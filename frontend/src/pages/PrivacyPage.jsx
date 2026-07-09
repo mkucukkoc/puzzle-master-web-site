@@ -3,9 +3,9 @@ import BrandNav from '@/components/BrandNav';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Section = ({ title, children }) => (
-  <section className="rounded-[1.5rem] bg-white border border-[#dfe3f3] p-6 shadow-sm">
-    <h3 className="text-xl font-black mb-3 text-[#273052]">{title}</h3>
-    <div className="text-[#68708a] leading-7 space-y-3">{children}</div>
+  <section className="rounded-[1.5rem] bg-white border border-[#d6e8e4] p-6 shadow-sm">
+    <h3 className="text-xl font-black mb-3 text-[#1f3d3a]">{title}</h3>
+    <div className="text-[#8a9d9a] leading-7 space-y-3">{children}</div>
   </section>
 );
 
@@ -42,19 +42,19 @@ const PrivacyPage = () => {
       ];
 
   return (
-    <div className="min-h-screen bg-[#fbfaf7] text-[#273052]">
+    <div className="min-h-screen bg-[#ffffff] text-[#1f3d3a]">
       <BrandNav active="privacy" />
 
       <main className="pt-24 sm:pt-28 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
-            <p className="text-xs font-bold tracking-[0.22em] text-[#e5484d]">
+            <p className="text-xs font-bold tracking-[0.22em] text-[#0ea394]">
               {isTR ? 'ARROWS PUZZLE MASTER' : 'ARROWS PUZZLE MASTER'}
             </p>
             <h1 className="mt-3 text-3xl sm:text-4xl font-black">
               {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
             </h1>
-            <p className="mt-3 text-[#68708a]">
+            <p className="mt-3 text-[#8a9d9a]">
               {isTR ? 'Son güncelleme: 4 Temmuz 2026' : 'Last updated: July 4, 2026'}
             </p>
           </div>

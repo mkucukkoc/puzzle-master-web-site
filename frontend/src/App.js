@@ -9,6 +9,7 @@ import DataDeletionPage from '@/pages/DataDeletionPage';
 import BlockBoomHomePage from '@/pages/BlockBoomHomePage';
 import BlockBoomPrivacyPage from '@/pages/BlockBoomPrivacyPage';
 import BlockBoomTermsPage from '@/pages/BlockBoomTermsPage';
+import BlockBoomDataDeletionPage from '@/pages/BlockBoomDataDeletionPage';
 import { LanguageProvider } from '@/context/LanguageContext';
 import '@/App.css';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/block-boom" element={<BlockBoomHomePage />} />
             <Route path="/block-boom/privacy" element={<BlockBoomPrivacyPage />} />
             <Route path="/block-boom/terms" element={<BlockBoomTermsPage />} />
+            <Route path="/block-boom/data-deletion" element={<BlockBoomDataDeletionPage />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="/account-deletion" element={<AccountDeletionPage />} />
             <Route path="/data-deletion" element={<DataDeletionPage />} />

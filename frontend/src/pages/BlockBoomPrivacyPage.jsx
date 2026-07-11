@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BlockBoomNav from '@/components/BlockBoomNav';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -152,6 +153,9 @@ const BlockBoomPrivacyPage = () => {
                   ? 'Gizlilik ile ilgili sorular için: support@aveniaichat.com'
                   : 'Questions about privacy: support@aveniaichat.com'}
               </p>
+              <Link to="/block-boom/data-deletion" className="text-[#6a45d8] font-bold hover:text-[#251b52] transition-colors">
+                {isTR ? 'Veri Silme Talebi' : 'Data Deletion Request'}
+              </Link>
             </Section>
           </div>
         </div>

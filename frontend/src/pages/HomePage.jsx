@@ -59,6 +59,61 @@ const PuzzlePreview = () => (
   </div>
 );
 
+const BoomPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-[#251b52] p-5 shadow-[0_24px_80px_rgba(37, 27, 82, 0.22)] border border-[#d8d2f4]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#8f74ff]/15" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ffb800]/10" />
+    <div className="relative grid grid-cols-4 gap-3">
+      {[
+        '#ff5252', '#ff5252', '#ffb800', '#ffb800',
+        '#ff5252', '#ff5252', '#ffb800', '#ffb800',
+        '#59d56b', '#59d56b', '#4e7eff', '#4e7eff',
+        '#59d56b', '#59d56b', '#4e7eff', '#4e7eff',
+      ].map((color, index) => (
+        <div
+          key={`${color}-${index}`}
+          className="relative h-16 rounded-2xl border border-white/10 shadow-[inset_0_2px_0_rgba(255,255,255,0.25),inset_0_-5px_10px_rgba(0,0,0,0.25)]"
+          style={{ background: `linear-gradient(135deg, ${color}, ${color}cc 60%, rgba(255,255,255,0.15))` }}
+        >
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
+        </div>
+      ))}
+    </div>
+    <div className="relative mt-5 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#d9d1ff]">
+        <span>BOOSTED PUZZLE</span>
+        <span className="text-[#ffb800]">BOOM MODE</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-[#ff5252] via-[#ffb800] to-[#59d56b]" />
+      </div>
+    </div>
+  </div>
+);
+
+const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLabel, secondaryHref, secondaryLabel, accentClass }) => (
+  <div className="rounded-[2rem] border border-[#d6e8e4] bg-white p-5 sm:p-6 shadow-[0_24px_80px_rgba(31, 61, 58, 0.12)]">
+    <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-6 items-center">
+      <div>
+        <div className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold tracking-[0.18em] ${accentClass}`}>
+          {subtitle}
+        </div>
+        <h3 className="mt-4 text-3xl sm:text-4xl font-black tracking-tight text-[#1f3d3a]">{title}</h3>
+        <p className="mt-4 text-[#8a9d9a] leading-7">{description}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a href={primaryHref} className="rounded-full bg-[#0ea394] px-5 py-3 font-bold text-white hover:bg-[#0b7f74] transition-colors">
+            {primaryLabel}
+          </a>
+          <a href={secondaryHref} className="rounded-full bg-white px-5 py-3 font-bold text-[#1f3d3a] border border-[#d6e8e4] hover:border-[#0ea394]/40 transition-colors">
+            {secondaryLabel}
+          </a>
+        </div>
+      </div>
+      <div>{preview}</div>
+    </div>
+  </div>
+);
+
 const HomePage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
@@ -172,6 +227,53 @@ const HomePage = () => {
                   <p className="mt-3 text-sm leading-6 text-[#8a9d9a]">{desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-16 bg-[#fbfaff] border-y border-[#ebe6ff]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center">
+              <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
+                {isTR ? 'İKİ OYUN, TEK SİTE' : 'TWO GAMES, ONE SITE'}
+              </p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
+                {isTR ? 'Puzzle ve Block Boom birlikte' : 'Puzzle and Block Boom together'}
+              </h2>
+              <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
+                {isTR
+                  ? 'Ana sayfadan iki uygulamayı da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
+                  : 'Discover both apps from the home page and open separate privacy and terms pages for each one.'}
+              </p>
+            </div>
+
+            <div className="mt-10 grid lg:grid-cols-2 gap-6">
+              <AppCard
+                subtitle={isTR ? 'MEVCUT OYUN' : 'CURRENT GAME'}
+                title="Arrows Puzzle Master"
+                description={isTR
+                  ? 'Grid tabanlı ok bulmacaları, hayvan temalı seviyeler ve temiz bir arayüzle mevcut puzzle deneyimi.'
+                  : 'The existing puzzle experience with grid-based arrow levels, animal-themed boards, and a clean interface.'}
+                preview={<PuzzlePreview />}
+                primaryHref="/privacy"
+                primaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                secondaryHref="/terms"
+                secondaryLabel={isTR ? 'Koşullar' : 'Terms'}
+                accentClass="bg-[#e7f2f0] text-[#0ea394] border border-[#c8e7e1]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Block Boom!"
+                description={isTR
+                  ? 'Renkli bloklar, daha vurucu görsel dil ve ayrı legal sayfalarla yeni oyun sayfası.'
+                  : 'A new game page with colorful blocks, a punchier visual language, and separate legal pages.'}
+                preview={<BoomPreview />}
+                primaryHref="/block-boom/privacy.html"
+                primaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                secondaryHref="/block-boom/terms.html"
+                secondaryLabel={isTR ? 'Koşullar' : 'Terms'}
+                accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
+              />
             </div>
           </div>
         </section>

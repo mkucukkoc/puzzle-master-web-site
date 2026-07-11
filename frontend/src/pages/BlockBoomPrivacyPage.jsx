@@ -13,34 +13,46 @@ const BlockBoomPrivacyPage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
 
-  const collected = isTR
+  const collectedData = isTR
     ? [
-        'Oyun ilerlemesi, seviye durumu, can/ipucu kullanımı ve uygulama tercihleri',
-        'Cihaz bilgileri, işletim sistemi, uygulama sürümü, çökme kayıtları ve performans verileri',
-        'Reklam gösterimi, ödüllü reklam etkileşimleri, reklam tanımlayıcıları ve ölçüm verileri',
-        'Satın alma veya abonelik durumu',
+        'Oyun ilerlemesi, seviye durumu, can/ipucu kullanımı, ayarlar ve tercih edilen dil',
+        'Cihaz modeli, işletim sistemi, uygulama sürümü, çökme kayıtları ve performans sinyalleri',
+        'Reklam gösterimi, ödüllü reklam tamamlanmaları ve reklam kimlikleri gibi teknik ölçüm verileri',
+        'Satın alma, abonelik veya platform doğrulama durumu',
         'Destek için bizimle iletişime geçerseniz e-posta adresi ve mesaj içeriği',
       ]
     : [
-        'Game progress, level state, hearts/hints usage, and app preferences',
-        'Device information, operating system, app version, crash logs, and performance data',
-        'Ad delivery, rewarded ad interactions, ad identifiers, and measurement data',
-        'Purchase or subscription status',
+        'Game progress, level state, hearts/hints usage, settings, and preferred language',
+        'Device model, operating system, app version, crash logs, and performance signals',
+        'Ad delivery, rewarded-ad completions, and technical measurement data such as advertising identifiers',
+        'Purchase, subscription, or platform verification status',
         'Email address and message content if you contact support',
       ];
 
-  const purposes = isTR
+  const uses = isTR
     ? [
-        'Oyunu çalıştırmak, ilerlemeyi kaydetmek ve seviye verilerini senkronize etmek',
-        'Ödüllü reklamları, premium özellikleri ve mağaza doğrulamalarını yönetmek',
-        'Hataları tespit etmek, performansı iyileştirmek ve kötüye kullanımı önlemek',
-        'Destek taleplerine ve veri silme isteklerine yanıt vermek',
+        'Oyunu çalıştırmak, ilerlemenizi kaydetmek ve aynı cihaz üzerinde deneyimi korumak',
+        'Reklamları, ödüllü içerikleri ve varsa premium özellikleri sunmak',
+        'Hata ayıklamak, performansı iyileştirmek ve kötüye kullanımı önlemek',
+        'Destek, hesap/ödemeye ilişkin talepler ve veri silme isteklerine yanıt vermek',
       ]
     : [
-        'Run the game, save progress, and sync level data',
-        'Manage rewarded ads, premium features, and store validation',
-        'Detect errors, improve performance, and prevent abuse',
-        'Respond to support and data deletion requests',
+        'Run the game, save progress, and preserve the experience on the same device',
+        'Deliver ads, rewarded content, and any premium features where available',
+        'Debug issues, improve performance, and prevent abuse',
+        'Respond to support, account/payment-related requests, and data deletion requests',
+      ];
+
+  const choices = isTR
+    ? [
+        'Block Boom! oynanış için kişi listesi, fotoğraf, video veya hassas konum istemez.',
+        'İsterseniz reklam kimliği ayarlarınızı cihazınızdan sınırlayabilir veya sıfırlayabilirsiniz.',
+        'Destek talepleri için bize e-posta gönderebilirsiniz; yalnızca talebinizi çözmek için gerekli bilgiler tutulur.',
+      ]
+    : [
+        'Block Boom! does not require contacts, photos, videos, or precise location for gameplay.',
+        'You can limit or reset your advertising ID settings from your device if desired.',
+        'You can email us for support; we keep only the information needed to resolve your request.',
       ];
 
   return (
@@ -50,9 +62,7 @@ const BlockBoomPrivacyPage = () => {
       <main className="pt-24 sm:pt-28 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
-            <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-              BLOCK BOOM!
-            </p>
+            <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">BLOCK BOOM!</p>
             <h1 className="mt-3 text-3xl sm:text-4xl font-black">
               {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
             </h1>
@@ -65,68 +75,73 @@ const BlockBoomPrivacyPage = () => {
             <Section title={isTR ? '1. Kapsam' : '1. Scope'}>
               <p>
                 {isTR
-                  ? 'Bu Gizlilik Politikası, Block Boom! mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlendiğini, neden işlendiğini ve kullanıcı haklarını açıklar.'
-                  : 'This Privacy Policy explains what data is processed in connection with the Block Boom! mobile game and related web pages, why it is processed, and the rights available to users.'}
+                  ? 'Bu Gizlilik Politikası, Block Boom! mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, bunların neden işlendiğini ve kullanıcıların hangi haklara sahip olabileceğini açıklar.'
+                  : 'This Privacy Policy explains what data may be processed in connection with the Block Boom! mobile game and related web pages, why it is processed, and what rights users may have.'}
               </p>
             </Section>
 
-            <Section title={isTR ? '2. İşleyebileceğimiz Veriler' : '2. Data We May Process'}>
+            <Section title={isTR ? '2. Toplayabileceğimiz Veriler' : '2. Data We May Process'}>
               <ul className="list-disc list-inside space-y-2">
-                {collected.map(item => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <p>
-                {isTR
-                  ? 'Block Boom! oynanış için fotoğraf, video, kişi listesi veya hassas konum verisi istemez.'
-                  : 'Block Boom! does not require photos, videos, contacts, or precise location for gameplay.'}
-              </p>
-            </Section>
-
-            <Section title={isTR ? '3. Verileri Kullanma Amaçlarımız' : '3. How We Use Data'}>
-              <ul className="list-disc list-inside space-y-2">
-                {purposes.map(item => (
+                {collectedData.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
             </Section>
 
-            <Section title={isTR ? '4. Üçüncü Taraf Hizmetler' : '4. Third-Party Services'}>
+            <Section title={isTR ? '3. Verileri Nasıl Kullanırız' : '3. How We Use Data'}>
+              <ul className="list-disc list-inside space-y-2">
+                {uses.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </Section>
+
+            <Section title={isTR ? '4. Paylaşım ve Üçüncü Taraf Hizmetler' : '4. Sharing and Third-Party Services'}>
               <p>
                 {isTR
-                  ? 'Uygulama, reklam sunumu, ödüllü reklamlar, uygulama mağazası doğrulamaları, analitik, hata raporlama veya benzer hizmetler için üçüncü taraf sağlayıcılar kullanabilir. Bu sağlayıcılar kendi politikalarına göre sınırlı teknik verileri işleyebilir.'
-                  : 'The app may use third-party providers for ad delivery, rewarded ads, app store validation, analytics, crash reporting, or similar services. These providers may process limited technical data under their own policies.'}
+                  ? 'Uygulama; reklam sunumu, ödüllü reklamlar, çökme raporlama, analitik veya uygulama mağazası doğrulaması için üçüncü taraf hizmetleri kullanabilir. Bu hizmetler, kendi gizlilik politikalarına tabi olarak sınırlı teknik verileri işleyebilir.'
+                  : 'The app may use third-party services for ad delivery, rewarded ads, crash reporting, analytics, or app store validation. Those services may process limited technical data under their own privacy policies.'}
+              </p>
+              <p>
+                {isTR
+                  ? 'Block Boom!, yasaların gerektirdiği durumlar dışında kişisel verileri satmaz.'
+                  : 'Block Boom! does not sell personal data except where required by law.'}
               </p>
             </Section>
 
-            <Section title={isTR ? '5. Reklamlar ve Reklam Kimliği' : '5. Ads and Advertising ID'}>
+            <Section title={isTR ? '5. Reklamlar ve Ödüller' : '5. Ads and Rewards'}>
               <p>
                 {isTR
-                  ? 'Block Boom!, ipucu, can veya benzer ödüller için reklam izleme seçeneği sunabilir. Reklam ortakları, reklam sunumu ve ölçüm için cihaz tanımlayıcılarını veya benzer teknik verileri kullanabilir.'
-                  : 'Block Boom! may offer rewarded ads for hints, hearts, or similar rewards. Advertising partners may use device identifiers or similar technical data for ad delivery and measurement.'}
+                  ? 'Block Boom! bazı seviyelerde ödüllü reklam gösterebilir. Reklamı izlemeyi seçmeniz halinde, ödülün verilebilmesi için reklamın tamamlanması gerekebilir. Reklam ortakları, reklam ölçümü için cihaz tanımlayıcıları veya benzer teknik veriler kullanabilir.'
+                  : 'Block Boom! may show rewarded ads in some parts of the experience. If you choose to watch an ad, it may need to be completed before the reward is granted. Advertising partners may use device identifiers or similar technical data for measurement.'}
               </p>
             </Section>
 
-            <Section title={isTR ? '6. Saklama Süresi' : '6. Retention'}>
+            <Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}>
               <p>
                 {isTR
-                  ? 'Yerel ilerleme cihazınızda saklanabilir. Destek, reklam, satın alma veya teknik kayıtlar yalnızca gerekli olduğu süre boyunca tutulur. Doğrulanmış veri silme talepleri genellikle 30 gün içinde işlenir.'
-                  : 'Local progress may be stored on your device. Support, ad, purchase, or technical records are kept only as long as needed. Verified data deletion requests are usually processed within 30 days.'}
+                  ? 'Yerel oyun ilerlemesi cihazınızda saklanabilir. Destek, reklam, satın alma ve teknik kayıtlar yalnızca gerekli olduğu süre boyunca tutulur. Doğrulanmış veri silme talepleri mümkün olan en kısa sürede, çoğunlukla 30 gün içinde işlenir.'
+                  : 'Local game progress may be stored on your device. Support, ad, purchase, and technical records are kept only as long as necessary. Verified deletion requests are processed as soon as reasonably possible, usually within 30 days.'}
               </p>
             </Section>
 
             <Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}>
               <p>
                 {isTR
-                  ? 'Block Boom! genel kitleye yöneliktir ve 13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
-                  : 'Block Boom! is intended for a general audience and does not knowingly seek to collect personal data from children under 13.'}
+                  ? 'Block Boom! genel kitleye yöneliktir ve 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
+                  : 'Block Boom! is intended for a general audience and does not knowingly collect personal data from children under 13.'}
               </p>
             </Section>
 
-            <Section title={isTR ? '8. Haklarınız' : '8. Your Rights'}>
+            <Section title={isTR ? '8. Haklarınız ve Seçimleriniz' : '8. Your Rights and Choices'}>
+              <ul className="list-disc list-inside space-y-2">
+                {choices.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
               <p>
                 {isTR
-                  ? 'Geçerli mevzuata göre verilerinize erişme, düzeltme, silme veya işlemeye itiraz etme haklarınız olabilir.'
+                  ? 'Geçerli mevzuata göre verilerinize erişme, düzeltme, silme veya işleme itiraz etme gibi haklara sahip olabilirsiniz.'
                   : 'Depending on applicable law, you may have rights to access, correct, delete, or object to the processing of your data.'}
               </p>
             </Section>

@@ -268,10 +268,10 @@ const HomePage = () => {
                   ? 'Renkli bloklar, daha vurucu görsel dil ve ayrı legal sayfalarla yeni oyun sayfası.'
                   : 'A new game page with colorful blocks, a punchier visual language, and separate legal pages.'}
                 preview={<BoomPreview />}
-                primaryHref="/block-boom/privacy.html"
-                primaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
-                secondaryHref="/block-boom/terms.html"
-                secondaryLabel={isTR ? 'Koşullar' : 'Terms'}
+                primaryHref="/block-boom"
+                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
+                secondaryHref="/block-boom/privacy"
+                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
               />
             </div>

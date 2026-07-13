@@ -4,11 +4,11 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const CarPuzzleMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#bed6ea] bg-[#082f51] shadow-[0_10px_30px_rgba(8,47,81,0.22)]">
-    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16),transparent_38%,rgba(255,255,255,0.05))]" />
-    <div className="absolute left-2 top-2 h-3 w-3 rounded-[4px] bg-[#ffb454] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute right-2 top-2 h-3 w-3 rounded-[4px] bg-[#3fc9ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-2 bottom-2 right-2 h-2 rounded-full bg-white/18" />
-    <div className="absolute left-1/2 top-1/2 h-2.5 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/90" />
+    <img
+      src="/car-puzzle/google-play-icon-512.png"
+      alt="Cars -Puzzle Escape"
+      className="h-full w-full object-cover"
+    />
   </div>
 );
 

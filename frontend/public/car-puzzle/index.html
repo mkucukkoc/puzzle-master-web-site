@@ -24,12 +24,7 @@
       .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
       .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 800; }
       .mark { width: 44px; height: 44px; border-radius: 16px; position: relative; overflow: hidden; border: 1px solid #bed6ea; background: #082f51; box-shadow: 0 10px 30px rgba(8, 47, 81, .22); }
-      .mark::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.16), transparent 38%, rgba(255,255,255,.05)); }
-      .mark span { position: absolute; border-radius: 4px; }
-      .m1 { left: 8px; top: 8px; width: 12px; height: 12px; background: #ffb454; }
-      .m2 { right: 8px; top: 8px; width: 12px; height: 12px; background: #3fc9ff; }
-      .m3 { left: 8px; bottom: 8px; right: 8px; height: 8px; background: rgba(255,255,255,.18); border-radius: 999px; }
-      .m4 { left: 50%; top: 50%; width: 24px; height: 10px; transform: translate(-50%, -50%); background: rgba(255,255,255,.92); border-radius: 999px; }
+      .mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .nav-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
       .nav-link { font-size: 14px; font-weight: 700; color: var(--muted); }
       .nav-link:hover { color: var(--ink); }
@@ -64,7 +59,7 @@
     <nav>
       <div class="wrap nav">
         <a class="brand" href="/car-puzzle">
-          <div class="mark"><span class="m1"></span><span class="m2"></span><span class="m3"></span><span class="m4"></span></div>
+          <div class="mark"><img src="/car-puzzle/google-play-icon-512.png" alt="Cars -Puzzle Escape" /></div>
           <span>Cars -Puzzle Escape</span>
         </a>
         <div class="nav-right">
@@ -105,15 +100,15 @@
             <h2 style="color:white; font-size: 2rem; line-height:1; margin-top: 12px;">Packed lot, smooth escape</h2>
             <p style="color:#cfe0ec;">A clean blue roadscape with bright vehicle colors and a premium store-ready look.</p>
           </div>
-          <div class="tile">
-            <div style="background:linear-gradient(135deg,#ffb454,#ffb454cc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#3fc9ff,#3fc9ffcc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#8be28d,#8be28dcc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#ff7c7c,#ff7c7ccc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#3fc9ff,#3fc9ffcc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#ffb454,#ffb454cc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#11304e,#11304ecc 60%,rgba(255,255,255,.15))"></div>
-            <div style="background:linear-gradient(135deg,#0f5cab,#0f5cabcc 60%,rgba(255,255,255,.15))"></div>
+          <div style="position:relative; z-index:1; margin-top: 24px; overflow:hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.12);">
+            <img src="/car-puzzle/google-play-feature-1024x500.png" alt="Cars -Puzzle Escape feature graphic" style="display:block; width:100%; height:auto;" />
+            <div style="position:absolute; left:16px; top:16px; display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius: 16px; background: rgba(0,0,0,.30); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(10px);">
+              <img src="/car-puzzle/google-play-icon-512.png" alt="Cars -Puzzle Escape icon" style="width:44px; height:44px; border-radius: 14px; object-fit:cover;" />
+              <div>
+                <div style="color:#cfe0ec; font-size:11px; font-weight:800; letter-spacing:.22em;">CARS</div>
+                <div style="color:white; font-size:14px; font-weight:900;">-Puzzle Escape</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

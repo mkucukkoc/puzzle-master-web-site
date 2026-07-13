@@ -92,26 +92,28 @@ const BoomPreview = () => (
 );
 
 const CarPreview = () => (
-  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-[#082f51] p-5 shadow-[0_24px_80px_rgba(8,47,81,0.18)] border border-[#bed6ea]">
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#082f51] p-4 shadow-[0_24px_80px_rgba(8,47,81,0.18)] border border-[#bed6ea]">
     <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#3fc9ff]/15" />
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ffb454]/10" />
-    <div className="relative grid grid-cols-4 gap-3">
-      {[
-        '#ffb454', '#3fc9ff', '#8be28d', '#ff7c7c',
-        '#3fc9ff', '#ffb454', '#11304e', '#0f5cab',
-        '#8be28d', '#3fc9ff', '#ffb454', '#11304e',
-        '#ff7c7c', '#0f5cab', '#8be28d', '#ffb454',
-      ].map((color, index) => (
-        <div
-          key={`${color}-${index}`}
-          className="relative h-16 rounded-2xl border border-white/10 shadow-[inset_0_2px_0_rgba(255,255,255,0.25),inset_0_-5px_10px_rgba(0,0,0,0.25)]"
-          style={{ background: `linear-gradient(135deg, ${color}, ${color}cc 60%, rgba(255,255,255,0.15))` }}
-        >
-          <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b365f]">
+      <img
+        src="/car-puzzle/google-play-feature-1024x500.png"
+        alt="Cars -Puzzle Escape feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/car-puzzle/google-play-icon-512.png"
+          alt="Cars -Puzzle Escape icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#cfe0ec]">CARS</div>
+          <div className="text-sm font-black text-white">-Puzzle Escape</div>
         </div>
-      ))}
+      </div>
     </div>
-    <div className="relative mt-5 rounded-2xl bg-white/8 p-4 border border-white/10">
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
       <div className="flex items-center justify-between text-xs font-semibold text-[#cfe0ec]">
         <span>PARKING LOT</span>
         <span className="text-[#ffb454]">TRAFFIC FLOW</span>
@@ -267,19 +269,19 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-                {isTR ? 'İKİ OYUN, TEK SİTE' : 'TWO GAMES, ONE SITE'}
+                {isTR ? 'ÜÇ OYUN, TEK SİTE' : 'THREE GAMES, ONE SITE'}
               </p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
-                {isTR ? 'Puzzle ve Block Boom birlikte' : 'Puzzle and Block Boom together'}
+                {isTR ? 'Puzzle, Block Boom ve Cars -Puzzle Escape birlikte' : 'Puzzle, Block Boom, and Cars -Puzzle Escape together'}
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan iki uygulamayı da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
-                  : 'Discover both apps from the home page and open separate privacy and terms pages for each one.'}
+                  ? 'Ana sayfadan üç oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all three games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
               </p>
             </div>
 
-            <div className="mt-10 grid lg:grid-cols-2 gap-6">
+            <div className="mt-10 grid lg:grid-cols-3 gap-6">
               <AppCard
                 subtitle={isTR ? 'MEVCUT OYUN' : 'CURRENT GAME'}
                 title="Arrows Puzzle Master"
@@ -306,11 +308,8 @@ const HomePage = () => {
                 secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
               />
-            </div>
-
-            <div className="mt-6">
               <AppCard
-                subtitle={isTR ? 'YENİ SAYFA' : 'NEW PAGE'}
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
                 title="Cars -Puzzle Escape"
                 description={isTR
                   ? 'Araba temalı ayrı bir bulmaca sayfası, kendi privacy/terms/data deletion akışıyla birlikte.'

@@ -148,6 +148,12 @@ const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLa
   </div>
 );
 
+const STORE = {
+  arrows: 'https://play.google.com/store/apps/details?id=com.puzzle.masters',
+  boom: 'https://play.google.com/store/apps/details?id=com.blocks.boom',
+  cars: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
+};
+
 const HomePage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
@@ -208,16 +214,16 @@ const HomePage = () => {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="#try-app"
+                  href={STORE.arrows}
                   className="rounded-full bg-[#0ea394] px-7 py-4 font-bold text-white shadow-[0_18px_40px_rgba(14, 163, 148, 0.26)] hover:bg-[#0b7f74] transition-colors"
                 >
-                  {hero.cta}
+                  {isTR ? '▶ Google Play\'de Oyna' : '▶ Play on Google Play'}
                 </a>
                 <a
-                  href="/privacy"
+                  href="#try-app"
                   className="rounded-full bg-white px-7 py-4 font-bold text-[#1f3d3a] border border-[#d6e8e4] hover:border-[#0ea394]/40 transition-colors"
                 >
-                  {hero.secondary}
+                  {hero.cta}
                 </a>
               </div>
 
@@ -276,8 +282,8 @@ const HomePage = () => {
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan üç oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all three games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
+                  ? 'Üç özgün bulmaca oyunu, hepsi Google Play\'de ücretsiz — her biri kendi gizlilik, koşullar ve destek sayfalarıyla.'
+                  : 'Three original puzzle games, each free on Google Play — with its own privacy, terms, and support.'}
               </p>
             </div>
 
@@ -289,36 +295,36 @@ const HomePage = () => {
                   ? 'Grid tabanlı ok bulmacaları, hayvan temalı seviyeler ve temiz bir arayüzle mevcut puzzle deneyimi.'
                   : 'The existing puzzle experience with grid-based arrow levels, animal-themed boards, and a clean interface.'}
                 preview={<PuzzlePreview />}
-                primaryHref="/privacy"
-                primaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
-                secondaryHref="/terms"
-                secondaryLabel={isTR ? 'Koşullar' : 'Terms'}
+                primaryHref={STORE.arrows}
+                primaryLabel="Google Play"
+                secondaryHref="/privacy"
+                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#e7f2f0] text-[#0ea394] border border-[#c8e7e1]"
               />
               <AppCard
                 subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
                 title="Block Boom!"
                 description={isTR
-                  ? 'Renkli bloklar, daha vurucu görsel dil ve ayrı legal sayfalarla yeni oyun sayfası.'
-                  : 'A new game page with colorful blocks, a punchier visual language, and separate legal pages.'}
+                  ? 'Renkli blokları sürükle, satır ve sütunları doldurup patlat, büyük kombolar yap. Parlak ve rahatlatıcı blok bulmacası.'
+                  : 'Drag colorful blocks, fill full rows and columns to pop them, and chain explosive combos in this bright, relaxing block puzzle.'}
                 preview={<BoomPreview />}
-                primaryHref="/block-boom"
-                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
-                secondaryHref="/block-boom/privacy"
-                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                primaryHref={STORE.boom}
+                primaryLabel="Google Play"
+                secondaryHref="/block-boom"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
               />
               <AppCard
                 subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
                 title="Cars -Puzzle Escape"
                 description={isTR
-                  ? 'Araba temalı ayrı bir bulmaca sayfası, kendi privacy/terms/data deletion akışıyla birlikte.'
-                  : 'A separate car-themed puzzle page with its own privacy, terms, and data deletion flow.'}
+                  ? 'Araçlara dokunup dolu otoparktan çıkar, trafiği çöz ve şehirden şehre ilerle. Rahatlatıcı, tepeden trafik bulmacası.'
+                  : 'Tap cars to drive them out of a packed lot, untangle the jam, and cruise from city to city in this relaxing traffic puzzle.'}
                 preview={<CarPreview />}
-                primaryHref="/car-puzzle"
-                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
-                secondaryHref="/car-puzzle/privacy"
-                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                primaryHref={STORE.cars}
+                primaryLabel="Google Play"
+                secondaryHref="/car-puzzle"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#eaf4fb] text-[#0f5cab] border border-[#cfe0ec]"
               />
             </div>

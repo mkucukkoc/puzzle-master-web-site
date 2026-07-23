@@ -91,8 +91,42 @@ const BoomPreview = () => (
   </div>
 );
 
-const EscapePreview = () => (
-  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-[#17345f] p-5 shadow-[0_24px_80px_rgba(23, 52, 95, 0.2)] border border-[#cfe1ff]">
+const CarPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#082f51] p-4 shadow-[0_24px_80px_rgba(8,47,81,0.18)] border border-[#bed6ea]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#3fc9ff]/15" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ffb454]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b365f]">
+      <img
+        src="/car-puzzle/google-play-feature-1024x500.png"
+        alt="Cars -Puzzle Escape feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/car-puzzle/google-play-icon-512.png"
+          alt="Cars -Puzzle Escape icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#cfe0ec]">CARS</div>
+          <div className="text-sm font-black text-white">-Puzzle Escape</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#cfe0ec]">
+        <span>PARKING LOT</span>
+        <span className="text-[#ffb454]">TRAFFIC MODE</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-[#3fc9ff] via-[#0f5cab] to-[#ffb454]" />
+      </div>
+    </div>
+  </div>
+);
+
+const BlocksPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-[#17345f] p-5 shadow-[0_24px_80px_rgba(23,52,95,0.2)] border border-[#cfe1ff]">
     <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#1f7cff]/15" />
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#17c3b2]/12" />
     <div className="relative grid grid-cols-4 gap-3">
@@ -123,8 +157,18 @@ const EscapePreview = () => (
   </div>
 );
 
-const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLabel, secondaryHref, secondaryLabel, accentClass }) => (
-  <div className="rounded-[2rem] border border-[#d6e8e4] bg-white p-5 sm:p-6 shadow-[0_24px_80px_rgba(31, 61, 58, 0.12)]">
+const AppCard = ({
+  title,
+  subtitle,
+  description,
+  preview,
+  primaryHref,
+  primaryLabel,
+  secondaryHref,
+  secondaryLabel,
+  accentClass,
+}) => (
+  <div className="rounded-[2rem] border border-[#d6e8e4] bg-white p-5 sm:p-6 shadow-[0_24px_80px_rgba(31,61,58,0.12)]">
     <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-6 items-center">
       <div>
         <div className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold tracking-[0.18em] ${accentClass}`}>
@@ -133,10 +177,16 @@ const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLa
         <h3 className="mt-4 text-3xl sm:text-4xl font-black tracking-tight text-[#1f3d3a]">{title}</h3>
         <p className="mt-4 text-[#8a9d9a] leading-7">{description}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href={primaryHref} className="rounded-full bg-[#0ea394] px-5 py-3 font-bold text-white hover:bg-[#0b7f74] transition-colors">
+          <a
+            href={primaryHref}
+            className="rounded-full bg-[#0ea394] px-5 py-3 font-bold text-white hover:bg-[#0b7f74] transition-colors"
+          >
             {primaryLabel}
           </a>
-          <a href={secondaryHref} className="rounded-full bg-white px-5 py-3 font-bold text-[#1f3d3a] border border-[#d6e8e4] hover:border-[#0ea394]/40 transition-colors">
+          <a
+            href={secondaryHref}
+            className="rounded-full bg-white px-5 py-3 font-bold text-[#1f3d3a] border border-[#d6e8e4] hover:border-[#0ea394]/40 transition-colors"
+          >
             {secondaryLabel}
           </a>
         </div>
@@ -146,13 +196,18 @@ const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLa
   </div>
 );
 
+const STORE = {
+  arrows: 'https://play.google.com/store/apps/details?id=com.puzzle.masters',
+  boom: 'https://play.google.com/store/apps/details?id=com.blocks.boom',
+  cars: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
+};
+
 const HomePage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
 
   const hero = {
     eyebrow: isTR ? 'MINIMAL OK PUZZLE OYUNU' : 'MINIMAL ARROW PUZZLE GAME',
-    title: isTR ? 'Arrows Puzzle Master' : 'Arrows Puzzle Master',
     desc: isTR
       ? 'Okları doğru sırayla serbest bırak, çarpışmaları çöz ve her seviyeyi tertemiz bir grid üzerinde tamamla.'
       : 'Release arrows in the right order, solve collisions, and clear every level on a clean grid.',
@@ -206,10 +261,10 @@ const HomePage = () => {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="#try-app"
-                  className="rounded-full bg-[#0ea394] px-7 py-4 font-bold text-white shadow-[0_18px_40px_rgba(14, 163, 148, 0.26)] hover:bg-[#0b7f74] transition-colors"
+                  href={STORE.arrows}
+                  className="rounded-full bg-[#0ea394] px-7 py-4 font-bold text-white shadow-[0_18px_40px_rgba(14,163,148,0.26)] hover:bg-[#0b7f74] transition-colors"
                 >
-                  {hero.cta}
+                  {isTR ? "▶ Google Play'de Oyna" : '▶ Play on Google Play'}
                 </a>
                 <a
                   href="/privacy"
@@ -230,7 +285,7 @@ const HomePage = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(14, 163, 148, 0.22),transparent_50%)] blur-2xl" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(14,163,148,0.22),transparent_50%)] blur-2xl" />
               <PuzzlePreview />
             </div>
           </div>
@@ -267,19 +322,21 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-                {isTR ? 'İKİ OYUN, TEK SİTE' : 'TWO GAMES, ONE SITE'}
+                {isTR ? 'DÖRT OYUN, TEK SİTE' : 'FOUR GAMES, ONE SITE'}
               </p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
-                {isTR ? 'Puzzle, Block Boom ve Puzzle Escape birlikte' : 'Puzzle, Block Boom, and Puzzle Escape together'}
+                {isTR
+                  ? 'Puzzle, Block Boom, Cars ve Blocks - Puzzle Escape birlikte'
+                  : 'Puzzle, Block Boom, Cars, and Blocks - Puzzle Escape together'}
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan üç uygulamayı da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all three apps from the home page and open separate privacy and terms pages for each one.'}
+                  ? 'Ana sayfadan dört oyunu da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all four games from the home page and open separate privacy and terms pages for each one.'}
               </p>
             </div>
 
-            <div className="mt-10 grid lg:grid-cols-3 gap-6">
+            <div className="mt-10 grid lg:grid-cols-2 gap-6">
               <AppCard
                 subtitle={isTR ? 'MEVCUT OYUN' : 'CURRENT GAME'}
                 title="Arrows Puzzle Master"
@@ -287,24 +344,37 @@ const HomePage = () => {
                   ? 'Grid tabanlı ok bulmacaları, hayvan temalı seviyeler ve temiz bir arayüzle mevcut puzzle deneyimi.'
                   : 'The existing puzzle experience with grid-based arrow levels, animal-themed boards, and a clean interface.'}
                 preview={<PuzzlePreview />}
-                primaryHref="/privacy"
-                primaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
-                secondaryHref="/terms"
-                secondaryLabel={isTR ? 'Koşullar' : 'Terms'}
+                primaryHref={STORE.arrows}
+                primaryLabel="Google Play"
+                secondaryHref="/privacy"
+                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#e7f2f0] text-[#0ea394] border border-[#c8e7e1]"
               />
               <AppCard
                 subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
                 title="Block Boom!"
                 description={isTR
-                  ? 'Renkli bloklar, daha vurucu görsel dil ve ayrı legal sayfalarla yeni oyun sayfası.'
-                  : 'A new game page with colorful blocks, a punchier visual language, and separate legal pages.'}
+                  ? 'Renkli blokları sürükle, satır ve sütunları doldurup patlat, büyük kombolar yap. Parlak ve rahatlatıcı blok bulmacası.'
+                  : 'Drag colorful blocks, fill full rows and columns to pop them, and chain explosive combos in this bright, relaxing block puzzle.'}
                 preview={<BoomPreview />}
-                primaryHref="/block-boom"
-                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
-                secondaryHref="/block-boom/privacy"
-                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                primaryHref={STORE.boom}
+                primaryLabel="Google Play"
+                secondaryHref="/block-boom"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Cars -Puzzle Escape"
+                description={isTR
+                  ? 'Araçlara dokunup dolu otoparktan çıkar, trafiği çöz ve şehirden şehre ilerle. Rahatlatıcı, tepeden trafik bulmacası.'
+                  : 'Tap cars to drive them out of a packed lot, untangle the jam, and cruise from city to city in this relaxing traffic puzzle.'}
+                preview={<CarPreview />}
+                primaryHref={STORE.cars}
+                primaryLabel="Google Play"
+                secondaryHref="/car-puzzle"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#eaf4fb] text-[#0f5cab] border border-[#cfe0ec]"
               />
               <AppCard
                 subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
@@ -312,7 +382,7 @@ const HomePage = () => {
                 description={isTR
                   ? 'Kilitli blokları doğru sırada çöz, çıkış yolunu aç ve ayrı legal sayfalarla yeni bir puzzle markası keşfet.'
                   : 'Solve locked blocks in the right order, open the escape path, and explore a new puzzle brand with separate legal pages.'}
-                preview={<EscapePreview />}
+                preview={<BlocksPreview />}
                 primaryHref="/blocks-puzzle-escape"
                 primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
                 secondaryHref="/blocks-puzzle-escape/privacy"

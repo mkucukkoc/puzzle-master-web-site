@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cars -Puzzle Escape landing page." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Cars -Puzzle Escape</title>
+    <style>
+      :root {
+        --bg: #f7fbff;
+        --panel: #ffffff;
+        --ink: #11304e;
+        --muted: #5f7692;
+        --accent: #0f5cab;
+        --accent-2: #ffb454;
+        --line: #cfe0ec;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+      nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+      .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 800; }
+      .mark { width: 44px; height: 44px; border-radius: 16px; position: relative; overflow: hidden; border: 1px solid #bed6ea; background: #082f51; box-shadow: 0 10px 30px rgba(8, 47, 81, .22); }
+      .mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .nav-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+      .nav-link { font-size: 14px; font-weight: 700; color: var(--muted); }
+      .nav-link:hover { color: var(--ink); }
+      .pill { display: inline-flex; align-items: center; justify-content: center; min-height: 34px; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 800; white-space: nowrap; }
+      .btn { color: #fff; background: var(--accent); box-shadow: 0 10px 24px rgba(15,92,171,.22); }
+      .btn:hover { background: #0b4a87; }
+      main { padding: 56px 0 72px; }
+      .eyebrow { color: var(--accent); font-size: 12px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; }
+      h1 { margin: 12px 0; font-size: clamp(42px, 8vw, 72px); line-height: .95; letter-spacing: -.05em; }
+      h2 { margin: 0 0 12px; color: var(--ink); }
+      p, li { color: var(--muted); line-height: 1.8; }
+      .hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+      .card { position: relative; border: 1px solid #bed6ea; background: #082f51; color: #fff; border-radius: 32px; padding: 24px; overflow: hidden; box-shadow: 0 24px 80px rgba(8,47,81,.22); }
+      .card::before { content: ""; position: absolute; inset: -2rem -2rem auto auto; width: 140px; height: 140px; border-radius: 999px; background: rgba(63,201,255,.12); }
+      .card::after { content: ""; position: absolute; inset: auto auto -2rem -1.5rem; width: 160px; height: 160px; border-radius: 999px; background: rgba(255,180,84,.08); }
+      .tile { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+      .tile div { height: 64px; border-radius: 18px; border: 1px solid rgba(255,255,255,.1); box-shadow: inset 0 2px 0 rgba(255,255,255,.25), inset 0 -5px 10px rgba(0,0,0,.25); }
+      .pill.primary { background: var(--accent); color: #fff; }
+      .pill.secondary { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+      .pill.secondary:hover { border-color: rgba(15,92,171,.4); }
+      .grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .feature { padding: 24px; border-radius: 28px; border: 1px solid var(--line); background: var(--panel); }
+      footer { padding: 0 0 42px; color: var(--muted); text-align: center; }
+      @media (max-width: 900px) {
+        .hero, .grid { grid-template-columns: 1fr; }
+        .nav { align-items: flex-start; padding: 12px 0; }
+        .nav-right { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap nav">
+        <a class="brand" href="/car-puzzle">
+          <div class="mark"><img src="/car-puzzle/google-play-icon-512.png" alt="Cars -Puzzle Escape" /></div>
+          <span>Cars -Puzzle Escape</span>
+        </a>
+        <div class="nav-right">
+          <a class="nav-link" href="/car-puzzle/privacy.html">Privacy</a>
+          <a class="nav-link" href="/car-puzzle/terms.html">Terms</a>
+          <a class="nav-link" href="/help">Help</a>
+          <a class="nav-link" href="/car-puzzle/data-deletion.html">Data Deletion</a>
+          <a class="pill btn" href="https://play.google.com/store/apps/details?id=com.puzzle.trafficescape">Get the Game</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Traffic Puzzle Game</p>
+          <h1>Cars -Puzzle Escape</h1>
+          <p>Tap a car and it drives off — if the road ahead is clear. Untangle the jam, clear the lot, and cruise from city to city in this relaxing top-down traffic puzzle. Free to play.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:22px;">
+            <a class="pill primary" style="min-height:52px; padding:0 22px; font-size:16px; box-shadow:0 16px 34px rgba(15,92,171,.28);" href="https://play.google.com/store/apps/details?id=com.puzzle.trafficescape">▶ Play on Google Play</a>
+            <a class="pill secondary" style="min-height:52px; padding:0 22px; font-size:16px;" href="/help">How to play</a>
+          </div>
+          <div class="grid" style="margin-top: 36px;">
+            <div class="feature">
+              <h2>Traffic logic</h2>
+              <p>Tap cars in the right order to clear the packed lot — simple to learn, tricky to master.</p>
+            </div>
+            <div class="feature">
+              <h2>Cities &amp; modes</h2>
+              <p>Drive through themed cities, tackle special missions, and race the clock in Rush Hour.</p>
+            </div>
+            <div class="feature">
+              <h2>Relaxing &amp; free</h2>
+              <p>No timers on the main track, gentle ads, and hundreds of hand-tuned levels.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="position:relative; z-index:1;">
+            <p class="eyebrow" style="color:#cfe0ec;">CARS -PUZZLE ESCAPE</p>
+            <h2 style="color:white; font-size: 2rem; line-height:1; margin-top: 12px;">Packed lot, smooth escape</h2>
+            <p style="color:#cfe0ec;">A clean blue roadscape with bright vehicle colors and satisfying, snappy clears.</p>
+          </div>
+          <div style="position:relative; z-index:1; margin-top: 24px; overflow:hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.12);">
+            <img src="/car-puzzle/google-play-feature-1024x500.png" alt="Cars -Puzzle Escape feature graphic" style="display:block; width:100%; height:auto;" />
+            <div style="position:absolute; left:16px; top:16px; display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius: 16px; background: rgba(0,0,0,.30); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(10px);">
+              <img src="/car-puzzle/google-play-icon-512.png" alt="Cars -Puzzle Escape icon" style="width:44px; height:44px; border-radius: 14px; object-fit:cover;" />
+              <div>
+                <div style="color:#cfe0ec; font-size:11px; font-weight:800; letter-spacing:.22em;">CARS</div>
+                <div style="color:white; font-size:14px; font-weight:900;">-Puzzle Escape</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2026 Cars -Puzzle Escape · <a class="section-link" style="color:var(--accent);font-weight:700" href="/car-puzzle/privacy.html">Privacy</a> · <a class="section-link" style="color:var(--accent);font-weight:700" href="/car-puzzle/terms.html">Terms</a> · <a class="section-link" style="color:var(--accent);font-weight:700" href="/help">Help</a></footer>
+  </body>
+</html>

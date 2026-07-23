@@ -1,15 +1,15 @@
 import React from 'react';
-import BlockBoomNav from '@/components/BlockBoomNav';
+import BlocksPuzzleEscapeNav from '@/components/BlocksPuzzleEscapeNav';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Section = ({ title, children }) => (
-  <section className="rounded-[1.5rem] bg-white border border-[#d8d2f4] p-6 shadow-sm">
-    <h3 className="text-xl font-black mb-3 text-[#251b52]">{title}</h3>
-    <div className="text-[#7b6cb2] leading-7 space-y-3">{children}</div>
+  <section className="rounded-[1.5rem] bg-white border border-[#cfe1ff] p-6 shadow-sm">
+    <h3 className="text-xl font-black mb-3 text-[#17345f]">{title}</h3>
+    <div className="text-[#6b86af] leading-7 space-y-3">{children}</div>
   </section>
 );
 
-const BlockBoomTermsPage = () => {
+const BlocksPuzzleEscapeTermsPage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
 
@@ -52,26 +52,26 @@ const BlockBoomTermsPage = () => {
       ];
 
   return (
-    <div className="min-h-screen bg-[#fbfaff] text-[#251b52]">
-      <BlockBoomNav active="terms" />
+    <div className="min-h-screen bg-[#f7fbff] text-[#17345f]">
+      <BlocksPuzzleEscapeNav active="terms" />
 
       <main className="pt-24 sm:pt-28 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#3A37A0] via-[#4A41C6] to-[#5B4BE0] p-8 sm:p-10 shadow-[0_24px_60px_rgba(74,65,198,0.35)]">
+          <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#0f5aa7] via-[#1f7cff] to-[#2f89ff] p-8 sm:p-10 shadow-[0_24px_60px_rgba(31,124,255,0.26)]">
             <div className="flex items-center gap-4">
               <div className="grid grid-cols-2 gap-1.5">
-                <span className="h-6 w-6 rounded-md bg-[#FF5D5D] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#FF9F43] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#5AD26B] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#4C8DFF] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#1f7cff] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#17c3b2] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#0ea394] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#ffb800] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
               </div>
-              <p className="text-[11px] font-black tracking-[0.28em] text-[#FFD24C]">BLOCK BOOM!</p>
+              <p className="text-[11px] font-black tracking-[0.28em] text-[#d9ecff]">BLOCKS - PUZZLE ESCAPE</p>
             </div>
             <h1 className="mt-6 text-3xl sm:text-4xl font-black text-white">
               {isTR ? 'Kullanım Koşulları' : 'Terms of Use'}
             </h1>
             <p className="mt-3 text-white/70">
-              {isTR ? 'Son güncelleme: 11 Temmuz 2026' : 'Last updated: July 11, 2026'}
+              {isTR ? 'Son güncelleme: 23 Temmuz 2026' : 'Last updated: July 23, 2026'}
             </p>
           </div>
 
@@ -79,16 +79,16 @@ const BlockBoomTermsPage = () => {
             <Section title={isTR ? '1. Kabul' : '1. Acceptance'}>
               <p>
                 {isTR
-                  ? 'Block Boom! uygulamasını indirerek veya kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayın.'
-                  : 'By downloading or using Block Boom!, you agree to these terms. If you do not agree, please do not use the app.'}
+                  ? 'Blocks - Puzzle Escape uygulamasını indirerek veya kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayın.'
+                  : 'By downloading or using Blocks - Puzzle Escape, you agree to these terms. If you do not agree, please do not use the app.'}
               </p>
             </Section>
 
             <Section title={isTR ? '2. Hizmetin Kapsamı' : '2. Service Scope'}>
               <p>
                 {isTR
-                  ? 'Block Boom!, blokları doğru sırayla yerleştirip temizlemeye dayalı bir mobil puzzle oyunudur. Hizmet şunları içerebilir:'
-                  : 'Block Boom! is a mobile puzzle game built around placing and clearing blocks in the correct order. The service may include:'}
+                  ? 'Blocks - Puzzle Escape, blokları doğru sırayla yerleştirip temizlemeye dayalı bir mobil puzzle oyunudur. Hizmet şunları içerebilir:'
+                  : 'Blocks - Puzzle Escape is a mobile puzzle game built around placing and clearing blocks in the correct order. The service may include:'}
               </p>
               <ul className="list-disc list-inside space-y-2">
                 {serviceIncludes.map(item => (
@@ -129,8 +129,8 @@ const BlockBoomTermsPage = () => {
             <Section title={isTR ? '6. Fikri Mülkiyet' : '6. Intellectual Property'}>
               <p>
                 {isTR
-                  ? 'Block Boom! adı, logosu, arayüzü, seviye düzenleri, oyun mantığı, yazılımı ve görsel varlıkları ilgili hak sahiplerinin mülkiyetindedir. Size yalnızca kişisel, devredilemez ve sınırlı bir kullanım hakkı verilir.'
-                  : 'The Block Boom! name, logo, interface, level layouts, gameplay mechanics, software, and visual assets belong to the relevant rights holders. You are granted only a personal, non-transferable, limited right to use the app.'}
+                  ? 'Blocks - Puzzle Escape adı, logosu, arayüzü, seviye düzenleri, oyun mantığı, yazılımı ve görsel varlıkları ilgili hak sahiplerinin mülkiyetindedir. Size yalnızca kişisel, devredilemez ve sınırlı bir kullanım hakkı verilir.'
+                  : 'The Blocks - Puzzle Escape name, logo, interface, level layouts, gameplay mechanics, software, and visual assets belong to the relevant rights holders. You are granted only a personal, non-transferable, limited right to use the app.'}
               </p>
             </Section>
 
@@ -177,4 +177,4 @@ const BlockBoomTermsPage = () => {
   );
 };
 
-export default BlockBoomTermsPage;
+export default BlocksPuzzleEscapeTermsPage;

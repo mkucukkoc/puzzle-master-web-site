@@ -91,6 +91,38 @@ const BoomPreview = () => (
   </div>
 );
 
+const EscapePreview = () => (
+  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-[#17345f] p-5 shadow-[0_24px_80px_rgba(23, 52, 95, 0.2)] border border-[#cfe1ff]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#1f7cff]/15" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#17c3b2]/12" />
+    <div className="relative grid grid-cols-4 gap-3">
+      {[
+        '#1f7cff', '#1f7cff', '#17c3b2', '#17c3b2',
+        '#1f7cff', '#1f7cff', '#17c3b2', '#17c3b2',
+        '#0ea394', '#0ea394', '#ffb800', '#ffb800',
+        '#0ea394', '#0ea394', '#ffb800', '#ffb800',
+      ].map((color, index) => (
+        <div
+          key={`${color}-${index}`}
+          className="relative h-16 rounded-2xl border border-white/10 shadow-[inset_0_2px_0_rgba(255,255,255,0.25),inset_0_-5px_10px_rgba(0,0,0,0.25)]"
+          style={{ background: `linear-gradient(135deg, ${color}, ${color}cc 60%, rgba(255,255,255,0.15))` }}
+        >
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
+        </div>
+      ))}
+    </div>
+    <div className="relative mt-5 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#d9ecff]">
+        <span>PUZZLE ESCAPE</span>
+        <span className="text-[#17c3b2]">CLEAR PATHS</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-4/5 rounded-full bg-gradient-to-r from-[#1f7cff] via-[#17c3b2] to-[#ffb800]" />
+      </div>
+    </div>
+  </div>
+);
+
 const AppCard = ({ title, subtitle, description, preview, primaryHref, primaryLabel, secondaryHref, secondaryLabel, accentClass }) => (
   <div className="rounded-[2rem] border border-[#d6e8e4] bg-white p-5 sm:p-6 shadow-[0_24px_80px_rgba(31, 61, 58, 0.12)]">
     <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-6 items-center">
@@ -238,16 +270,16 @@ const HomePage = () => {
                 {isTR ? 'İKİ OYUN, TEK SİTE' : 'TWO GAMES, ONE SITE'}
               </p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
-                {isTR ? 'Puzzle ve Block Boom birlikte' : 'Puzzle and Block Boom together'}
+                {isTR ? 'Puzzle, Block Boom ve Puzzle Escape birlikte' : 'Puzzle, Block Boom, and Puzzle Escape together'}
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan iki uygulamayı da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
-                  : 'Discover both apps from the home page and open separate privacy and terms pages for each one.'}
+                  ? 'Ana sayfadan üç uygulamayı da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all three apps from the home page and open separate privacy and terms pages for each one.'}
               </p>
             </div>
 
-            <div className="mt-10 grid lg:grid-cols-2 gap-6">
+            <div className="mt-10 grid lg:grid-cols-3 gap-6">
               <AppCard
                 subtitle={isTR ? 'MEVCUT OYUN' : 'CURRENT GAME'}
                 title="Arrows Puzzle Master"
@@ -273,6 +305,19 @@ const HomePage = () => {
                 secondaryHref="/block-boom/privacy"
                 secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Blocks - Puzzle Escape"
+                description={isTR
+                  ? 'Kilitli blokları doğru sırada çöz, çıkış yolunu aç ve ayrı legal sayfalarla yeni bir puzzle markası keşfet.'
+                  : 'Solve locked blocks in the right order, open the escape path, and explore a new puzzle brand with separate legal pages.'}
+                preview={<EscapePreview />}
+                primaryHref="/blocks-puzzle-escape"
+                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
+                secondaryHref="/blocks-puzzle-escape/privacy"
+                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
+                accentClass="bg-[#e9f4ff] text-[#1f7cff] border border-[#cfe1ff]"
               />
             </div>
           </div>

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BlockBoomNav from '@/components/BlockBoomNav';
+import BlocksPuzzleEscapeNav from '@/components/BlocksPuzzleEscapeNav';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Section = ({ title, children }) => (
-  <section className="rounded-[1.5rem] bg-white border border-[#d8d2f4] p-6 shadow-sm">
-    <h3 className="text-xl font-black mb-3 text-[#251b52]">{title}</h3>
-    <div className="text-[#7b6cb2] leading-7 space-y-3">{children}</div>
+  <section className="rounded-[1.5rem] bg-white border border-[#cfe1ff] p-6 shadow-sm">
+    <h3 className="text-xl font-black mb-3 text-[#17345f]">{title}</h3>
+    <div className="text-[#6b86af] leading-7 space-y-3">{children}</div>
   </section>
 );
 
-const BlockBoomPrivacyPage = () => {
+const BlocksPuzzleEscapePrivacyPage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
 
@@ -46,37 +46,37 @@ const BlockBoomPrivacyPage = () => {
 
   const choices = isTR
     ? [
-        'Block Boom! oynanış için kişi listesi, fotoğraf, video veya hassas konum istemez.',
+        'Blocks - Puzzle Escape oynanış için kişi listesi, fotoğraf, video veya hassas konum istemez.',
         'İsterseniz reklam kimliği ayarlarınızı cihazınızdan sınırlayabilir veya sıfırlayabilirsiniz.',
         'Destek talepleri için bize e-posta gönderebilirsiniz; yalnızca talebinizi çözmek için gerekli bilgiler tutulur.',
       ]
     : [
-        'Block Boom! does not require contacts, photos, videos, or precise location for gameplay.',
+        'Blocks - Puzzle Escape does not require contacts, photos, videos, or precise location for gameplay.',
         'You can limit or reset your advertising ID settings from your device if desired.',
         'You can email us for support; we keep only the information needed to resolve your request.',
       ];
 
   return (
-    <div className="min-h-screen bg-[#fbfaff] text-[#251b52]">
-      <BlockBoomNav active="privacy" />
+    <div className="min-h-screen bg-[#f7fbff] text-[#17345f]">
+      <BlocksPuzzleEscapeNav active="privacy" />
 
       <main className="pt-24 sm:pt-28 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#3A37A0] via-[#4A41C6] to-[#5B4BE0] p-8 sm:p-10 shadow-[0_24px_60px_rgba(74,65,198,0.35)]">
+          <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#0f5aa7] via-[#1f7cff] to-[#2f89ff] p-8 sm:p-10 shadow-[0_24px_60px_rgba(31,124,255,0.26)]">
             <div className="flex items-center gap-4">
               <div className="grid grid-cols-2 gap-1.5">
-                <span className="h-6 w-6 rounded-md bg-[#FF5D5D] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#FF9F43] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#5AD26B] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
-                <span className="h-6 w-6 rounded-md bg-[#4C8DFF] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#1f7cff] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#17c3b2] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#0ea394] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#ffb800] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
               </div>
-              <p className="text-[11px] font-black tracking-[0.28em] text-[#FFD24C]">BLOCK BOOM!</p>
+              <p className="text-[11px] font-black tracking-[0.28em] text-[#d9ecff]">BLOCKS - PUZZLE ESCAPE</p>
             </div>
             <h1 className="mt-6 text-3xl sm:text-4xl font-black text-white">
               {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
             </h1>
             <p className="mt-3 text-white/70">
-              {isTR ? 'Son güncelleme: 11 Temmuz 2026' : 'Last updated: July 11, 2026'}
+              {isTR ? 'Son güncelleme: 23 Temmuz 2026' : 'Last updated: July 23, 2026'}
             </p>
           </div>
 
@@ -84,8 +84,8 @@ const BlockBoomPrivacyPage = () => {
             <Section title={isTR ? '1. Kapsam' : '1. Scope'}>
               <p>
                 {isTR
-                  ? 'Bu Gizlilik Politikası, Block Boom! mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, bunların neden işlendiğini ve kullanıcıların hangi haklara sahip olabileceğini açıklar.'
-                  : 'This Privacy Policy explains what data may be processed in connection with the Block Boom! mobile game and related web pages, why it is processed, and what rights users may have.'}
+                  ? 'Bu Gizlilik Politikası, Blocks - Puzzle Escape mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, bunların neden işlendiğini ve kullanıcıların hangi haklara sahip olabileceğini açıklar.'
+                  : 'This Privacy Policy explains what data may be processed in connection with the Blocks - Puzzle Escape mobile game and related web pages, why it is processed, and what rights users may have.'}
               </p>
             </Section>
 
@@ -113,16 +113,16 @@ const BlockBoomPrivacyPage = () => {
               </p>
               <p>
                 {isTR
-                  ? 'Block Boom!, yasaların gerektirdiği durumlar dışında kişisel verileri satmaz.'
-                  : 'Block Boom! does not sell personal data except where required by law.'}
+                  ? 'Blocks - Puzzle Escape, yasaların gerektirdiği durumlar dışında kişisel verileri satmaz.'
+                  : 'Blocks - Puzzle Escape does not sell personal data except where required by law.'}
               </p>
             </Section>
 
             <Section title={isTR ? '5. Reklamlar ve Ödüller' : '5. Ads and Rewards'}>
               <p>
                 {isTR
-                  ? 'Block Boom! bazı seviyelerde ödüllü reklam gösterebilir. Reklamı izlemeyi seçmeniz halinde, ödülün verilebilmesi için reklamın tamamlanması gerekebilir. Reklam ortakları, reklam ölçümü için cihaz tanımlayıcıları veya benzer teknik veriler kullanabilir.'
-                  : 'Block Boom! may show rewarded ads in some parts of the experience. If you choose to watch an ad, it may need to be completed before the reward is granted. Advertising partners may use device identifiers or similar technical data for measurement.'}
+                  ? 'Blocks - Puzzle Escape bazı seviyelerde ödüllü reklam gösterebilir. Reklamı izlemeyi seçmeniz halinde, ödülün verilebilmesi için reklamın tamamlanması gerekebilir. Reklam ortakları, reklam ölçümü için cihaz tanımlayıcıları veya benzer teknik veriler kullanabilir.'
+                  : 'Blocks - Puzzle Escape may show rewarded ads in some parts of the experience. If you choose to watch an ad, it may need to be completed before the reward is granted. Advertising partners may use device identifiers or similar technical data for measurement.'}
               </p>
             </Section>
 
@@ -137,8 +137,8 @@ const BlockBoomPrivacyPage = () => {
             <Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}>
               <p>
                 {isTR
-                  ? 'Block Boom! genel kitleye yöneliktir ve 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
-                  : 'Block Boom! is intended for a general audience and does not knowingly collect personal data from children under 13.'}
+                  ? 'Blocks - Puzzle Escape genel kitleye yöneliktir ve 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
+                  : 'Blocks - Puzzle Escape is intended for a general audience and does not knowingly collect personal data from children under 13.'}
               </p>
             </Section>
 
@@ -161,7 +161,7 @@ const BlockBoomPrivacyPage = () => {
                   ? 'Gizlilik ile ilgili sorular için: support@aveniaichat.com'
                   : 'Questions about privacy: support@aveniaichat.com'}
               </p>
-              <Link to="/block-boom/data-deletion" className="text-[#6a45d8] font-bold hover:text-[#251b52] transition-colors">
+              <Link to="/blocks-puzzle-escape/data-deletion" className="text-[#1f7cff] font-bold hover:text-[#17345f] transition-colors">
                 {isTR ? 'Veri Silme Talebi' : 'Data Deletion Request'}
               </Link>
             </Section>
@@ -172,4 +172,4 @@ const BlockBoomPrivacyPage = () => {
   );
 };
 
-export default BlockBoomPrivacyPage;
+export default BlocksPuzzleEscapePrivacyPage;

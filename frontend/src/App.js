@@ -10,6 +10,10 @@ import BlockBoomHomePage from '@/pages/BlockBoomHomePage';
 import BlockBoomPrivacyPage from '@/pages/BlockBoomPrivacyPage';
 import BlockBoomTermsPage from '@/pages/BlockBoomTermsPage';
 import BlockBoomDataDeletionPage from '@/pages/BlockBoomDataDeletionPage';
+import BlocksPuzzleEscapeHomePage from '@/pages/BlocksPuzzleEscapeHomePage';
+import BlocksPuzzleEscapePrivacyPage from '@/pages/BlocksPuzzleEscapePrivacyPage';
+import BlocksPuzzleEscapeTermsPage from '@/pages/BlocksPuzzleEscapeTermsPage';
+import BlocksPuzzleEscapeDataDeletionPage from '@/pages/BlocksPuzzleEscapeDataDeletionPage';
 import { LanguageProvider } from '@/context/LanguageContext';
 import '@/App.css';
 
@@ -26,6 +30,10 @@ function App() {
             <Route path="/block-boom/privacy" element={<BlockBoomPrivacyPage />} />
             <Route path="/block-boom/terms" element={<BlockBoomTermsPage />} />
             <Route path="/block-boom/data-deletion" element={<BlockBoomDataDeletionPage />} />
+            <Route path="/blocks-puzzle-escape" element={<BlocksPuzzleEscapeHomePage />} />
+            <Route path="/blocks-puzzle-escape/privacy" element={<BlocksPuzzleEscapePrivacyPage />} />
+            <Route path="/blocks-puzzle-escape/terms" element={<BlocksPuzzleEscapeTermsPage />} />
+            <Route path="/blocks-puzzle-escape/data-deletion" element={<BlocksPuzzleEscapeDataDeletionPage />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="/account-deletion" element={<AccountDeletionPage />} />
             <Route path="/data-deletion" element={<DataDeletionPage />} />

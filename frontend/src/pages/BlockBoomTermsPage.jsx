@@ -71,7 +71,7 @@ const BlockBoomTermsPage = () => {
               {isTR ? 'Kullanım Koşulları' : 'Terms of Use'}
             </h1>
             <p className="mt-3 text-white/70">
-              {isTR ? 'Son güncelleme: 11 Temmuz 2026' : 'Last updated: July 11, 2026'}
+              {isTR ? 'Son güncelleme: 23 Temmuz 2026' : 'Last updated: July 23, 2026'}
             </p>
           </div>
 
@@ -79,8 +79,8 @@ const BlockBoomTermsPage = () => {
             <Section title={isTR ? '1. Kabul' : '1. Acceptance'}>
               <p>
                 {isTR
-                  ? 'Block Boom! uygulamasını indirerek veya kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayın.'
-                  : 'By downloading or using Block Boom!, you agree to these terms. If you do not agree, please do not use the app.'}
+                  ? 'Block Boom! uygulamasını indirerek, açarak veya kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız lütfen uygulamayı kullanmayın.'
+                  : 'By downloading, opening, or using Block Boom!, you agree to these terms. If you do not agree, please do not use the app.'}
               </p>
             </Section>
 

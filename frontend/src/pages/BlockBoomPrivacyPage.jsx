@@ -16,44 +16,44 @@ const BlockBoomPrivacyPage = () => {
 
   const collectedData = isTR
     ? [
-        'Oyun ilerlemesi, seviye durumu, can/ipucu kullanımı, ayarlar ve tercih edilen dil',
+        'Oyun ilerlemesi, seviye durumu, can ve ipucu kullanımı, seçili tema ve uygulama tercihleri',
         'Cihaz modeli, işletim sistemi, uygulama sürümü, çökme kayıtları ve performans sinyalleri',
-        'Reklam gösterimi, ödüllü reklam tamamlanmaları ve reklam kimlikleri gibi teknik ölçüm verileri',
-        'Satın alma, abonelik veya platform doğrulama durumu',
+        'Reklam gösterimi, ödüllü reklam tamamlama bilgileri ve reklam kimlikleri gibi teknik veriler',
+        'Satın alma, abonelik veya mağaza doğrulama durumu',
         'Destek için bizimle iletişime geçerseniz e-posta adresi ve mesaj içeriği',
       ]
     : [
-        'Game progress, level state, hearts/hints usage, settings, and preferred language',
+        'Game progress, level state, hearts and hint usage, selected theme, and app preferences',
         'Device model, operating system, app version, crash logs, and performance signals',
-        'Ad delivery, rewarded-ad completions, and technical measurement data such as advertising identifiers',
-        'Purchase, subscription, or platform verification status',
+        'Ad delivery, rewarded-ad completion data, and technical data such as advertising identifiers',
+        'Purchase, subscription, or store verification status',
         'Email address and message content if you contact support',
       ];
 
-  const uses = isTR
+  const purposes = isTR
     ? [
-        'Oyunu çalıştırmak, ilerlemenizi kaydetmek ve aynı cihaz üzerinde deneyimi korumak',
+        'Oyunu çalıştırmak, ilerlemenizi kaydetmek ve mümkün olduğunda deneyimi cihazlar arasında korumak',
         'Reklamları, ödüllü içerikleri ve varsa premium özellikleri sunmak',
         'Hata ayıklamak, performansı iyileştirmek ve kötüye kullanımı önlemek',
         'Destek, hesap/ödemeye ilişkin talepler ve veri silme isteklerine yanıt vermek',
       ]
     : [
-        'Run the game, save progress, and preserve the experience on the same device',
+        'Run the game, save progress, and preserve the experience across devices where applicable',
         'Deliver ads, rewarded content, and any premium features where available',
         'Debug issues, improve performance, and prevent abuse',
         'Respond to support, account/payment-related requests, and data deletion requests',
       ];
 
-  const choices = isTR
+  const controls = isTR
     ? [
         'Block Boom! oynanış için kişi listesi, fotoğraf, video veya hassas konum istemez.',
-        'İsterseniz reklam kimliği ayarlarınızı cihazınızdan sınırlayabilir veya sıfırlayabilirsiniz.',
-        'Destek talepleri için bize e-posta gönderebilirsiniz; yalnızca talebinizi çözmek için gerekli bilgiler tutulur.',
+        'İsterseniz cihaz ayarlarından reklam kimliğinizi sınırlayabilir veya sıfırlayabilirsiniz.',
+        'Yalnızca talebinizi çözmek için gerekli olan destek bilgileri tutulur.',
       ]
     : [
         'Block Boom! does not require contacts, photos, videos, or precise location for gameplay.',
         'You can limit or reset your advertising ID settings from your device if desired.',
-        'You can email us for support; we keep only the information needed to resolve your request.',
+        'We keep only the support information needed to resolve your request.',
       ];
 
   return (
@@ -76,7 +76,7 @@ const BlockBoomPrivacyPage = () => {
               {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
             </h1>
             <p className="mt-3 text-white/70">
-              {isTR ? 'Son güncelleme: 11 Temmuz 2026' : 'Last updated: July 11, 2026'}
+              {isTR ? 'Son güncelleme: 23 Temmuz 2026' : 'Last updated: July 23, 2026'}
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const BlockBoomPrivacyPage = () => {
 
             <Section title={isTR ? '3. Verileri Nasıl Kullanırız' : '3. How We Use Data'}>
               <ul className="list-disc list-inside space-y-2">
-                {uses.map(item => (
+                {purposes.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -144,7 +144,7 @@ const BlockBoomPrivacyPage = () => {
 
             <Section title={isTR ? '8. Haklarınız ve Seçimleriniz' : '8. Your Rights and Choices'}>
               <ul className="list-disc list-inside space-y-2">
-                {choices.map(item => (
+                {controls.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

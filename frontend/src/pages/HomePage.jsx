@@ -157,6 +157,40 @@ const BlocksPreview = () => (
   </div>
 );
 
+const NonogramPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#061f35] p-4 shadow-[0_24px_80px_rgba(6,31,53,0.18)] border border-[#16455a]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#1fdbc9]/12" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ff6f61]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#06213a]">
+      <img
+        src="/nonogram/nonogram-feature-1024x500.png"
+        alt="Nonogram Pixel Puzzle feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/nonogram/nonogram-play-icon-512.png"
+          alt="Nonogram Pixel Puzzle icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#8feceb]">NONOGRAM</div>
+          <div className="text-sm font-black text-white">Pixel Puzzle</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#cfe7ea]">
+        <span>DAILY GRID</span>
+        <span className="text-[#1fdbc9]">PIXEL CLUES</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-4/5 rounded-full bg-gradient-to-r from-[#1fdbc9] via-[#ff6f61] to-[#ffb86b]" />
+      </div>
+    </div>
+  </div>
+);
+
 const AppCard = ({
   title,
   subtitle,
@@ -200,6 +234,7 @@ const STORE = {
   arrows: 'https://play.google.com/store/apps/details?id=com.puzzle.masters',
   boom: 'https://play.google.com/store/apps/details?id=com.blocks.boom',
   cars: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
+  nonogram: 'https://play.google.com/store/apps/details?id=com.nonogram.pixelpuzzle',
 };
 
 const HomePage = () => {
@@ -322,17 +357,17 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-                {isTR ? 'DÖRT OYUN, TEK SİTE' : 'FOUR GAMES, ONE SITE'}
+                {isTR ? 'BEŞ OYUN, TEK SİTE' : 'FIVE GAMES, ONE SITE'}
               </p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
                 {isTR
-                  ? 'Puzzle, Block Boom, Cars ve Blocks - Puzzle Escape birlikte'
-                  : 'Puzzle, Block Boom, Cars, and Blocks - Puzzle Escape together'}
+                  ? 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape ve Nonogram birlikte'
+                  : 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, and Nonogram together'}
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan dört oyunu da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all four games from the home page and open separate privacy and terms pages for each one.'}
+                  ? 'Ana sayfadan beş oyunu da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all five games from the home page and open separate privacy and terms pages for each one.'}
               </p>
             </div>
 
@@ -388,6 +423,19 @@ const HomePage = () => {
                 secondaryHref="/blocks-puzzle-escape/privacy"
                 secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
                 accentClass="bg-[#e9f4ff] text-[#1f7cff] border border-[#cfe1ff]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Nonogram - Pixel Puzzle"
+                description={isTR
+                  ? 'Sayı ipuçlarıyla piksel resmi ortaya çıkar, günlük bulmacaları çöz ve yıldız serisini koru. Temiz, koyu ve mağaza uyumlu nonogram deneyimi.'
+                  : 'Reveal pixel art from number clues, solve daily puzzles, and keep your streak alive in a clean, dark, store-ready nonogram experience.'}
+                preview={<NonogramPreview />}
+                primaryHref={STORE.nonogram}
+                primaryLabel="Google Play"
+                secondaryHref="/nonogram"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#e8f8f8] text-[#0f8c90] border border-[#b9dfdf]"
               />
             </div>
           </div>

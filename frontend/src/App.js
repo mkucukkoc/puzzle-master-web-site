@@ -14,6 +14,10 @@ import CarPuzzleHomePage from '@/pages/CarPuzzleHomePage';
 import CarPuzzlePrivacyPage from '@/pages/CarPuzzlePrivacyPage';
 import CarPuzzleTermsPage from '@/pages/CarPuzzleTermsPage';
 import CarPuzzleDataDeletionPage from '@/pages/CarPuzzleDataDeletionPage';
+import NonogramHomePage from '@/pages/NonogramHomePage';
+import NonogramPrivacyPage from '@/pages/NonogramPrivacyPage';
+import NonogramTermsPage from '@/pages/NonogramTermsPage';
+import NonogramDataDeletionPage from '@/pages/NonogramDataDeletionPage';
 import BlocksPuzzleEscapeHomePage from '@/pages/BlocksPuzzleEscapeHomePage';
 import BlocksPuzzleEscapePrivacyPage from '@/pages/BlocksPuzzleEscapePrivacyPage';
 import BlocksPuzzleEscapeTermsPage from '@/pages/BlocksPuzzleEscapeTermsPage';
@@ -45,6 +49,17 @@ function App() {
             <Route path="/car-puzzle/data-deletion" element={<CarPuzzleDataDeletionPage />} />
             <Route path="/car-puzzle/data-deletion.html" element={<CarPuzzleDataDeletionPage />} />
             <Route path="/car-puzzle/data-deletion/index.html" element={<CarPuzzleDataDeletionPage />} />
+            <Route path="/nonogram" element={<NonogramHomePage />} />
+            <Route path="/nonogram/index.html" element={<NonogramHomePage />} />
+            <Route path="/nonogram/privacy" element={<NonogramPrivacyPage />} />
+            <Route path="/nonogram/privacy.html" element={<NonogramPrivacyPage />} />
+            <Route path="/nonogram/privacy/index.html" element={<NonogramPrivacyPage />} />
+            <Route path="/nonogram/terms" element={<NonogramTermsPage />} />
+            <Route path="/nonogram/terms.html" element={<NonogramTermsPage />} />
+            <Route path="/nonogram/terms/index.html" element={<NonogramTermsPage />} />
+            <Route path="/nonogram/data-deletion" element={<NonogramDataDeletionPage />} />
+            <Route path="/nonogram/data-deletion.html" element={<NonogramDataDeletionPage />} />
+            <Route path="/nonogram/data-deletion/index.html" element={<NonogramDataDeletionPage />} />
             <Route path="/blocks-puzzle-escape" element={<BlocksPuzzleEscapeHomePage />} />
             <Route path="/blocks-puzzle-escape/privacy" element={<BlocksPuzzleEscapePrivacyPage />} />
             <Route path="/blocks-puzzle-escape/terms" element={<BlocksPuzzleEscapeTermsPage />} />

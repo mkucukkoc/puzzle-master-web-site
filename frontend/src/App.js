@@ -18,6 +18,10 @@ import NonogramHomePage from '@/pages/NonogramHomePage';
 import NonogramPrivacyPage from '@/pages/NonogramPrivacyPage';
 import NonogramTermsPage from '@/pages/NonogramTermsPage';
 import NonogramDataDeletionPage from '@/pages/NonogramDataDeletionPage';
+import MinesweeperHomePage from '@/pages/MinesweeperHomePage';
+import MinesweeperPrivacyPage from '@/pages/MinesweeperPrivacyPage';
+import MinesweeperTermsPage from '@/pages/MinesweeperTermsPage';
+import MinesweeperDataDeletionPage from '@/pages/MinesweeperDataDeletionPage';
 import BlocksPuzzleEscapeHomePage from '@/pages/BlocksPuzzleEscapeHomePage';
 import BlocksPuzzleEscapePrivacyPage from '@/pages/BlocksPuzzleEscapePrivacyPage';
 import BlocksPuzzleEscapeTermsPage from '@/pages/BlocksPuzzleEscapeTermsPage';
@@ -60,6 +64,17 @@ function App() {
             <Route path="/nonogram/data-deletion" element={<NonogramDataDeletionPage />} />
             <Route path="/nonogram/data-deletion.html" element={<NonogramDataDeletionPage />} />
             <Route path="/nonogram/data-deletion/index.html" element={<NonogramDataDeletionPage />} />
+            <Route path="/minesweeper" element={<MinesweeperHomePage />} />
+            <Route path="/minesweeper/index.html" element={<MinesweeperHomePage />} />
+            <Route path="/minesweeper/privacy" element={<MinesweeperPrivacyPage />} />
+            <Route path="/minesweeper/privacy.html" element={<MinesweeperPrivacyPage />} />
+            <Route path="/minesweeper/privacy/index.html" element={<MinesweeperPrivacyPage />} />
+            <Route path="/minesweeper/terms" element={<MinesweeperTermsPage />} />
+            <Route path="/minesweeper/terms.html" element={<MinesweeperTermsPage />} />
+            <Route path="/minesweeper/terms/index.html" element={<MinesweeperTermsPage />} />
+            <Route path="/minesweeper/data-deletion" element={<MinesweeperDataDeletionPage />} />
+            <Route path="/minesweeper/data-deletion.html" element={<MinesweeperDataDeletionPage />} />
+            <Route path="/minesweeper/data-deletion/index.html" element={<MinesweeperDataDeletionPage />} />
             <Route path="/blocks-puzzle-escape" element={<BlocksPuzzleEscapeHomePage />} />
             <Route path="/blocks-puzzle-escape/privacy" element={<BlocksPuzzleEscapePrivacyPage />} />
             <Route path="/blocks-puzzle-escape/terms" element={<BlocksPuzzleEscapeTermsPage />} />

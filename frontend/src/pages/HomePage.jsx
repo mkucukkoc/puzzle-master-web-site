@@ -191,6 +191,40 @@ const NonogramPreview = () => (
   </div>
 );
 
+const MinesweeperPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#0a1f4f] p-4 shadow-[0_24px_80px_rgba(10,31,79,0.2)] border border-[#253f86]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#4bb2ff]/12" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ff8d5a]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#102b67]">
+      <img
+        src="/minesweeper/minesweeper-mine-quest-feature-1024x500.png"
+        alt="Minesweeper: Mine Quest feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/minesweeper/minesweeper-mine-quest-play-icon-512.png"
+          alt="Minesweeper: Mine Quest icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#9ed7ff]">MINESWEEPER</div>
+          <div className="text-sm font-black text-white">Mine Quest</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#d8e7ff]">
+        <span>SAFE TILES</span>
+        <span className="text-[#ff8d5a]">FLAG MODE</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-[86%] rounded-full bg-gradient-to-r from-[#4bb2ff] via-[#3370ff] to-[#ff8d5a]" />
+      </div>
+    </div>
+  </div>
+);
+
 const AppCard = ({
   title,
   subtitle,
@@ -235,6 +269,7 @@ const STORE = {
   boom: 'https://play.google.com/store/apps/details?id=com.blocks.boom',
   cars: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
   nonogram: 'https://play.google.com/store/apps/details?id=com.nonogram.pixelpuzzle',
+  minesweeper: 'https://play.google.com/store/apps/details?id=com.minequest.minesweeper',
 };
 
 const HomePage = () => {
@@ -357,17 +392,17 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-                {isTR ? 'BEŞ OYUN, TEK SİTE' : 'FIVE GAMES, ONE SITE'}
+                {isTR ? 'ALTI OYUN, TEK SİTE' : 'SIX GAMES, ONE SITE'}
               </p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
                 {isTR
-                  ? 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape ve Nonogram birlikte'
-                  : 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, and Nonogram together'}
+                  ? 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, Nonogram ve Minesweeper birlikte'
+                  : 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, Nonogram, and Minesweeper together'}
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan beş oyunu da keşfedebilir, her biri için ayrı gizlilik ve kullanım koşulları sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all five games from the home page and open separate privacy and terms pages for each one.'}
+                  ? 'Ana sayfadan altı oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all six games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
               </p>
             </div>
 
@@ -436,6 +471,19 @@ const HomePage = () => {
                 secondaryHref="/nonogram"
                 secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#e8f8f8] text-[#0f8c90] border border-[#b9dfdf]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Minesweeper: Mine Quest"
+                description={isTR
+                  ? 'Sayıları çöz, güvenli kareleri aç, mayınları işaretle ve deterministik 900 seviyelik akışta ustalaş. Klasik mantık, modern mağaza vitrini.'
+                  : 'Read the numbers, open safe tiles, flag the mines, and master a deterministic 900-level flow. Classic logic with a modern store-ready presentation.'}
+                preview={<MinesweeperPreview />}
+                primaryHref={STORE.minesweeper}
+                primaryLabel="Google Play"
+                secondaryHref="/minesweeper"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#eaf3ff] text-[#2d63db] border border-[#c9dbff]"
               />
             </div>
           </div>

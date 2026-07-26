@@ -225,6 +225,108 @@ const MinesweeperPreview = () => (
   </div>
 );
 
+const WordSearchPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#0f3b2d] p-4 shadow-[0_24px_80px_rgba(15,59,45,0.2)] border border-[#bfe6cf]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#5fd08a]/12" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#f4c95d]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#113e30]">
+      <img
+        src="/word-search/word-search-feature-1024x500.png"
+        alt="Word Search feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/word-search/word-search-play-icon-512.png"
+          alt="Word Search icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#c6f0d7]">WORD SEARCH</div>
+          <div className="text-sm font-black text-white">Hidden Words</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#d4f1df]">
+        <span>LETTER GRID</span>
+        <span className="text-[#f4c95d]">DAILY WORDS</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-[82%] rounded-full bg-gradient-to-r from-[#5fd08a] via-[#2ea66b] to-[#f4c95d]" />
+      </div>
+    </div>
+  </div>
+);
+
+const FlowConnectsPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#0b1533] p-4 shadow-[0_24px_80px_rgba(11,21,51,0.2)] border border-[#7cccf0]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#20c6e8]/12" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#47d6c6]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#102149]">
+      <img
+        src="/flow-connects/flow-connects-feature-1024x500.png"
+        alt="Flow Connects: Pipe Puzzle feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/flow-connects/flow-connects-play-icon-512.png"
+          alt="Flow Connects: Pipe Puzzle icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#a7f0ff]">FLOW CONNECTS</div>
+          <div className="text-sm font-black text-white">Pipe Puzzle</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#d5eef8]">
+        <span>PIPE FLOW</span>
+        <span className="text-[#47d6c6]">DAILY CONNECTS</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-[88%] rounded-full bg-gradient-to-r from-[#20c6e8] via-[#0f8cdb] to-[#47d6c6]" />
+      </div>
+    </div>
+  </div>
+);
+
+const SudokuPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#17113d] p-4 shadow-[0_24px_80px_rgba(23,17,61,0.2)] border border-[#c6bcff]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#7556ef]/12" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#3f83f8]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#1d1650]">
+      <img
+        src="/sudoku-quest/sudoku-quest-feature-1024x500.png"
+        alt="Sudoku Quest feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/sudoku-quest/sudoku-quest-play-icon-512.png"
+          alt="Sudoku Quest icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#d8d3ff]">SUDOKU QUEST</div>
+          <div className="text-sm font-black text-white">Number Logic</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#dcd8ff]">
+        <span>9×9 GRID</span>
+        <span className="text-[#7dd3fc]">DAILY SUDOKU</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-[84%] rounded-full bg-gradient-to-r from-[#7556ef] via-[#3f83f8] to-[#7dd3fc]" />
+      </div>
+    </div>
+  </div>
+);
+
 const AppCard = ({
   title,
   subtitle,
@@ -270,6 +372,9 @@ const STORE = {
   cars: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
   nonogram: 'https://play.google.com/store/apps/details?id=com.nonogram.pixelpuzzle',
   minesweeper: 'https://play.google.com/store/apps/details?id=com.minequest.minesweeper',
+  wordSearch: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.wordsearch',
+  flowConnects: 'https://play.google.com/store/apps/details?id=com.flowconnects.pipepuzzle',
+  sudoku: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.sudokuquest',
 };
 
 const HomePage = () => {
@@ -401,8 +506,8 @@ const HomePage = () => {
               </h2>
               <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
                 {isTR
-                  ? 'Ana sayfadan altı oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all six games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
+                  ? 'Ana sayfadan dokuz oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
+                  : 'Discover all nine games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
               </p>
             </div>
 
@@ -484,6 +589,45 @@ const HomePage = () => {
                 secondaryHref="/minesweeper"
                 secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#eaf3ff] text-[#2d63db] border border-[#c9dbff]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Word Search"
+                description={isTR
+                  ? 'Gizli kelimeleri bul, günlük bulmacaları çöz, seri takibini sürdür ve 14 dil desteğiyle rahat bir kelime avı yaşa.'
+                  : 'Find hidden words, solve daily puzzles, keep your streak going, and enjoy a calm word hunt with 14-language support.'}
+                preview={<WordSearchPreview />}
+                primaryHref={STORE.wordSearch}
+                primaryLabel="Google Play"
+                secondaryHref="/word-search"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#eef8ef] text-[#2ea66b] border border-[#ccebd6]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Flow Connects: Pipe Puzzle"
+                description={isTR
+                  ? 'Aynı renkteki uçları birleştir, tüm hücreleri doldur ve her gün değişen akış bulmacalarında mantığını test et.'
+                  : 'Connect matching colors, fill every cell, and test your logic with daily flow puzzles that keep changing.'}
+                preview={<FlowConnectsPreview />}
+                primaryHref={STORE.flowConnects}
+                primaryLabel="Google Play"
+                secondaryHref="/flow-connects"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#eaf7fb] text-[#0f8cdb] border border-[#cbe8f4]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Sudoku Quest"
+                description={isTR
+                  ? 'İpuçları, notlar, günlük Sudoku ve tek çözümlü 2.000 bölümle sayılara hükmet. Rahat, temiz ve klasik bir mantık oyunu.'
+                  : 'Master the numbers with hints, notes, daily Sudoku, and 2,000 single-solution boards. Calm, clean, classic logic play.'}
+                preview={<SudokuPreview />}
+                primaryHref={STORE.sudoku}
+                primaryLabel="Google Play"
+                secondaryHref="/sudoku-quest"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#f0ecff] text-[#7556ef] border border-[#ddd6ff]"
               />
             </div>
           </div>

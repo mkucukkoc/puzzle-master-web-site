@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Triple Grove: Tile Match - Match 3 tiles, clear layered boards, and solve 3,000 levels!" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Triple Grove: Tile Match</title>
+    <style>
+      :root { --bg:#f0fdf4; --panel:#fff; --ink:#052e16; --muted:#365314; --accent:#16a34a; --line:#bbf7d0; }
+      * { box-sizing: border-box; }
+      body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      a { color:inherit; text-decoration:none; }
+      .wrap { width:min(920px, calc(100% - 32px)); margin:0 auto; }
+      nav { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+      .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+      .brand { display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:800; }
+      .mark { width:44px; height:44px; border-radius:16px; position:relative; overflow:hidden; border:1px solid var(--line); background:#052e16; box-shadow:0 10px 30px rgba(22,163,74,.22); }
+      .mark img { width:100%; height:100%; object-fit:cover; display:block; }
+      .nav-right { display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:flex-end; }
+      .nav-link { font-size:14px; font-weight:700; color:var(--muted); }
+      .nav-link:hover { color:var(--accent); }
+      .pill { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:0 16px; border-radius:999px; font-size:14px; font-weight:800; white-space:nowrap; }
+      .btn { color:#fff; background:var(--accent); box-shadow:0 10px 24px rgba(22,163,74,.22); }
+      .btn:hover { background:#15803d; }
+      main { padding:52px 0; }
+      .eyebrow { color:var(--accent); font-size:12px; font-weight:900; letter-spacing:.22em; text-transform:uppercase; }
+      h1 { margin:12px 0; font-size:clamp(34px, 7vw, 56px); line-height:1; letter-spacing:-.04em; }
+      p { color:var(--muted); line-height:1.75; font-size:18px; }
+      section { margin-top:24px; padding:32px; border:1px solid var(--line); border-radius:24px; background:var(--panel); }
+      .hero-img { width:100%; border-radius:16px; border:1px solid var(--line); margin-top:24px; }
+      footer { padding:42px 0; color:var(--muted); text-align:center; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap nav">
+        <a class="brand" href="/tile-match">
+          <div class="mark"><img src="/tile-match/tile-match-play-icon-512.png" alt="Triple Grove: Tile Match" /></div>
+          <span>Triple Grove: Tile Match</span>
+        </a>
+        <div class="nav-right">
+          <a class="nav-link" href="/tile-match/privacy.html">Privacy</a>
+          <a class="nav-link" href="/tile-match/terms.html">Terms</a>
+          <a class="nav-link" href="/tile-match/data-deletion.html">Data Deletion</a>
+          <a class="pill btn" href="https://play.google.com/store/apps/details?id=com.mkucukkoc.triplegrove">Google Play</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <p class="eyebrow">Triple Grove: Tile Match</p>
+      <h1>Match 3 Tiles & Clear the Board</h1>
+      <p>Find colorful tiles, bring three identical pictures together in the 7-slot tray, and clear every layered board. 3,000 solvable offline levels, undo & shuffle boosters, and 10 beautiful backgrounds!</p>
+
+      <section>
+        <h2>Features</h2>
+        <ul>
+          <li><strong>3,000 Solvable Levels:</strong> 3 progression tracks carefully built and guaranteed solvable.</li>
+          <li><strong>Undo & Shuffle Boosters:</strong> Helpful tools when you're in a pinch.</li>
+          <li><strong>10 Selectable Themes:</strong> Change backgrounds and tile icons as you progress.</li>
+          <li><strong>Offline Play:</strong> Play anytime, anywhere without internet connection.</li>
+        </ul>
+        <img class="hero-img" src="/tile-match/tile-match-feature-1024x500.png" alt="Triple Grove Feature Graphic" />
+      </section>
+
+      <section>
+        <h2>Legal & Support</h2>
+        <p>Review our <a style="color:var(--accent); font-weight:bold;" href="/tile-match/privacy.html">Privacy Policy</a>, <a style="color:var(--accent); font-weight:bold;" href="/tile-match/terms.html">Terms of Use</a>, or <a style="color:var(--accent); font-weight:bold;" href="/tile-match/data-deletion.html">Data Deletion Instructions</a>.</p>
+        <p>Support contact: <a style="color:var(--accent); font-weight:bold;" href="mailto:iammustafakucukkoc@gmail.com">iammustafakucukkoc@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer>© 2026 Triple Grove: Tile Match</footer>
+  </body>
+</html>

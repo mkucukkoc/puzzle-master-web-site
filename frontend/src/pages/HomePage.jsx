@@ -327,6 +327,40 @@ const SudokuPreview = () => (
   </div>
 );
 
+const TileMatchPreview = () => (
+  <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] bg-[#052e16] p-4 shadow-[0_24px_80px_rgba(5,46,22,0.2)] border border-[#bbf7d0]">
+    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#16a34a]/15" />
+    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#eab308]/10" />
+    <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0a4722]">
+      <img
+        src="/tile-match/tile-match-feature-1024x500.png"
+        alt="Triple Grove: Tile Match feature graphic"
+        className="h-auto w-full object-cover"
+      />
+      <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/40 px-3 py-2 backdrop-blur-md">
+        <img
+          src="/tile-match/tile-match-play-icon-512.png"
+          alt="Triple Grove: Tile Match icon"
+          className="h-11 w-11 rounded-2xl object-cover"
+        />
+        <div className="text-left">
+          <div className="text-[11px] font-bold tracking-[0.22em] text-[#bbf7d0]">TRIPLE GROVE</div>
+          <div className="text-sm font-black text-white">Tile Match</div>
+        </div>
+      </div>
+    </div>
+    <div className="relative mt-4 rounded-2xl bg-white/8 p-4 border border-white/10">
+      <div className="flex items-center justify-between text-xs font-semibold text-[#bbf7d0]">
+        <span>7-SLOT TRAY</span>
+        <span className="text-[#facc15]">TRIPLE MATCH</span>
+      </div>
+      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full w-[85%] rounded-full bg-gradient-to-r from-[#16a34a] via-[#eab308] to-[#22c55e]" />
+      </div>
+    </div>
+  </div>
+);
+
 const AppCard = ({
   title,
   subtitle,
@@ -375,6 +409,7 @@ const STORE = {
   wordSearch: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.wordsearch',
   flowConnects: 'https://play.google.com/store/apps/details?id=com.flowconnects.pipepuzzle',
   sudoku: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.sudokuquest',
+  tileMatch: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.triplegrove',
 };
 
 const HomePage = () => {
@@ -628,6 +663,19 @@ const HomePage = () => {
                 secondaryHref="/sudoku-quest"
                 secondaryLabel={isTR ? 'Sayfa' : 'Page'}
                 accentClass="bg-[#f0ecff] text-[#7556ef] border border-[#ddd6ff]"
+              />
+              <AppCard
+                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
+                title="Triple Grove: Tile Match"
+                description={isTR
+                  ? 'Katmanlı tahtalarda 3 aynı taşı eşleştir, tepsiyi doldurmadan tahtayı temizle ve 3.000 çözülebilir bölümün tadını çıkar.'
+                  : 'Match 3 identical tiles on layered boards, clear the board before filling the tray, and enjoy 3,000 solvable levels.'}
+                preview={<TileMatchPreview />}
+                primaryHref={STORE.tileMatch}
+                primaryLabel="Google Play"
+                secondaryHref="/tile-match"
+                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
+                accentClass="bg-[#f0fdf4] text-[#16a34a] border border-[#bbf7d0]"
               />
             </div>
           </div>

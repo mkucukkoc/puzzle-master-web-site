@@ -26,6 +26,10 @@ import BlocksPuzzleEscapeHomePage from '@/pages/BlocksPuzzleEscapeHomePage';
 import BlocksPuzzleEscapePrivacyPage from '@/pages/BlocksPuzzleEscapePrivacyPage';
 import BlocksPuzzleEscapeTermsPage from '@/pages/BlocksPuzzleEscapeTermsPage';
 import BlocksPuzzleEscapeDataDeletionPage from '@/pages/BlocksPuzzleEscapeDataDeletionPage';
+import TileMatchHomePage from '@/pages/TileMatchHomePage';
+import TileMatchPrivacyPage from '@/pages/TileMatchPrivacyPage';
+import TileMatchTermsPage from '@/pages/TileMatchTermsPage';
+import TileMatchDataDeletionPage from '@/pages/TileMatchDataDeletionPage';
 import { LanguageProvider } from '@/context/LanguageContext';
 import '@/App.css';
 
@@ -79,6 +83,21 @@ function App() {
             <Route path="/blocks-puzzle-escape/privacy" element={<BlocksPuzzleEscapePrivacyPage />} />
             <Route path="/blocks-puzzle-escape/terms" element={<BlocksPuzzleEscapeTermsPage />} />
             <Route path="/blocks-puzzle-escape/data-deletion" element={<BlocksPuzzleEscapeDataDeletionPage />} />
+            <Route path="/tile-match" element={<TileMatchHomePage />} />
+            <Route path="/tile-match/index.html" element={<TileMatchHomePage />} />
+            <Route path="/tile-match/privacy" element={<TileMatchPrivacyPage />} />
+            <Route path="/tile-match/privacy.html" element={<TileMatchPrivacyPage />} />
+            <Route path="/tile-match/privacy/index.html" element={<TileMatchPrivacyPage />} />
+            <Route path="/tile-match/terms" element={<TileMatchTermsPage />} />
+            <Route path="/tile-match/terms.html" element={<TileMatchTermsPage />} />
+            <Route path="/tile-match/terms/index.html" element={<TileMatchTermsPage />} />
+            <Route path="/tile-match/data-deletion" element={<TileMatchDataDeletionPage />} />
+            <Route path="/tile-match/data-deletion.html" element={<TileMatchDataDeletionPage />} />
+            <Route path="/tile-match/data-deletion/index.html" element={<TileMatchDataDeletionPage />} />
+            <Route path="/triple-grove" element={<TileMatchHomePage />} />
+            <Route path="/triple-grove/privacy" element={<TileMatchPrivacyPage />} />
+            <Route path="/triple-grove/terms" element={<TileMatchTermsPage />} />
+            <Route path="/triple-grove/data-deletion" element={<TileMatchDataDeletionPage />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="/account-deletion" element={<AccountDeletionPage />} />
             <Route path="/data-deletion" element={<DataDeletionPage />} />

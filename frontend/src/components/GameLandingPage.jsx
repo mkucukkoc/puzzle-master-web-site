@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, Download, Smartphone } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import GameArtwork from '@/components/GameArtwork';
+import StoreBadge from '@/components/StoreBadge';
 
 const GameLandingPage = ({ game }) => {
   const { language } = useLanguage();
@@ -18,23 +19,9 @@ const GameLandingPage = ({ game }) => {
             <ChevronLeft size={16} />
             {isTR ? 'Ana sayfa' : 'Home'}
           </Link>
-          <div className="flex items-center gap-2">
-            <a
-              href={game.playStoreUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-900 hover:opacity-90 transition-opacity"
-            >
-              Google Play
-            </a>
-            <a
-              href={game.appStoreUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/15 bg-white/6 px-4 py-2 text-sm font-bold text-white hover:bg-white/12 transition-colors"
-            >
-              App Store
-            </a>
+          <div className="hidden items-center gap-2 md:flex">
+            <StoreBadge href={game.appStoreUrl} variant="apple" compact className="scale-[0.9] origin-right" />
+            <StoreBadge href={game.playStoreUrl} variant="google" compact className="scale-[0.9] origin-right" />
           </div>
         </div>
       </header>
@@ -58,25 +45,8 @@ const GameLandingPage = ({ game }) => {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={game.playStoreUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white transition-colors"
-                  style={{ backgroundColor: game.accent }}
-                >
-                  <Smartphone size={18} />
-                  {isTR ? 'Google Play' : 'Google Play'}
-                </a>
-                <a
-                  href={game.appStoreUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-6 py-3 font-bold text-white hover:bg-white/12 transition-colors"
-                >
-                  <Download size={18} />
-                  {isTR ? 'App Store' : 'App Store'}
-                </a>
+                <StoreBadge href={game.appStoreUrl} variant="apple" compact />
+                <StoreBadge href={game.playStoreUrl} variant="google" compact />
                 <Link
                   to="/"
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-transparent px-6 py-3 font-bold text-white/85 hover:bg-white/8 transition-colors"
@@ -116,4 +86,3 @@ const GameLandingPage = ({ game }) => {
 };
 
 export default GameLandingPage;
-

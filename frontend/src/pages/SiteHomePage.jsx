@@ -3,18 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ChevronRight, Globe, LayoutGrid, Smartphone } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import StoreBadge from '@/components/StoreBadge';
 import { GAMES } from '@/data/games';
-
-const StoreBadge = ({ children, href, className = '' }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noreferrer"
-    className={`inline-flex items-center justify-center rounded-xl bg-black px-4 py-3 text-xs font-semibold leading-none text-white shadow-[0_10px_25px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-0.5 sm:min-w-[145px] ${className}`}
-  >
-    {children}
-  </a>
-);
 
 const GameCard = ({ game, isTR }) => {
   const description = isTR ? game.descriptionTR : game.descriptionEN;
@@ -61,8 +51,8 @@ const GameCard = ({ game, isTR }) => {
         </div>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-          <StoreBadge href={game.appStoreUrl}>Download on the App Store</StoreBadge>
-          <StoreBadge href={game.playStoreUrl}>GET IT ON Google Play</StoreBadge>
+          <StoreBadge href={game.appStoreUrl} variant="apple" />
+          <StoreBadge href={game.playStoreUrl} variant="google" />
         </div>
       </div>
     </article>
@@ -138,7 +128,7 @@ const SiteHomePage = () => {
         <section className="px-4 pb-10 pt-6 sm:px-6">
           <div className="mx-auto max-w-7xl">
             <div
-              className="relative isolate overflow-hidden rounded-[2.5rem] bg-[#111827] shadow-[0_28px_90px_rgba(15,23,42,0.18)]"
+              className="relative isolate overflow-hidden rounded-[2.75rem] bg-[#111827] shadow-[0_28px_90px_rgba(15,23,42,0.18)]"
               id="featured"
             >
               <img
@@ -146,17 +136,17 @@ const SiteHomePage = () => {
                 alt={`${activeGame.title} hero artwork`}
                 className="absolute inset-0 h-full w-full object-cover opacity-85"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,14,24,0.88)_0%,rgba(10,14,24,0.74)_40%,rgba(10,14,24,0.28)_72%,rgba(10,14,24,0.14)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,14,24,0.92)_0%,rgba(10,14,24,0.76)_36%,rgba(10,14,24,0.30)_72%,rgba(10,14,24,0.16)_100%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(106,173,29,0.22),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(255,255,255,0.14),transparent_24%)]" />
 
-              <div className="relative grid min-h-[640px] items-end lg:grid-cols-[1fr_0.9fr]">
+              <div className="relative grid min-h-[680px] items-end lg:grid-cols-[1fr_0.95fr]">
                 <div className="px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-14">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-bold tracking-[0.22em] text-white/85">
                     <span className="h-2 w-2 rounded-full bg-[#6aad1d]" />
                     {isTR ? 'ANA SAYFA VİTRİNİ' : 'HOMEPAGE SHOWCASE'}
                   </div>
 
-                  <h1 className="mt-6 max-w-xl text-5xl font-black leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl">
+                  <h1 className="mt-6 max-w-2xl text-5xl font-black leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-[4.45rem]">
                     {heroTitle}
                   </h1>
 
@@ -188,6 +178,11 @@ const SiteHomePage = () => {
                         <div className="mt-1 text-xs font-semibold tracking-wide text-white/70">{label}</div>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <StoreBadge href={activeGame.appStoreUrl} variant="apple" compact />
+                    <StoreBadge href={activeGame.playStoreUrl} variant="google" compact />
                   </div>
                 </div>
 

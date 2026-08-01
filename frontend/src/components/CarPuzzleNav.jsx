@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const CarPuzzleMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#bed6ea] bg-[#082f51] shadow-[0_10px_30px_rgba(8,47,81,0.22)]">
     <img
-      src="/car-puzzle/google-play-icon-512.png"
+      src="/games/cars-puzzle-escape/icon.png"
       alt="Cars -Puzzle Escape"
       className="h-full w-full object-cover"
     />

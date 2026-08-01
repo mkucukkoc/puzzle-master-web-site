@@ -4,11 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const BlocksPuzzleEscapeMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#cfe1ff] bg-[#17345f] shadow-[0_10px_30px_rgba(31,124,255,0.18)]">
-    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.14),transparent_45%,rgba(255,255,255,0.06))]" />
-    <div className="absolute left-1 top-1 h-4 w-4 rounded-md bg-[#1f7cff] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-5 top-1 h-4 w-4 rounded-md bg-[#17c3b2] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-1 top-5 h-4 w-4 rounded-md bg-[#0ea394] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-5 top-5 h-4 w-4 rounded-md bg-[#ffb800] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
+    <img src="/games/blocks-puzzle-escape/icon.png" alt="Blocks - Puzzle Escape" className="h-full w-full object-cover" />
   </div>
 );
 

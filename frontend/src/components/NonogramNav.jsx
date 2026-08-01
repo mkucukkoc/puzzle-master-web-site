@@ -4,11 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const NonogramMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#16455a] bg-[#06213a] shadow-[0_10px_30px_rgba(6,33,58,0.28)]">
-    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent_40%,rgba(255,255,255,0.04))]" />
-    <div className="absolute left-1 top-1 h-4 w-4 rounded-md bg-[#2fd0cf] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]" />
-    <div className="absolute left-5 top-1 h-4 w-4 rounded-md bg-[#ff6f61] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]" />
-    <div className="absolute left-1 top-5 h-4 w-4 rounded-md bg-[#ffb86b] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]" />
-    <div className="absolute left-5 top-5 h-4 w-4 rounded-md bg-[#ffffff] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]" />
+    <img src="/games/nonogram/icon.png" alt="Nonogram Pixel Puzzle" className="h-full w-full object-cover" />
   </div>
 );
 

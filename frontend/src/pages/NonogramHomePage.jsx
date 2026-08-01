@@ -8,13 +8,13 @@ const NonogramPreview = () => (
     <div className="absolute -bottom-10 -left-8 h-32 w-32 rounded-full bg-[#ff6f61]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#06213a]">
       <img
-        src="/nonogram/nonogram-feature-1024x500.png"
+        src="/games/nonogram/feature.png"
         alt="Nonogram Pixel Puzzle feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/nonogram/nonogram-play-icon-512.png"
+          src="/games/nonogram/icon.png"
           alt="Nonogram Pixel Puzzle icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />

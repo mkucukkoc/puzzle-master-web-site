@@ -22,38 +22,13 @@ const ArrowTile = ({ direction = 'R', active = false, className = '' }) => {
 };
 
 const PuzzlePreview = () => (
-  <div className="relative mx-auto w-full max-w-sm rounded-[2rem] bg-white p-5 shadow-[0_24px_80px_rgba(31, 61, 58, 0.16)] border border-[#d6e8e4]">
-    <div className="absolute -top-5 -right-5 h-20 w-20 rounded-full bg-[#0ea394]/10" />
-    <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#1f3d3a]/10" />
-    <div className="relative grid grid-cols-5 gap-3">
-      <ArrowTile direction="R" />
-      <ArrowTile direction="D" />
-      <ArrowTile direction="L" />
-      <ArrowTile direction="R" />
-      <ArrowTile direction="D" />
-      <ArrowTile direction="U" />
-      <ArrowTile direction="R" active />
-      <ArrowTile direction="D" />
-      <ArrowTile direction="L" />
-      <ArrowTile direction="U" />
-      <ArrowTile direction="R" />
-      <ArrowTile direction="U" />
-      <ArrowTile direction="R" />
-      <ArrowTile direction="D" />
-      <ArrowTile direction="L" />
-      <ArrowTile direction="D" />
-      <ArrowTile direction="L" />
-      <ArrowTile direction="U" />
-      <ArrowTile direction="R" />
-      <ArrowTile direction="U" />
-    </div>
-    <div className="relative mt-5 rounded-2xl bg-[#e7f2f0] p-4 border border-[#d6e8e4]">
-      <div className="flex items-center justify-between text-xs font-semibold text-[#8a9d9a]">
-        <span>LEVEL 29</span>
-        <span className="text-[#0ea394]">HORSE MAZE</span>
-      </div>
-      <div className="mt-3 h-2 rounded-full bg-[#d6e8e4] overflow-hidden">
-        <div className="h-full w-2/3 rounded-full bg-[#0ea394]" />
+  <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#d6e8e4] bg-white shadow-[0_24px_80px_rgba(31,61,58,0.16)]">
+    <img src="/games/arrows-puzzle-master/feature.png" alt="Arrows Puzzle Master gameplay artwork" className="aspect-[1024/500] w-full object-cover" />
+    <div className="absolute left-5 top-5 flex items-center gap-3 rounded-2xl border border-white/70 bg-white/80 px-3 py-2 backdrop-blur-md">
+      <img src="/games/arrows-puzzle-master/icon.png" alt="Arrows Puzzle Master" className="h-12 w-12 rounded-xl object-cover" />
+      <div>
+        <div className="text-xs font-bold tracking-[0.2em] text-[#0ea394]">ARROWS</div>
+        <div className="text-sm font-black text-[#1f3d3a]">Puzzle Master</div>
       </div>
     </div>
   </div>
@@ -97,13 +72,13 @@ const CarPreview = () => (
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ffb454]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b365f]">
       <img
-        src="/car-puzzle/google-play-feature-1024x500.png"
+        src="/games/cars-puzzle-escape/feature.png"
         alt="Cars -Puzzle Escape feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/car-puzzle/google-play-icon-512.png"
+          src="/games/cars-puzzle-escape/icon.png"
           alt="Cars -Puzzle Escape icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />
@@ -163,13 +138,13 @@ const NonogramPreview = () => (
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ff6f61]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#06213a]">
       <img
-        src="/nonogram/nonogram-feature-1024x500.png"
+        src="/games/nonogram/feature.png"
         alt="Nonogram Pixel Puzzle feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/nonogram/nonogram-play-icon-512.png"
+          src="/games/nonogram/icon.png"
           alt="Nonogram Pixel Puzzle icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />
@@ -197,13 +172,13 @@ const MinesweeperPreview = () => (
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#ff8d5a]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#102b67]">
       <img
-        src="/minesweeper/minesweeper-mine-quest-feature-1024x500.png"
+        src="/games/minesweeper/feature.png"
         alt="Minesweeper: Mine Quest feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/minesweeper/minesweeper-mine-quest-play-icon-512.png"
+          src="/games/minesweeper/icon.png"
           alt="Minesweeper: Mine Quest icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />
@@ -333,13 +308,13 @@ const TileMatchPreview = () => (
     <div className="absolute -bottom-6 -left-5 h-24 w-24 rounded-full bg-[#eab308]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0a4722]">
       <img
-        src="/tile-match/tile-match-feature-1024x500.png"
+        src="/games/tile-match/feature.png"
         alt="Triple Grove: Tile Match feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/40 px-3 py-2 backdrop-blur-md">
         <img
-          src="/tile-match/tile-match-play-icon-512.png"
+          src="/games/tile-match/icon.png"
           alt="Triple Grove: Tile Match icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />
@@ -528,162 +503,9 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="px-6 py-16 bg-[#fbfaff] border-y border-[#ebe6ff]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center">
-              <p className="text-xs font-bold tracking-[0.22em] text-[#6a45d8]">
-                {isTR ? 'ALTI OYUN, TEK SİTE' : 'SIX GAMES, ONE SITE'}
-              </p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-black text-[#251b52]">
-                {isTR
-                  ? 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, Nonogram ve Minesweeper birlikte'
-                  : 'Puzzle, Block Boom, Cars, Blocks - Puzzle Escape, Nonogram, and Minesweeper together'}
-              </h2>
-              <p className="mt-4 text-[#7b6cb2] max-w-2xl mx-auto">
-                {isTR
-                  ? 'Ana sayfadan dokuz oyunu da keşfedebilir, her biri için ayrı gizlilik, kullanım koşulları ve veri silme sayfalarına ulaşabilirsiniz.'
-                  : 'Discover all nine games from the home page and open separate privacy, terms, and data deletion pages for each one.'}
-              </p>
-            </div>
-
-            <div className="mt-10 grid lg:grid-cols-2 gap-6">
-              <AppCard
-                subtitle={isTR ? 'MEVCUT OYUN' : 'CURRENT GAME'}
-                title="Arrows Puzzle Master"
-                description={isTR
-                  ? 'Grid tabanlı ok bulmacaları, hayvan temalı seviyeler ve temiz bir arayüzle mevcut puzzle deneyimi.'
-                  : 'The existing puzzle experience with grid-based arrow levels, animal-themed boards, and a clean interface.'}
-                preview={<PuzzlePreview />}
-                primaryHref={STORE.arrows}
-                primaryLabel="Google Play"
-                secondaryHref="/privacy"
-                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
-                accentClass="bg-[#e7f2f0] text-[#0ea394] border border-[#c8e7e1]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Block Boom!"
-                description={isTR
-                  ? 'Renkli blokları sürükle, satır ve sütunları doldurup patlat, büyük kombolar yap. Parlak ve rahatlatıcı blok bulmacası.'
-                  : 'Drag colorful blocks, fill full rows and columns to pop them, and chain explosive combos in this bright, relaxing block puzzle.'}
-                preview={<BoomPreview />}
-                primaryHref={STORE.boom}
-                primaryLabel="Google Play"
-                secondaryHref="/block-boom"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#f1ecff] text-[#6a45d8] border border-[#ddd4ff]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Cars -Puzzle Escape"
-                description={isTR
-                  ? 'Araçlara dokunup dolu otoparktan çıkar, trafiği çöz ve şehirden şehre ilerle. Rahatlatıcı, tepeden trafik bulmacası.'
-                  : 'Tap cars to drive them out of a packed lot, untangle the jam, and cruise from city to city in this relaxing traffic puzzle.'}
-                preview={<CarPreview />}
-                primaryHref={STORE.cars}
-                primaryLabel="Google Play"
-                secondaryHref="/car-puzzle"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#eaf4fb] text-[#0f5cab] border border-[#cfe0ec]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Blocks - Puzzle Escape"
-                description={isTR
-                  ? 'Kilitli blokları doğru sırada çöz, çıkış yolunu aç ve ayrı legal sayfalarla yeni bir puzzle markası keşfet.'
-                  : 'Solve locked blocks in the right order, open the escape path, and explore a new puzzle brand with separate legal pages.'}
-                preview={<BlocksPreview />}
-                primaryHref="/blocks-puzzle-escape"
-                primaryLabel={isTR ? 'Açılış Sayfası' : 'Landing Page'}
-                secondaryHref="/blocks-puzzle-escape/privacy"
-                secondaryLabel={isTR ? 'Gizlilik' : 'Privacy'}
-                accentClass="bg-[#e9f4ff] text-[#1f7cff] border border-[#cfe1ff]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Nonogram - Pixel Puzzle"
-                description={isTR
-                  ? 'Sayı ipuçlarıyla piksel resmi ortaya çıkar, günlük bulmacaları çöz ve yıldız serisini koru. Temiz, koyu ve mağaza uyumlu nonogram deneyimi.'
-                  : 'Reveal pixel art from number clues, solve daily puzzles, and keep your streak alive in a clean, dark, store-ready nonogram experience.'}
-                preview={<NonogramPreview />}
-                primaryHref={STORE.nonogram}
-                primaryLabel="Google Play"
-                secondaryHref="/nonogram"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#e8f8f8] text-[#0f8c90] border border-[#b9dfdf]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Minesweeper: Mine Quest"
-                description={isTR
-                  ? 'Sayıları çöz, güvenli kareleri aç, mayınları işaretle ve deterministik 900 seviyelik akışta ustalaş. Klasik mantık, modern mağaza vitrini.'
-                  : 'Read the numbers, open safe tiles, flag the mines, and master a deterministic 900-level flow. Classic logic with a modern store-ready presentation.'}
-                preview={<MinesweeperPreview />}
-                primaryHref={STORE.minesweeper}
-                primaryLabel="Google Play"
-                secondaryHref="/minesweeper"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#eaf3ff] text-[#2d63db] border border-[#c9dbff]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Word Search"
-                description={isTR
-                  ? 'Gizli kelimeleri bul, günlük bulmacaları çöz, seri takibini sürdür ve 14 dil desteğiyle rahat bir kelime avı yaşa.'
-                  : 'Find hidden words, solve daily puzzles, keep your streak going, and enjoy a calm word hunt with 14-language support.'}
-                preview={<WordSearchPreview />}
-                primaryHref={STORE.wordSearch}
-                primaryLabel="Google Play"
-                secondaryHref="/word-search"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#eef8ef] text-[#2ea66b] border border-[#ccebd6]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Flow Connects: Pipe Puzzle"
-                description={isTR
-                  ? 'Aynı renkteki uçları birleştir, tüm hücreleri doldur ve her gün değişen akış bulmacalarında mantığını test et.'
-                  : 'Connect matching colors, fill every cell, and test your logic with daily flow puzzles that keep changing.'}
-                preview={<FlowConnectsPreview />}
-                primaryHref={STORE.flowConnects}
-                primaryLabel="Google Play"
-                secondaryHref="/flow-connects"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#eaf7fb] text-[#0f8cdb] border border-[#cbe8f4]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Sudoku Quest"
-                description={isTR
-                  ? 'İpuçları, notlar, günlük Sudoku ve tek çözümlü 2.000 bölümle sayılara hükmet. Rahat, temiz ve klasik bir mantık oyunu.'
-                  : 'Master the numbers with hints, notes, daily Sudoku, and 2,000 single-solution boards. Calm, clean, classic logic play.'}
-                preview={<SudokuPreview />}
-                primaryHref={STORE.sudoku}
-                primaryLabel="Google Play"
-                secondaryHref="/sudoku-quest"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#f0ecff] text-[#7556ef] border border-[#ddd6ff]"
-              />
-              <AppCard
-                subtitle={isTR ? 'YENİ OYUN' : 'NEW GAME'}
-                title="Triple Grove: Tile Match"
-                description={isTR
-                  ? 'Katmanlı tahtalarda 3 aynı taşı eşleştir, tepsiyi doldurmadan tahtayı temizle ve 3.000 çözülebilir bölümün tadını çıkar.'
-                  : 'Match 3 identical tiles on layered boards, clear the board before filling the tray, and enjoy 3,000 solvable levels.'}
-                preview={<TileMatchPreview />}
-                primaryHref={STORE.tileMatch}
-                primaryLabel="Google Play"
-                secondaryHref="/tile-match"
-                secondaryLabel={isTR ? 'Sayfa' : 'Page'}
-                accentClass="bg-[#f0fdf4] text-[#16a34a] border border-[#bbf7d0]"
-              />
-            </div>
-          </div>
-        </section>
-
         <footer className="px-6 py-10 text-center text-sm text-[#8a9d9a]">
           <img
-            src="/arrows-puzzle-master-icon.png"
+            src="/games/arrows-puzzle-master/icon.png"
             alt="Arrows Puzzle Master"
             className="mx-auto mb-4 h-14 w-14 rounded-2xl object-cover shadow-md"
           />

@@ -16,6 +16,7 @@
       .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
       .brand { display:flex; align-items:center; gap:12px; color:var(--ink); font-weight:800; }
       .mark { width:44px; height:44px; border-radius:16px; position:relative; overflow:hidden; border:1px solid #d7c8ff; background:#251b52; box-shadow:0 10px 30px rgba(77,58,163,.18); }
+      .mark img { display:block; width:100%; height:100%; object-fit:cover; }
       .mark span { position:absolute; width:11px; height:11px; border-radius:3px; }
       .b1{left:7px;top:7px;background:#ff5252} .b2{left:24px;top:7px;background:#ffb800} .b3{left:7px;top:24px;background:#59d56b} .b4{left:24px;top:24px;background:#4e7eff}
       .nav-right { display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:flex-end; }
@@ -55,7 +56,7 @@
     <nav>
       <div class="wrap nav">
         <a class="brand" href="/block-boom">
-          <div class="mark"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
+          <div class="mark"><img src="/games/block-boom/icon.png" alt="Block Boom!" /></div>
           <span>Block Boom!</span>
         </a>
         <div class="nav-right">
@@ -78,19 +79,11 @@
             <a class="pill secondary" href="/block-boom/privacy.html">Privacy &amp; Terms</a>
           </div>
         </div>
-        <div class="card">
-          <div style="position:relative; z-index:1;">
-            <p class="eyebrow" style="color:#d9d1ff;">Block Boom!</p>
-            <h2 style="color:#fff; font-size:1.9rem; line-height:1.05; margin-top:10px;">Fill it. Pop it. Boom.</h2>
-            <p style="color:#d9d1ff; margin:6px 0 0;">A vivid stage with chunky, glossy blocks and oh-so-satisfying clears.</p>
-          </div>
-          <div class="board">
-            <div class="r"></div><div class="r"></div><div class="y"></div><div class="e"></div><div class="g"></div><div class="b"></div>
-            <div class="e"></div><div class="y"></div><div class="y"></div><div class="g"></div><div class="g"></div><div class="b"></div>
-            <div class="p"></div><div class="e"></div><div class="b"></div><div class="b"></div><div class="e"></div><div class="r"></div>
-            <div class="p"></div><div class="p"></div><div class="e"></div><div class="y"></div><div class="g"></div><div class="r"></div>
-            <div class="b"></div><div class="e"></div><div class="r"></div><div class="y"></div><div class="e"></div><div class="g"></div>
-            <div class="b"></div><div class="g"></div><div class="r"></div><div class="y"></div><div class="p"></div><div class="p"></div>
+        <div class="card" style="padding:0;">
+          <img src="/games/block-boom/feature.png" alt="Block Boom! gameplay artwork" style="display:block; width:100%; aspect-ratio:1024/500; object-fit:cover;" />
+          <div style="position:absolute; left:20px; top:20px; display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:16px; background:rgba(37,27,82,.72); border:1px solid rgba(255,255,255,.14); backdrop-filter:blur(10px);">
+            <img src="/games/block-boom/icon.png" alt="Block Boom! icon" style="width:44px; height:44px; border-radius:14px; object-fit:cover;" />
+            <div><strong style="display:block; font-size:12px; letter-spacing:.16em; color:rgba(255,255,255,.72);">BLOCK BOOM!</strong><strong style="font-size:15px; color:#fff;">Match. Clear. Boom.</strong></div>
           </div>
         </div>
       </section>

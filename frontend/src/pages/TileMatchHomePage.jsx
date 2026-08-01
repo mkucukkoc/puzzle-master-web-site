@@ -8,13 +8,13 @@ const TilePreview = () => (
     <div className="absolute -bottom-7 -left-6 h-28 w-28 rounded-full bg-[#eab308]/15" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0a4722]">
       <img
-        src="/tile-match/tile-match-feature-1024x500.png"
+        src="/games/tile-match/feature.png"
         alt="Triple Grove: Tile Match feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/40 px-3 py-2 backdrop-blur-md">
         <img
-          src="/tile-match/tile-match-play-icon-512.png"
+          src="/games/tile-match/icon.png"
           alt="Triple Grove: Tile Match icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />
@@ -209,7 +209,7 @@ const TileMatchHomePage = () => {
 
         <footer className="px-6 py-10 text-center text-sm text-[#365314]">
           <img
-            src="/tile-match/tile-match-play-icon-512.png"
+            src="/games/tile-match/icon.png"
             alt="Triple Grove: Tile Match"
             className="mx-auto mb-4 h-14 w-14 rounded-2xl object-cover shadow-md"
           />

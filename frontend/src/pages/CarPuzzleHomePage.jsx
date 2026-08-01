@@ -37,13 +37,13 @@ const CarPreview = () => (
     <div className="absolute -bottom-7 -left-6 h-28 w-28 rounded-full bg-[#ffb454]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0b365f]">
       <img
-        src="/car-puzzle/google-play-feature-1024x500.png"
+        src="/games/cars-puzzle-escape/feature.png"
         alt="Cars -Puzzle Escape feature graphic"
         className="h-auto w-full object-cover"
       />
       <div className="absolute left-4 top-4 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/car-puzzle/google-play-icon-512.png"
+          src="/games/cars-puzzle-escape/icon.png"
           alt="Cars -Puzzle Escape icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />

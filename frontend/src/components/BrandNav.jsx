@@ -25,7 +25,7 @@ const BrandNav = ({ active }) => {
         <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity">
           <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-white shadow-[0_10px_30px_rgba(14, 163, 148, 0.18)] border border-[#c8e7e1] flex items-center justify-center overflow-hidden">
             <img
-              src="/arrows-puzzle-master-icon.png"
+              src="/games/arrows-puzzle-master/icon.png"
               alt="Arrows Puzzle Master"
               className="w-full h-full object-cover"
             />

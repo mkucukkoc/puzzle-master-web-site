@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const TileMatchMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#bbf7d0] bg-[#052e16] shadow-[0_10px_30px_rgba(22,163,74,0.22)]">
     <img
-      src="/tile-match/tile-match-play-icon-512.png"
+      src="/games/tile-match/icon.png"
       alt="Triple Grove: Tile Match"
       className="h-full w-full object-cover"
     />

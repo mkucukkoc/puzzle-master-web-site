@@ -20,8 +20,8 @@ const GameLandingPage = ({ game }) => {
             {isTR ? 'Ana sayfa' : 'Home'}
           </Link>
           <div className="hidden items-center gap-2 md:flex">
-            <StoreBadge href={game.appStoreUrl} variant="apple" compact className="scale-[0.9] origin-right" />
-            <StoreBadge href={game.playStoreUrl} variant="google" compact className="scale-[0.9] origin-right" />
+            <StoreBadge href={game.appStoreUrl} variant="apple" compact />
+            <StoreBadge href={game.playStoreUrl} variant="google" compact />
           </div>
         </div>
       </header>

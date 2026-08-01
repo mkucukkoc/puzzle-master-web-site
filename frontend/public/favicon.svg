@@ -1,7 +1,13 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="30" fill="#FFFFFF"/>
-  <path d="M64 17L88 46H73V111H55V46H40L64 17Z" fill="#0EA394"/>
-  <path d="M16 75H93L88 58L119 72L88 90L93 75H16Z" fill="#111111"/>
-  <path d="M111 18L26 32" stroke="#0EA394" stroke-width="14" stroke-linecap="round"/>
-  <path d="M82 26H106" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="puzzleGamesGreen" x1="16" y1="12" x2="116" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#95D43A"/>
+      <stop offset="1" stop-color="#4F9415"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="url(#puzzleGamesGreen)"/>
+  <rect x="33" y="33" width="25" height="25" rx="6" stroke="white" stroke-width="7"/>
+  <rect x="70" y="33" width="25" height="25" rx="6" stroke="white" stroke-width="7"/>
+  <rect x="33" y="70" width="25" height="25" rx="6" stroke="white" stroke-width="7"/>
+  <rect x="70" y="70" width="25" height="25" rx="6" stroke="white" stroke-width="7"/>
 </svg>

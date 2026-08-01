@@ -12,34 +12,14 @@ const BlockTile = ({ color }) => (
 );
 
 const BlocksPreview = () => (
-  <div className="relative mx-auto w-full max-w-xl rounded-[2rem] bg-[#17345f] p-6 sm:p-7 shadow-[0_24px_80px_rgba(23, 52, 95, 0.2)] border border-[#cfe1ff] overflow-hidden">
-    <div className="absolute -top-8 -right-8 h-28 w-28 rounded-full bg-[#1f7cff]/15" />
-    <div className="absolute -bottom-10 -left-8 h-32 w-32 rounded-full bg-[#17c3b2]/12" />
-    <div className="relative flex items-center justify-between gap-4">
+  <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#cfe1ff] bg-[#17345f] shadow-[0_24px_80px_rgba(23,52,95,0.2)]">
+    <img src="/games/blocks-puzzle-escape/feature.png" alt="Blocks - Puzzle Escape gameplay artwork" className="aspect-[1024/500] w-full object-cover" />
+    <div className="absolute left-5 top-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-black/40 px-3 py-2 backdrop-blur-md">
+      <img src="/games/blocks-puzzle-escape/icon.png" alt="Blocks - Puzzle Escape" className="h-12 w-12 rounded-xl object-cover" />
       <div>
-        <p className="text-xs font-bold tracking-[0.22em] text-[#d9ecff]">BLOCKS - PUZZLE ESCAPE</p>
-        <h1 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-white leading-[0.95]">
-          Open the path.
-          <span className="block text-[#17c3b2]">Escape cleanly.</span>
-        </h1>
-        <p className="mt-4 max-w-lg text-sm sm:text-base leading-7 text-[#d9ecff]">
-          A separate puzzle landing page built for Blocks - Puzzle Escape, with its own privacy and terms pages.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href="/blocks-puzzle-escape/privacy" className="rounded-full bg-[#1f7cff] px-5 py-3 font-bold text-white hover:opacity-90 transition-opacity">
-            Privacy
-          </a>
-          <a href="/blocks-puzzle-escape/terms" className="rounded-full bg-white px-5 py-3 font-bold text-[#17345f] hover:bg-[#f0f6ff] transition-colors">
-            Terms
-          </a>
-        </div>
+        <div className="text-xs font-bold tracking-[0.2em] text-white/70">BLOCKS</div>
+        <div className="text-sm font-black text-white">Puzzle Escape</div>
       </div>
-    </div>
-
-    <div className="relative mt-7 grid grid-cols-4 gap-3">
-      {['#1f7cff', '#1f7cff', '#17c3b2', '#17c3b2', '#1f7cff', '#1f7cff', '#17c3b2', '#17c3b2', '#0ea394', '#0ea394', '#ffb800', '#ffb800', '#0ea394', '#0ea394', '#ffb800', '#ffb800'].map((color, index) => (
-        <BlockTile key={`${color}-${index}`} color={color} />
-      ))}
     </div>
   </div>
 );

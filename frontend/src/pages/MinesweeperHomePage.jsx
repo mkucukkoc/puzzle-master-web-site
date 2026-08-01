@@ -14,13 +14,13 @@ const MinesweeperPreview = () => (
     <div className="absolute -bottom-10 -left-8 h-32 w-32 rounded-full bg-[#ff8d5a]/10" />
     <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#102b67] p-4">
       <img
-        src="/minesweeper/minesweeper-mine-quest-feature-1024x500.png"
+        src="/games/minesweeper/feature.png"
         alt="Minesweeper: Mine Quest feature graphic"
         className="h-auto w-full object-cover rounded-[1.5rem]"
       />
       <div className="absolute left-8 top-8 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 backdrop-blur-md">
         <img
-          src="/minesweeper/minesweeper-mine-quest-play-icon-512.png"
+          src="/games/minesweeper/icon.png"
           alt="Minesweeper: Mine Quest icon"
           className="h-11 w-11 rounded-2xl object-cover"
         />

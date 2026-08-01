@@ -4,11 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const BlockBoomMark = () => (
   <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-[#d7c8ff] bg-[#251b52] shadow-[0_10px_30px_rgba(77,58,163,0.24)]">
-    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.14),transparent_45%,rgba(255,255,255,0.06))]" />
-    <div className="absolute left-1 top-1 h-4 w-4 rounded-md bg-[#ff5252] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-5 top-1 h-4 w-4 rounded-md bg-[#ffb800] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-1 top-5 h-4 w-4 rounded-md bg-[#59d56b] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
-    <div className="absolute left-5 top-5 h-4 w-4 rounded-md bg-[#4e7eff] shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]" />
+    <img src="/games/block-boom/icon.png" alt="Block Boom!" className="h-full w-full object-cover" />
   </div>
 );
 

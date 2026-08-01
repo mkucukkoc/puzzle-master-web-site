@@ -63,7 +63,7 @@ const SiteHomePage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
-  const featured = useMemo(() => GAMES.slice(0, 5), []);
+  const featured = useMemo(() => GAMES, []);
   const heroGames = featured.length ? featured : GAMES;
   const activeGame = heroGames[activeHeroIndex % heroGames.length];
 
@@ -75,21 +75,21 @@ const SiteHomePage = () => {
     return () => window.clearInterval(timer);
   }, [heroGames.length]);
 
-  const heroTitle = isTR ? '10 puzzle oyunu, tek bir vitrin.' : '10 puzzle games, one curated showcase.';
+  const heroTitle = isTR ? 'Her mod için yeni bir puzzle.' : 'A new puzzle for every mood.';
   const heroDescription = isTR
-    ? 'Videodaki hissi koruyan, büyük görseller, sade kartlar ve mağaza bağlantılarıyla bir ana sayfa kurduk. Devamını Gör ile her oyunun kendi sayfasına geçebilirsin.'
-    : 'We rebuilt the homepage with the same editorial feel: big visuals, clean cards, and store links. See more takes you to each game’s dedicated landing page.';
+    ? 'Hızlı bir blok turu, sakin bir mantık bulmacası ya da yeni bir günlük meydan okuma seç. Her oyunda çözülmeyi bekleyen yeni seviyeler var.'
+    : 'Pick a quick block round, a calm logic puzzle, or a fresh daily challenge. Every game has new levels waiting to be solved.';
 
   const heroStats = isTR
     ? [
         ['10', 'oyun'],
-        ['10', 'tanıtım sayfası'],
-        ['2', 'mağaza bağlantısı'],
+        ['Her gün', 'yeni bulmacalar'],
+        ['iOS + Android', 'hemen oyna'],
       ]
     : [
         ['10', 'games'],
-        ['10', 'landing pages'],
-        ['2', 'store links'],
+        ['Every day', 'new puzzles'],
+        ['iOS + Android', 'play now'],
       ];
 
   return (
@@ -102,23 +102,11 @@ const SiteHomePage = () => {
             </div>
             <div>
               <div className="text-sm font-bold tracking-[0.22em] text-[#6aad1d]">PUZZLE GAMES</div>
-              <div className="text-sm text-[#7b8496]">{isTR ? '10 oyunluk vitrin' : '10-game showcase'}</div>
+              <div className="text-sm text-[#7b8496]">{isTR ? 'Her gün yeni bir meydan okuma' : 'A new challenge every day'}</div>
             </div>
           </Link>
 
           <div className="hidden items-center gap-5 md:flex">
-            <a href="#games" className="text-sm font-semibold text-[#5d6679] transition-colors hover:text-[#121826]">
-              {isTR ? 'Oyunlar' : 'Games'}
-            </a>
-            <a href="#featured" className="text-sm font-semibold text-[#5d6679] transition-colors hover:text-[#121826]">
-              {isTR ? 'Öne çıkanlar' : 'Featured'}
-            </a>
-            <a href="/privacy" className="text-sm font-semibold text-[#5d6679] transition-colors hover:text-[#121826]">
-              {isTR ? 'Gizlilik' : 'Privacy'}
-            </a>
-            <a href="/terms" className="text-sm font-semibold text-[#5d6679] transition-colors hover:text-[#121826]">
-              {isTR ? 'Koşullar' : 'Terms'}
-            </a>
             <LanguageSwitcher />
           </div>
         </div>
@@ -143,7 +131,7 @@ const SiteHomePage = () => {
                 <div className="px-6 py-8 sm:px-10 sm:py-10 lg:px-12 lg:py-14">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-bold tracking-[0.22em] text-white/85">
                     <span className="h-2 w-2 rounded-full bg-[#6aad1d]" />
-                    {isTR ? 'ANA SAYFA VİTRİNİ' : 'HOMEPAGE SHOWCASE'}
+                    {isTR ? 'PUZZLE GAMES' : 'PUZZLE GAMES'}
                   </div>
 
                   <h1 className="mt-6 max-w-2xl text-[2.35rem] font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[4.45rem]">
@@ -246,10 +234,10 @@ const SiteHomePage = () => {
 
               <div className="relative border-t border-white/10 bg-white/6 px-6 py-4 backdrop-blur-md sm:px-10">
                 <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 text-sm text-white/80">
-                  <span className="font-semibold">{isTR ? 'Kayan vitrin, store bağlantıları ve ayrı açılış sayfaları' : 'Rotating showcase, store links, and dedicated pages'}</span>
+                  <span className="font-semibold">{isTR ? 'Keşfet, çöz ve yeni favorini bul' : 'Discover, solve, and find your next favorite'}</span>
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-[#6aad1d]" />
-                    <span>{isTR ? 'Kaydırarak oyunlar arasında geç' : 'Scroll through the games'}</span>
+                    <span>{isTR ? 'Tüm oyunları keşfet' : 'Explore every game'}</span>
                   </div>
                 </div>
               </div>
@@ -262,12 +250,12 @@ const SiteHomePage = () => {
             <div className="text-center">
               <p className="text-xs font-bold tracking-[0.22em] text-[#6aad1d]">{isTR ? 'OYUNLAR' : 'GAMES'}</p>
               <h2 className="mt-3 text-3xl font-black text-[#121826] sm:text-4xl">
-                {isTR ? 'Her oyuna ayrı kart, ayrı mağaza bağlantısı' : 'Each game gets its own card and store links'}
+                {isTR ? 'Oyununu seç, hemen oyna' : 'Pick a game and start playing'}
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-[#5d6679]">
                 {isTR
-                  ? 'Aşağıdaki kartlarda oyun görseli, kısa açıklama, mağaza rozetleri ve oyunun kendi ana sayfasına giden bağlantı yer alıyor.'
-                  : 'Each card below includes the game artwork, a short description, store badges, and the link to its dedicated landing page.'}
+                  ? 'Mantık, blok, kelime ve sayı bulmacaları arasından favorini seç; iOS veya Android’de oynamaya başla.'
+                  : 'Choose your favorite from logic, block, word, and number puzzles, then start playing on iOS or Android.'}
               </p>
             </div>
 
@@ -283,7 +271,7 @@ const SiteHomePage = () => {
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0ea394] text-white shadow-[0_14px_32px_rgba(14,163,148,0.24)]">
             <LayoutGrid size={22} />
           </div>
-          <p>{isTR ? 'Puzzle Games showcase' : 'Puzzle Games showcase'}</p>
+          <p>Puzzle Games</p>
         </footer>
       </main>
     </div>

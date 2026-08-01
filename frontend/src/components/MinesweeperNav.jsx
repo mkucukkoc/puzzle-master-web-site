@@ -25,7 +25,7 @@ const MinesweeperNav = ({ active }) => {
         <Link to="/minesweeper" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity">
           <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-white shadow-[0_10px_30px_rgba(45,99,219,0.18)] border border-[#c9dbff] flex items-center justify-center overflow-hidden">
             <img
-              src="/minesweeper/minesweeper-mine-quest-play-icon-512.png"
+              src="/games/minesweeper/icon.png"
               alt="Minesweeper: Mine Quest"
               className="w-full h-full object-cover"
             />

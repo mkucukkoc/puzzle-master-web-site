@@ -51,7 +51,7 @@ const TileMatchPrivacyPage = () => {
           <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#052e16] via-[#14532d] to-[#16a34a] p-8 sm:p-10 shadow-[0_24px_60px_rgba(5,46,22,0.28)]">
             <div className="flex items-center gap-4">
               <img
-                src="/tile-match/tile-match-play-icon-512.png"
+                src="/games/tile-match/icon.png"
                 alt="Triple Grove: Tile Match"
                 className="h-12 w-12 rounded-2xl border border-white/20 object-cover"
               />

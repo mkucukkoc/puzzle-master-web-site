@@ -12,34 +12,14 @@ const BlockTile = ({ color }) => (
 );
 
 const BlockBoomHero = () => (
-  <div className="relative mx-auto w-full max-w-xl rounded-[2rem] bg-[#251b52] p-6 sm:p-7 shadow-[0_24px_80px_rgba(37, 27, 82, 0.22)] border border-[#d8d2f4] overflow-hidden">
-    <div className="absolute -top-8 -right-8 h-28 w-28 rounded-full bg-[#8f74ff]/15" />
-    <div className="absolute -bottom-10 -left-8 h-32 w-32 rounded-full bg-[#ffb800]/10" />
-    <div className="relative flex items-center justify-between gap-4">
+  <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#d8d2f4] bg-[#251b52] shadow-[0_24px_80px_rgba(37,27,82,0.22)]">
+    <img src="/games/block-boom/feature.png" alt="Block Boom! gameplay artwork" className="aspect-[1024/500] w-full object-cover" />
+    <div className="absolute left-5 top-5 flex items-center gap-3 rounded-2xl border border-white/15 bg-[#251b52]/70 px-3 py-2 backdrop-blur-md">
+      <img src="/games/block-boom/icon.png" alt="Block Boom!" className="h-12 w-12 rounded-xl object-cover" />
       <div>
-        <p className="text-xs font-bold tracking-[0.22em] text-[#d9d1ff]">BLOCK BOOM!</p>
-        <h1 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-white leading-[0.95]">
-          Big colors.
-          <span className="block text-[#ffb800]">Fast clears.</span>
-        </h1>
-        <p className="mt-4 max-w-lg text-sm sm:text-base leading-7 text-[#d9d1ff]">
-          A separate block puzzle landing page built for Block Boom!, with its own privacy and terms pages.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href="/block-boom/privacy" className="rounded-full bg-[#ffb800] px-5 py-3 font-bold text-[#251b52] hover:opacity-90 transition-opacity">
-            Privacy
-          </a>
-          <a href="/block-boom/terms" className="rounded-full bg-white px-5 py-3 font-bold text-[#251b52] hover:bg-[#f3edff] transition-colors">
-            Terms
-          </a>
-        </div>
+        <div className="text-xs font-bold tracking-[0.2em] text-white/70">BLOCK BOOM!</div>
+        <div className="text-sm font-black text-white">Match. Clear. Boom.</div>
       </div>
-    </div>
-
-    <div className="relative mt-7 grid grid-cols-4 gap-3">
-      {['#ff5252', '#ff5252', '#ffb800', '#ffb800', '#ff5252', '#ff5252', '#ffb800', '#ffb800', '#59d56b', '#59d56b', '#4e7eff', '#4e7eff', '#59d56b', '#59d56b', '#4e7eff', '#4e7eff'].map((color, index) => (
-        <BlockTile key={`${color}-${index}`} color={color} />
-      ))}
     </div>
   </div>
 );

@@ -23,7 +23,7 @@ const ArrowTile = ({ direction = 'R', active = false, className = '' }) => {
 
 const PuzzlePreview = () => (
   <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#d6e8e4] bg-white shadow-[0_24px_80px_rgba(31,61,58,0.16)]">
-    <img src="/games/arrows-puzzle-master/feature.png" alt="Arrows Puzzle Master gameplay artwork" className="aspect-[1024/500] w-full object-cover" />
+    <img src="/games/arrows-puzzle-master/feature-v9.png" alt="Arrows Puzzle Master gameplay artwork" className="aspect-[1024/500] w-full object-cover" />
     <div className="absolute left-5 top-5 flex items-center gap-3 rounded-2xl border border-white/70 bg-white/80 px-3 py-2 backdrop-blur-md">
       <img src="/games/arrows-puzzle-master/icon.png" alt="Arrows Puzzle Master" className="h-12 w-12 rounded-xl object-cover" />
       <div>

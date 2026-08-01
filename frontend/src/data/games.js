@@ -10,7 +10,7 @@ export const GAMES = [
     accent: '#0ea394',
     accentSoft: '#e7f2f0',
     surface: '#ffffff',
-    feature: '/games/arrows-puzzle-master/feature.png',
+    feature: '/games/arrows-puzzle-master/feature-v9.png',
     icon: '/games/arrows-puzzle-master/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.masters',
     appStoreUrl: 'https://apps.apple.com/us/app/arrows-puzzle-master/id6788788102',

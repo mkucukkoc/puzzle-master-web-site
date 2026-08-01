@@ -13,7 +13,7 @@ export const GAMES = [
     feature: '/games/arrows-puzzle-master/feature.png',
     icon: '/games/arrows-puzzle-master/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.masters',
-    appStoreUrl: appStoreSearchUrl('Arrows Puzzle Master'),
+    appStoreUrl: 'https://apps.apple.com/us/app/arrows-puzzle-master/id6788788102',
     descriptionEN: 'Release arrows in the right order, untangle collisions, and clear each level on a crisp logic grid.',
     descriptionTR: 'Okları doğru sırayla serbest bırak, çarpışmaları çöz ve her bölümü temiz bir ızgara üzerinde tamamla.',
     highlightsEN: [
@@ -39,7 +39,7 @@ export const GAMES = [
     feature: '/games/block-boom/feature.png',
     icon: '/games/block-boom/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.blocks.boom',
-    appStoreUrl: appStoreSearchUrl('Block Boom'),
+    appStoreUrl: 'https://apps.apple.com/us/app/blocks-boom/id6791165161',
     descriptionEN: 'Drop colorful blocks, finish rows and columns, and keep the combo meter glowing.',
     descriptionTR: 'Renkli blokları yerleştir, satır ve sütunları tamamla, komboları alevlendirmeye devam et.',
     highlightsEN: [
@@ -65,7 +65,7 @@ export const GAMES = [
     feature: '/games/cars-puzzle-escape/feature.png',
     icon: '/games/cars-puzzle-escape/icon.png',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.trafficescape',
-    appStoreUrl: appStoreSearchUrl('Cars Puzzle Escape'),
+    appStoreUrl: 'https://apps.apple.com/us/app/cars-puzzle-escape/id6790754783',
     descriptionEN: 'Tap cars out of the lot, untangle traffic, and chase a clean escape route.',
     descriptionTR: 'Arabaları otoparktan çıkar, trafiği çöz ve temiz bir kaçış hattı yakala.',
     highlightsEN: [
@@ -266,4 +266,3 @@ export const GAMES = [
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));
 
 export const getGameBySlug = slug => GAME_MAP[slug] ?? GAMES[0];
-

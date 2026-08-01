@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GamesPage from '@/pages/GamesPage';
 import SiteHomePage from '@/pages/SiteHomePage';
 import HomePage from '@/pages/HomePage';
 import PrivacyPage from '@/pages/PrivacyPage';
@@ -42,7 +43,10 @@ function App() {
       <LanguageProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<SiteHomePage />} />
+            <Route path="/" element={<GamesPage />} />
+            <Route path="/games" element={<GamesPage />} />
+            <Route path="/games/index.html" element={<GamesPage />} />
+            <Route path="/showcase" element={<SiteHomePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
 

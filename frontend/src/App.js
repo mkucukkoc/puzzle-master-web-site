@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SiteHomePage from '@/pages/SiteHomePage';
 import HomePage from '@/pages/HomePage';
 import PrivacyPage from '@/pages/PrivacyPage';
 import TermsPage from '@/pages/TermsPage';
@@ -30,6 +31,8 @@ import TileMatchHomePage from '@/pages/TileMatchHomePage';
 import TileMatchPrivacyPage from '@/pages/TileMatchPrivacyPage';
 import TileMatchTermsPage from '@/pages/TileMatchTermsPage';
 import TileMatchDataDeletionPage from '@/pages/TileMatchDataDeletionPage';
+import GameLandingPage from '@/components/GameLandingPage';
+import { getGameBySlug } from '@/data/games';
 import { LanguageProvider } from '@/context/LanguageContext';
 import '@/App.css';
 
@@ -39,13 +42,17 @@ function App() {
       <LanguageProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<SiteHomePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
+
+            <Route path="/arrows-puzzle-master" element={<HomePage />} />
+
             <Route path="/block-boom" element={<BlockBoomHomePage />} />
             <Route path="/block-boom/privacy" element={<BlockBoomPrivacyPage />} />
             <Route path="/block-boom/terms" element={<BlockBoomTermsPage />} />
             <Route path="/block-boom/data-deletion" element={<BlockBoomDataDeletionPage />} />
+
             <Route path="/car-puzzle" element={<CarPuzzleHomePage />} />
             <Route path="/car-puzzle/index.html" element={<CarPuzzleHomePage />} />
             <Route path="/car-puzzle/privacy" element={<CarPuzzlePrivacyPage />} />
@@ -57,6 +64,7 @@ function App() {
             <Route path="/car-puzzle/data-deletion" element={<CarPuzzleDataDeletionPage />} />
             <Route path="/car-puzzle/data-deletion.html" element={<CarPuzzleDataDeletionPage />} />
             <Route path="/car-puzzle/data-deletion/index.html" element={<CarPuzzleDataDeletionPage />} />
+
             <Route path="/nonogram" element={<NonogramHomePage />} />
             <Route path="/nonogram/index.html" element={<NonogramHomePage />} />
             <Route path="/nonogram/privacy" element={<NonogramPrivacyPage />} />
@@ -68,6 +76,7 @@ function App() {
             <Route path="/nonogram/data-deletion" element={<NonogramDataDeletionPage />} />
             <Route path="/nonogram/data-deletion.html" element={<NonogramDataDeletionPage />} />
             <Route path="/nonogram/data-deletion/index.html" element={<NonogramDataDeletionPage />} />
+
             <Route path="/minesweeper" element={<MinesweeperHomePage />} />
             <Route path="/minesweeper/index.html" element={<MinesweeperHomePage />} />
             <Route path="/minesweeper/privacy" element={<MinesweeperPrivacyPage />} />
@@ -79,10 +88,19 @@ function App() {
             <Route path="/minesweeper/data-deletion" element={<MinesweeperDataDeletionPage />} />
             <Route path="/minesweeper/data-deletion.html" element={<MinesweeperDataDeletionPage />} />
             <Route path="/minesweeper/data-deletion/index.html" element={<MinesweeperDataDeletionPage />} />
+
+            <Route path="/word-search" element={<GameLandingPage game={getGameBySlug('word-search')} />} />
+            <Route path="/word-search/index.html" element={<GameLandingPage game={getGameBySlug('word-search')} />} />
+            <Route path="/sudoku" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
+            <Route path="/sudoku/index.html" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
+            <Route path="/flow-connects" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />
+            <Route path="/flow-connects/index.html" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />
+
             <Route path="/blocks-puzzle-escape" element={<BlocksPuzzleEscapeHomePage />} />
             <Route path="/blocks-puzzle-escape/privacy" element={<BlocksPuzzleEscapePrivacyPage />} />
             <Route path="/blocks-puzzle-escape/terms" element={<BlocksPuzzleEscapeTermsPage />} />
             <Route path="/blocks-puzzle-escape/data-deletion" element={<BlocksPuzzleEscapeDataDeletionPage />} />
+
             <Route path="/tile-match" element={<TileMatchHomePage />} />
             <Route path="/tile-match/index.html" element={<TileMatchHomePage />} />
             <Route path="/tile-match/privacy" element={<TileMatchPrivacyPage />} />
@@ -98,6 +116,7 @@ function App() {
             <Route path="/triple-grove/privacy" element={<TileMatchPrivacyPage />} />
             <Route path="/triple-grove/terms" element={<TileMatchTermsPage />} />
             <Route path="/triple-grove/data-deletion" element={<TileMatchDataDeletionPage />} />
+
             <Route path="/help" element={<HelpPage />} />
             <Route path="/account-deletion" element={<AccountDeletionPage />} />
             <Route path="/data-deletion" element={<DataDeletionPage />} />

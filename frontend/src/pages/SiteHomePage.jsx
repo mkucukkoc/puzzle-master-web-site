@@ -146,30 +146,30 @@ const SiteHomePage = () => {
                     {isTR ? 'ANA SAYFA VİTRİNİ' : 'HOMEPAGE SHOWCASE'}
                   </div>
 
-                  <h1 className="mt-6 max-w-2xl text-5xl font-black leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-[4.45rem]">
+                  <h1 className="mt-6 max-w-2xl text-[2.35rem] font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[4.45rem]">
                     {heroTitle}
                   </h1>
 
-                  <p className="mt-6 max-w-xl text-base leading-8 text-white/75 sm:text-lg">
+                  <p className="mt-6 max-w-xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
                     {heroDescription}
                   </p>
 
-                  <div className="mt-8 flex flex-wrap gap-3">
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <a
                       href="#games"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#6aad1d] px-6 py-3 font-bold text-white shadow-[0_18px_40px_rgba(106,173,29,0.25)] transition-transform hover:-translate-y-0.5"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#6aad1d] px-6 py-3 font-bold text-white shadow-[0_18px_40px_rgba(106,173,29,0.25)] transition-transform hover:-translate-y-0.5 sm:w-auto"
                     >
                       <Globe size={18} />
                       {isTR ? 'Oyunlara bak' : 'Browse games'}
                     </a>
                     <Link
                       to={activeGame.route}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-6 py-3 font-bold text-white transition-colors hover:bg-white/12"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/8 px-6 py-3 font-bold text-white transition-colors hover:bg-white/12 sm:w-auto"
                     >
                       <Smartphone size={18} />
                       {isTR ? 'Devamını Gör' : 'See more'}
                     </Link>
-                  </div>
+                </div>
 
                   <div className="mt-10 grid max-w-xl grid-cols-3 gap-3">
                     {heroStats.map(([value, label]) => (

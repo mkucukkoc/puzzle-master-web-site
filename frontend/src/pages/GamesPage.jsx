@@ -103,25 +103,25 @@ const GamesPage = () => {
                 <span className="h-2 w-2 rounded-full bg-[#6aad1d]" />
                 {isTR ? 'ANA EKRAN' : 'HOMEPAGE'}
               </div>
-              <h1 className="mt-5 max-w-3xl text-4xl font-black tracking-tight text-[#121826] sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 max-w-3xl text-[2.35rem] font-black tracking-tight leading-[0.98] text-[#121826] sm:text-5xl lg:text-6xl">
                 {isTR ? 'Oyunlar burada başlıyor.' : 'The games start here.'}
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-[#5d6679] sm:text-lg">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5d6679] sm:text-base sm:leading-8">
                 {isTR
                   ? 'Ana link açıldığında ilk ekranda oyun vitrini görünsün istedik. Her karttan mağazaya gidebilir veya kendi ana sayfasını açabilirsin.'
                   : 'We made the root link open straight into the game showcase. From every card you can jump to the store or open the dedicated landing page.'}
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#games"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#6aad1d] px-6 py-3 font-bold text-white shadow-[0_18px_40px_rgba(106,173,29,0.25)] transition-transform hover:-translate-y-0.5"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#6aad1d] px-6 py-3 font-bold text-white shadow-[0_18px_40px_rgba(106,173,29,0.25)] transition-transform hover:-translate-y-0.5 sm:w-auto"
                 >
                   <Globe size={18} />
                   {isTR ? 'Oyunlara bak' : 'Browse games'}
                 </a>
                 <Link
                   to="/showcase"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#dbe7f6] bg-white px-6 py-3 font-bold text-[#121826] transition-colors hover:border-[#6aad1d]/35"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#dbe7f6] bg-white px-6 py-3 font-bold text-[#121826] transition-colors hover:border-[#6aad1d]/35 sm:w-auto"
                 >
                   <Smartphone size={18} />
                   {isTR ? 'Vitrini aç' : 'Open showcase'}

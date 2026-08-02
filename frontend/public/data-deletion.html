@@ -1,168 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Arrows Puzzle Master data deletion request instructions." />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>Data Deletion Request | Arrows Puzzle Master</title>
-    <style>
-      body {
-        margin: 0;
-        background: #ffffff;
-        color: #1f3d3a;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      nav {
-        border-bottom: 1px solid #d6e8e4;
-        background: #fff;
-      }
-      .wrap {
-        width: min(900px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-      .nav {
-        min-height: 72px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #1f3d3a;
-        font-weight: 800;
-        text-decoration: none;
-      }
-      .brand img {
-        width: 44px;
-        height: 44px;
-        border-radius: 16px;
-      }
-      main {
-        padding: 52px 0;
-      }
-      .eyebrow {
-        color: #0ea394;
-        font-size: 12px;
-        font-weight: 900;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-      }
-      h1 {
-        margin: 12px 0;
-        font-size: clamp(34px, 7vw, 56px);
-        line-height: 1;
-        letter-spacing: -0.04em;
-      }
-      h2 {
-        margin: 0 0 12px;
-        color: #1f3d3a;
-      }
-      p,
-      li {
-        color: #8a9d9a;
-        line-height: 1.75;
-      }
-      section {
-        margin-top: 18px;
-        padding: 24px;
-        border: 1px solid #d6e8e4;
-        border-radius: 24px;
-        background: #fff;
-      }
-      a {
-        color: #0ea394;
-        font-weight: 800;
-      }
-      code {
-        padding: 3px 7px;
-        border-radius: 8px;
-        background: #e7f2f0;
-        color: #0b7f74;
-        font-weight: 800;
-      }
-      footer {
-        padding: 0 0 42px;
-        color: #8a9d9a;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="wrap nav">
-        <a class="brand" href="/">
-          <img src="/games/arrows-puzzle-master/icon.png" alt="Arrows Puzzle Master" />
-          <span>Arrows Puzzle Master</span>
-        </a>
-        <a href="/privacy">Privacy Policy</a>
-      </div>
-    </nav>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Puzzle Games showcase with dedicated landing pages for 10 mobile puzzle titles." />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
+        <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
 
-    <main class="wrap">
-      <p class="eyebrow">Data Deletion</p>
-      <h1>Data Deletion Request</h1>
-      <p>
-        This page explains how users can request deletion of data associated with the
-        Arrows Puzzle Master mobile game.
-      </p>
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Puzzle Games Showcase</title>
+        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+        <!--
+        These two scripts have been added for the Visual Edits, please do not edit or remove them
+        -->
+        <script>
+            // Only load visual edit scripts when inside an iframe
+            if (window.self !== window.top) {
+                // Load debug monitor script
+                var debugMonitorScript = document.createElement('script');
+                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
+                document.head.appendChild(debugMonitorScript);
 
-      <section>
-        <h2>App and Developer</h2>
-        <p>
-          This request process applies to the Arrows Puzzle Master mobile game.
-          Requests are reviewed by the Arrows Puzzle Master support team.
-        </p>
-      </section>
+                // Configure Tailwind
+                window.tailwind = window.tailwind || {};
+                tailwind.config = {
+                    corePlugins: { preflight: false },
+                };
 
-      <section>
-        <h2>How to Request Data Deletion</h2>
-        <ol>
-          <li>Send an email to <a href="mailto:support@aveniaichat.com">support@aveniaichat.com</a>.</li>
-          <li>Use the subject line <code>Arrows Puzzle Master Data Deletion Request</code>.</li>
-          <li>Include your email address, device/platform information, and the data types you want deleted.</li>
-          <li>We may request additional information if needed to verify the request.</li>
-        </ol>
-        <p>Verified requests are usually processed within 30 days.</p>
-      </section>
+                // Load Tailwind CDN
+                var tailwindScript = document.createElement('script');
+                tailwindScript.src = 'https://cdn.tailwindcss.com';
+                document.head.appendChild(tailwindScript);
+            }
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-      <section>
-        <h2>Data Types That Can Be Deleted</h2>
-        <ul>
-          <li>Cloud-stored game progress, level state, and app preferences, if any.</li>
-          <li>Email address and message content related to support requests.</li>
-          <li>Technical support records that can be associated with your account or device.</li>
-          <li>In-app profile data or user identifiers, if any.</li>
-        </ul>
-      </section>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-      <section>
-        <h2>Data That May Be Retained and Retention Periods</h2>
-        <ul>
-          <li>Some records may be retained for legal obligations, security, fraud prevention, payment disputes, or accounting requirements.</li>
-          <li>App store payment, subscription, or purchase records may be managed separately by Google Play or the relevant payment provider.</li>
-          <li>Aggregated or anonymized statistics that cannot identify a user may be retained after a deletion request.</li>
-          <li>Residual backup copies are removed through routine cycles within 90 days.</li>
-        </ul>
-      </section>
-
-      <section lang="tr">
-        <h2>Türkçe Özet</h2>
-        <p>
-          Arrows Puzzle Master verilerinizin silinmesini istemek için
-          <a href="mailto:support@aveniaichat.com">support@aveniaichat.com</a>
-          adresine e-posta gönderin. Konu satırına
-          <code>Arrows Puzzle Master Data Deletion Request</code> yazın ve silinmesini
-          istediğiniz veri türlerini belirtin. Doğrulanmış talepler genellikle 30 gün
-          içinde işlenir. Yedek sistemlerde kalan kopyalar en geç 90 gün içinde rutin
-          döngülerle silinir.
-        </p>
-      </section>
-    </main>
-
-    <footer>© 2026 Arrows Puzzle Master</footer>
-  </body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push(
+                                        [e].concat(
+                                            Array.prototype.slice.call(
+                                                arguments,
+                                                0,
+                                            ),
+                                        ),
+                                    );
+                                });
+                        }
+                        ((p = t.createElement("script")).type =
+                            "text/javascript"),
+                            (p.crossOrigin = "anonymous"),
+                            (p.async = !0),
+                            (p.src =
+                                s.api_host.replace(
+                                    ".i.posthog.com",
+                                    "-assets.i.posthog.com",
+                                ) + "/static/array.js"),
+                            (r =
+                                t.getElementsByTagName(
+                                    "script",
+                                )[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return (
+                                        "posthog" !== a && (e += "." + a),
+                                        t || (e += " (stub)"),
+                                        e
+                                    );
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o =
+                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
+                                        " ",
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
+                api_host: "https://us.i.posthog.com",
+                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                session_recording: {
+                    recordCrossOriginIframes: true,
+                },
+            });
+        </script>
+    </body>
 </html>

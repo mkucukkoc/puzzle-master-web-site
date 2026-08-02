@@ -1,226 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Triple Grove: Tile Match</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: #070b16;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-    }
-    .header {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(14, 163, 148, 0.2);
-      color: #0ea394;
-      border: 1px solid rgba(14, 163, 148, 0.4);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 12px;
-    }
-    h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(255, 255, 255, 0.6); }
-    .section {
-      margin-bottom: 24px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-    }
-    h2, h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #ffffff; }
-    p { font-size: 15px; color: rgba(255, 255, 255, 0.82); margin-bottom: 12px; }
-    ul, ol { margin: 12px 0 12px 24px; color: rgba(255, 255, 255, 0.82); font-size: 15px; }
-    li { margin-bottom: 6px; }
-    a { color: #0ea394; text-decoration: none; font-weight: bold; }
-    a:hover { text-decoration: underline; }
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <span class="badge">Triple Grove: Tile Match</span>
-      <h1>Privacy Policy</h1>
-      <div class="updated">Last updated: August 2, 2026</div>
-    </div>
-    <div class="section">import React from 'react';
-import { Link } from 'react-router-dom';
-import TileMatchNav from '@/components/TileMatchNav';
-import { useLanguage } from '@/context/LanguageContext';
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Puzzle Games showcase with dedicated landing pages for 10 mobile puzzle titles." />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
+        <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
 
-const Section = ({ title, children }) =&gt; (
-  &lt;section className="rounded-[1.5rem] bg-white border border-[#bbf7d0] p-6 shadow-sm"&gt;
-    &lt;h3 className="text-xl font-black mb-3 text-[#052e16]"&gt;{title}&lt;/h3&gt;
-    &lt;div className="text-[#365314] leading-7 space-y-3"&gt;{children}&lt;/div&gt;
-  &lt;/section&gt;
-);
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Puzzle Games Showcase</title>
+        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+        <!--
+        These two scripts have been added for the Visual Edits, please do not edit or remove them
+        -->
+        <script>
+            // Only load visual edit scripts when inside an iframe
+            if (window.self !== window.top) {
+                // Load debug monitor script
+                var debugMonitorScript = document.createElement('script');
+                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
+                document.head.appendChild(debugMonitorScript);
 
-const TileMatchPrivacyPage = () =&gt; {
-  const { language } = useLanguage();
-  const isTR = language === 'tr';
+                // Configure Tailwind
+                window.tailwind = window.tailwind || {};
+                tailwind.config = {
+                    corePlugins: { preflight: false },
+                };
 
-  const collected = isTR
-    ? [
-        'Oyun ilerlemesi, seviye durumu, yıldızlar, açılan temalar ve uygulama tercihleri (cihazınızda yerel saklanır)',
-        'Cihaz modeli, işletim sistemi, uygulama sürümü, hata kayıtları ve performans verileri',
-        'Google Mobile Ads aracılığıyla reklam gösterimi, etkileşimler ve Android Reklam Kimliği gibi teknik tanımlayıcılar',
-        'Destek talebi gönderirseniz e-posta adresi ve mesaj içeriği',
-      ]
-    : [
-        'Game progress, level state, stars, unlocked themes, and app preferences (stored locally on your device)',
-        'Device model, operating system, app version, crash logs, and performance data',
-        'Ad delivery, interaction metrics, and technical identifiers such as Android Advertising ID via Google Mobile Ads',
-        'Email address and message content if you contact support',
-      ];
+                // Load Tailwind CDN
+                var tailwindScript = document.createElement('script');
+                tailwindScript.src = 'https://cdn.tailwindcss.com';
+                document.head.appendChild(tailwindScript);
+            }
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-  const purposes = isTR
-    ? [
-        'Oyunu çalıştırmak, seviye ilerlemesini ve yıldızları aynı cihazda korumak',
-        'Kullanıcı tercihlerine göre reklamları ve ödüllü reklam özelliklerini sunmak',
-        'Hataları gidermek, performansı artırmak ve haksız kullanımı önlemek',
-        'Destek taleplerini yanıtlamak ve yasal yükümlülükleri yerine getirmek',
-      ]
-    : [
-        'Run the game, save level progress and stars on your device',
-        'Deliver ads and rewarded ad features based on user preferences',
-        'Debug issues, improve performance, and prevent fraud or misuse',
-        'Respond to support requests and meet legal compliance',
-      ];
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-  return (
-    &lt;div className="min-h-screen bg-[#f0fdf4] text-[#052e16]"&gt;
-      &lt;TileMatchNav active="privacy" /&gt;
-
-      &lt;main className="pt-24 sm:pt-28 pb-12 px-6"&gt;
-        &lt;div className="max-w-3xl mx-auto"&gt;
-          &lt;div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#052e16] via-[#14532d] to-[#16a34a] p-8 sm:p-10 shadow-[0_24px_60px_rgba(5,46,22,0.28)]"&gt;
-            &lt;div className="flex items-center gap-4"&gt;
-              &lt;img
-                src="/games/tile-match/icon.png"
-                alt="Triple Grove: Tile Match"
-                className="h-12 w-12 rounded-2xl border border-white/20 object-cover"
-              /&gt;
-              &lt;p className="text-[11px] font-black tracking-[0.28em] text-[#bbf7d0]"&gt;TRIPLE GROVE&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;h1 className="mt-6 text-3xl sm:text-4xl font-black text-white"&gt;
-              {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
-            &lt;/h1&gt;
-            &lt;p className="mt-3 text-white/70"&gt;
-              {isTR ? 'Son güncelleme: 28 Temmuz 2026' : 'Last updated: July 28, 2026'}
-            &lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div className="space-y-5"&gt;
-            &lt;Section title={isTR ? '1. Kapsam' : '1. Scope'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Bu Gizlilik Politikası, Triple Grove: Tile Match mobil oyunu ve ilgili web sayfalarında hangi verilerin işlenebileceğini, neden işlendiğini ve kullanıcı seçeneklerini açıklar.'
-                  : 'This Privacy Policy explains what data may be processed in connection with the Triple Grove: Tile Match mobile game and related web pages, why it is processed, and user rights.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '2. İşlenen Veriler' : '2. Data We Process'}&gt;
-              &lt;ul className="list-disc list-inside space-y-2"&gt;
-                {collected.map(item =&gt; (
-                  &lt;li key={item}&gt;{item}&lt;/li&gt;
-                ))}
-              &lt;/ul&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '3. Veri İşleme Amaçları' : '3. Purposes of Processing'}&gt;
-              &lt;ul className="list-disc list-inside space-y-2"&gt;
-                {purposes.map(item =&gt; (
-                  &lt;li key={item}&gt;{item}&lt;/li&gt;
-                ))}
-              &lt;/ul&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '4. İzinler' : '4. Permissions'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Triple Grove konum, kamera, mikrofon, kişiler veya medya dosyalarınıza erişim istemez. İnternet ve ağ durumu izinleri reklam hizmetleri için, titreşim izni ise dokunsal geri bildirim için kullanılır.'
-                  : 'Triple Grove does not request access to location, camera, microphone, contacts, or media files. Internet and network state permissions are used for ad delivery, and vibration permission is used for optional haptic feedback.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '5. Reklamlar ve Üçüncü Taraf SDK’lar' : '5. Ads and Third-Party SDKs'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Uygulama, reklam gösterimi için Google Mobile Ads kullanabilir. Reklam sağlayıcıları reklam kimliği, cihaz bilgisi, IP adresi ve reklam etkileşim verilerini işleyebilir.'
-                  : 'The app may use Google Mobile Ads to deliver advertisements. Advertising providers may process advertising IDs, device specifications, IP address, and interaction metrics.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Yerel oyun verileri cihazınızda saklanır ve uygulama kaldırıldığında veya uygulama verisi temizlendiğinde silinir. Destek talepleri ve iletişim kayıtları yalnızca yanıt vermek için tutulur.'
-                  : 'Local game data is stored on your device and deleted when the app is uninstalled or app storage cleared. Support records are kept only as needed to fulfill your inquiry.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Oyun genel kitleye yöneliktir ve 13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
-                  : 'The game is intended for a general audience and does not knowingly collect personal data from children under 13.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '8. İletişim ve Veri Silme' : '8. Contact & Data Requests'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Gizlilik sorularınız ve veri silme talepleriniz için: iammustafakucukkoc@gmail.com'
-                  : 'For privacy questions or data deletion requests: iammustafakucukkoc@gmail.com'}
-              &lt;/p&gt;
-              &lt;div className="mt-3"&gt;
-                &lt;Link to="/tile-match/data-deletion" className="text-[#16a34a] font-bold hover:text-[#052e16] transition-colors"&gt;
-                  {isTR ? 'Triple Grove Veri Silme Talebi Sayfası' : 'Triple Grove Data Deletion Request Page'}
-                &lt;/Link&gt;
-              &lt;/div&gt;
-            &lt;/Section&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/main&gt;
-    &lt;/div&gt;
-  );
-};
-
-export default TileMatchPrivacyPage;
-</div>
-    <div class="footer">
-      <a href="/">&larr; Return to Triple Grove: Tile Match Home</a>
-    </div>
-  </div>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push(
+                                        [e].concat(
+                                            Array.prototype.slice.call(
+                                                arguments,
+                                                0,
+                                            ),
+                                        ),
+                                    );
+                                });
+                        }
+                        ((p = t.createElement("script")).type =
+                            "text/javascript"),
+                            (p.crossOrigin = "anonymous"),
+                            (p.async = !0),
+                            (p.src =
+                                s.api_host.replace(
+                                    ".i.posthog.com",
+                                    "-assets.i.posthog.com",
+                                ) + "/static/array.js"),
+                            (r =
+                                t.getElementsByTagName(
+                                    "script",
+                                )[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return (
+                                        "posthog" !== a && (e += "." + a),
+                                        t || (e += " (stub)"),
+                                        e
+                                    );
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o =
+                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
+                                        " ",
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
+                api_host: "https://us.i.posthog.com",
+                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                session_recording: {
+                    recordCrossOriginIframes: true,
+                },
+            });
+        </script>
+    </body>
 </html>

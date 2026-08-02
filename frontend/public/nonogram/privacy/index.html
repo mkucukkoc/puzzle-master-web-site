@@ -1,235 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Nonogram: Pixel Puzzle</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: #070b16;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-    }
-    .header {
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(14, 163, 148, 0.2);
-      color: #0ea394;
-      border: 1px solid rgba(14, 163, 148, 0.4);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 12px;
-    }
-    h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
-    .updated { font-size: 13px; color: rgba(255, 255, 255, 0.6); }
-    .section {
-      margin-bottom: 24px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-    }
-    h2, h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #ffffff; }
-    p { font-size: 15px; color: rgba(255, 255, 255, 0.82); margin-bottom: 12px; }
-    ul, ol { margin: 12px 0 12px 24px; color: rgba(255, 255, 255, 0.82); font-size: 15px; }
-    li { margin-bottom: 6px; }
-    a { color: #0ea394; text-decoration: none; font-weight: bold; }
-    a:hover { text-decoration: underline; }
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <span class="badge">Nonogram: Pixel Puzzle</span>
-      <h1>Privacy Policy</h1>
-      <div class="updated">Last updated: August 2, 2026</div>
-    </div>
-    <div class="section">import React from 'react';
-import { Link } from 'react-router-dom';
-import NonogramNav from '@/components/NonogramNav';
-import { useLanguage } from '@/context/LanguageContext';
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Puzzle Games showcase with dedicated landing pages for 10 mobile puzzle titles." />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
+        <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
 
-const Section = ({ title, children }) =&gt; (
-  &lt;section className="rounded-[1.5rem] bg-white border border-[#d6e8e8] p-6 shadow-sm"&gt;
-    &lt;h3 className="text-xl font-black mb-3 text-[#06213a]"&gt;{title}&lt;/h3&gt;
-    &lt;div className="text-[#4d6976] leading-7 space-y-3"&gt;{children}&lt;/div&gt;
-  &lt;/section&gt;
-);
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Puzzle Games Showcase</title>
+        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+        <!--
+        These two scripts have been added for the Visual Edits, please do not edit or remove them
+        -->
+        <script>
+            // Only load visual edit scripts when inside an iframe
+            if (window.self !== window.top) {
+                // Load debug monitor script
+                var debugMonitorScript = document.createElement('script');
+                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
+                document.head.appendChild(debugMonitorScript);
 
-const NonogramPrivacyPage = () =&gt; {
-  const { language } = useLanguage();
-  const isTR = language === 'tr';
+                // Configure Tailwind
+                window.tailwind = window.tailwind || {};
+                tailwind.config = {
+                    corePlugins: { preflight: false },
+                };
 
-  const collected = isTR
-    ? [
-        'Oyun ilerlemesi, seviye durumu, günlük bulmaca sonucu, yıldız/seri verileri ve uygulama tercihleri',
-        'Cihaz modeli, işletim sistemi, uygulama sürümü, hata kayıtları ve performans sinyalleri',
-        'Reklam gösterimi, ödüllü reklam tamamlama bilgileri ve reklam kimliği gibi teknik veriler',
-        'Giriş yaparsanız hesap kimliği veya oturum verileri',
-        'Destek için bizimle iletişime geçerseniz e-posta adresi ve mesaj içeriği',
-      ]
-    : [
-        'Game progress, level state, daily puzzle results, star/streak data, and app preferences',
-        'Device model, operating system, app version, crash logs, and performance signals',
-        'Ad delivery, rewarded-ad completion data, and technical data such as advertising identifiers',
-        'Account or session data if you sign in',
-        'Email address and message content if you contact support',
-      ];
+                // Load Tailwind CDN
+                var tailwindScript = document.createElement('script');
+                tailwindScript.src = 'https://cdn.tailwindcss.com';
+                document.head.appendChild(tailwindScript);
+            }
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-  const purposes = isTR
-    ? [
-        'Oyunu çalıştırmak, ilerlemeyi kaydetmek ve günlük bulmacayı göstermek',
-        'Reklamları, ödüllü içerikleri ve varsa premium özellikleri sunmak',
-        'Hata ayıklamak, performansı iyileştirmek ve kötüye kullanımı önlemek',
-        'Destek taleplerine yanıt vermek ve yasal yükümlülükleri yerine getirmek',
-      ]
-    : [
-        'Run the game, save progress, and show the daily puzzle',
-        'Deliver ads, rewarded content, and any premium features where available',
-        'Debug issues, improve performance, and prevent abuse',
-        'Respond to support requests and comply with legal obligations',
-      ];
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-  return (
-    &lt;div className="min-h-screen bg-[#f7fbfb] text-[#06213a]"&gt;
-      &lt;NonogramNav active="privacy" /&gt;
-
-      &lt;main className="pt-24 sm:pt-28 pb-12 px-6"&gt;
-        &lt;div className="max-w-3xl mx-auto"&gt;
-          &lt;div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#05304f] via-[#0b4665] to-[#0f7180] p-8 sm:p-10 shadow-[0_24px_60px_rgba(6,33,58,0.28)]"&gt;
-            &lt;div className="flex items-center gap-4"&gt;
-              &lt;div className="grid grid-cols-2 gap-1.5"&gt;
-                &lt;span className="h-6 w-6 rounded-md bg-[#1fdbc9] shadow-[inset_0_2px_0_rgba(255,255,255,0.45)]" /&gt;
-                &lt;span className="h-6 w-6 rounded-md bg-[#ff6f61] shadow-[inset_0_2px_0_rgba(255,255,255,0.45)]" /&gt;
-                &lt;span className="h-6 w-6 rounded-md bg-[#ffb86b] shadow-[inset_0_2px_0_rgba(255,255,255,0.45)]" /&gt;
-                &lt;span className="h-6 w-6 rounded-md bg-[#ffffff] shadow-[inset_0_2px_0_rgba(255,255,255,0.65)]" /&gt;
-              &lt;/div&gt;
-              &lt;p className="text-[11px] font-black tracking-[0.28em] text-[#8feceb]"&gt;NONOGRAM&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;h1 className="mt-6 text-3xl sm:text-4xl font-black text-white"&gt;
-              {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
-            &lt;/h1&gt;
-            &lt;p className="mt-3 text-white/70"&gt;
-              {isTR ? 'Son güncelleme: 24 Temmuz 2026' : 'Last updated: July 24, 2026'}
-            &lt;/p&gt;
-          &lt;/div&gt;
-
-          &lt;div className="space-y-5"&gt;
-            &lt;Section title={isTR ? '1. Kapsam' : '1. Scope'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Bu Gizlilik Politikası, Nonogram - Pixel Puzzle mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, bunların neden işlendiğini ve kullanıcıların hangi haklara sahip olabileceğini açıklar.'
-                  : 'This Privacy Policy explains what data may be processed in connection with the Nonogram - Pixel Puzzle mobile game and related web pages, why it is processed, and what rights users may have.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '2. Toplayabileceğimiz Veriler' : '2. Data We May Process'}&gt;
-              &lt;ul className="list-disc list-inside space-y-2"&gt;
-                {collected.map(item =&gt; (
-                  &lt;li key={item}&gt;{item}&lt;/li&gt;
-                ))}
-              &lt;/ul&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '3. Verileri Nasıl Kullanırız' : '3. How We Use Data'}&gt;
-              &lt;ul className="list-disc list-inside space-y-2"&gt;
-                {purposes.map(item =&gt; (
-                  &lt;li key={item}&gt;{item}&lt;/li&gt;
-                ))}
-              &lt;/ul&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '4. Paylaşım ve Üçüncü Taraf Hizmetler' : '4. Sharing and Third-Party Services'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Uygulama; reklam sunumu, ödüllü reklamlar, çökme raporlama, analitik, mağaza doğrulaması veya giriş işlevleri için üçüncü taraf hizmetleri kullanabilir. Bu hizmetler, kendi gizlilik politikalarına tabi olarak sınırlı teknik verileri işleyebilir.'
-                  : 'The app may use third-party services for ad delivery, rewarded ads, crash reporting, analytics, store validation, or sign-in features. Those services may process limited technical data under their own privacy policies.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '5. Reklamlar ve Reklam Kimliği' : '5. Ads and Advertising ID'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Nonogram - Pixel Puzzle reklamlar ve ödüllü reklamlar gösterebilir. Reklam ortakları, reklam sunumu, ölçüm, dolandırıcılığın önlenmesi ve uyumluluk için Android Reklam Kimliği gibi cihaz tanımlayıcılarını kullanabilir.'
-                  : 'Nonogram - Pixel Puzzle may show ads and rewarded ads. Advertising partners may use device identifiers, including the Android Advertising ID, for ad delivery, measurement, fraud prevention, and compliance.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Yerel oyun ilerlemesi cihazınızda saklanabilir. Sunucu tarafında işlenen destek, reklam, giriş veya teknik kayıtlar yalnızca gerekli olduğu süre boyunca tutulur. Doğrulanmış veri silme talepleri genellikle 30 gün içinde işlenir; yedek kopyalar rutin döngülerle en geç 90 gün içinde kaldırılabilir.'
-                  : 'Local game progress may be stored on your device. Server-side support, ad, sign-in, or technical records are kept only as long as needed. Verified data deletion requests are usually processed within 30 days; residual backup copies may be removed within 90 days through routine cycles.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Oyun genel kitleye yöneliktir ve 13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz. Böyle bir veri işlendiğini öğrenirsek silmek için makul adımları atarız.'
-                  : 'The game is intended for a general audience and does not knowingly seek to collect personal data from children under 13. If we learn such data has been processed, we will take reasonable steps to delete it.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '8. Haklarınız' : '8. Your Rights'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Geçerli mevzuata göre verilerinize erişme, düzeltme, silme veya işleme itiraz etme haklarınız olabilir. Veri silme bağlantısını kullanabilir veya destek e-postası üzerinden bize ulaşabilirsiniz.'
-                  : 'Depending on applicable law, you may have rights to access, correct, delete, or object to the processing of your data. You can use the data deletion link or contact us by support email.'}
-              &lt;/p&gt;
-            &lt;/Section&gt;
-
-            &lt;Section title={isTR ? '9. İletişim' : '9. Contact'}&gt;
-              &lt;p&gt;
-                {isTR
-                  ? 'Gizlilik ile ilgili sorular için: support@aveniaichat.com'
-                  : 'Questions about privacy: support@aveniaichat.com'}
-              &lt;/p&gt;
-              &lt;Link to="/nonogram/data-deletion" className="text-[#0f8c90] font-bold hover:text-[#06213a] transition-colors"&gt;
-                {isTR ? 'Veri Silme Talebi' : 'Data Deletion Request'}
-              &lt;/Link&gt;
-            &lt;/Section&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/main&gt;
-    &lt;/div&gt;
-  );
-};
-
-export default NonogramPrivacyPage;
-</div>
-    <div class="footer">
-      <a href="/">&larr; Return to Nonogram: Pixel Puzzle Home</a>
-    </div>
-  </div>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push(
+                                        [e].concat(
+                                            Array.prototype.slice.call(
+                                                arguments,
+                                                0,
+                                            ),
+                                        ),
+                                    );
+                                });
+                        }
+                        ((p = t.createElement("script")).type =
+                            "text/javascript"),
+                            (p.crossOrigin = "anonymous"),
+                            (p.async = !0),
+                            (p.src =
+                                s.api_host.replace(
+                                    ".i.posthog.com",
+                                    "-assets.i.posthog.com",
+                                ) + "/static/array.js"),
+                            (r =
+                                t.getElementsByTagName(
+                                    "script",
+                                )[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return (
+                                        "posthog" !== a && (e += "." + a),
+                                        t || (e += " (stub)"),
+                                        e
+                                    );
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o =
+                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
+                                        " ",
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
+                api_host: "https://us.i.posthog.com",
+                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                session_recording: {
+                    recordCrossOriginIframes: true,
+                },
+            });
+        </script>
+    </body>
 </html>

@@ -1,129 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Block Boom! terms of use." />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>Terms of Use | Block Boom!</title>
-    <style>
-      :root { --bg:#fbfaff; --panel:#fff; --ink:#251b52; --muted:#7b6cb2; --accent:#6a45d8; --line:#ddd4ff; }
-      * { box-sizing:border-box; }
-      body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-      a { color:inherit; text-decoration:none; }
-      .wrap { width:min(1080px, calc(100% - 32px)); margin:0 auto; }
-      nav { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
-      .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-      .brand { display:flex; align-items:center; gap:12px; font-weight:800; color:var(--ink); }
-      .mark { width:44px; height:44px; border-radius:16px; position:relative; overflow:hidden; border:1px solid #d7c8ff; background:#251b52; box-shadow:0 10px 30px rgba(77,58,163,.18); }
-      .mark span { position:absolute; width:11px; height:11px; border-radius:3px; }
-      .b1{left:7px;top:7px;background:#ff5252} .b2{left:24px;top:7px;background:#ffb800} .b3{left:7px;top:24px;background:#59d56b} .b4{left:24px;top:24px;background:#4e7eff}
-      .nav-links { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-      .nav-links a { font-size:14px; font-weight:700; color:var(--muted); }
-      .nav-links a:hover { color:var(--ink); }
-      main { padding:56px 0 72px; }
-      .hero { border-radius:28px; padding:32px; color:#fff; background:linear-gradient(135deg,#3A37A0,#4A41C6,#5B4BE0); box-shadow:0 24px 60px rgba(74,65,198,.35); }
-      .eyebrow { color:#ffd24c; font-size:11px; font-weight:900; letter-spacing:.28em; text-transform:uppercase; }
-      h1 { margin:10px 0 0; font-size:clamp(32px,5vw,44px); line-height:1.05; letter-spacing:-.03em; }
-      .updated { margin:12px 0 0; color:rgba(255,255,255,.72); }
-      .section { margin-top:18px; border-radius:24px; background:var(--panel); border:1px solid var(--line); padding:24px; box-shadow:0 8px 30px rgba(37,27,82,.05); }
-      .section h2 { margin:0 0 12px; color:var(--ink); font-size:22px; }
-      .section p, .section li { color:var(--muted); line-height:1.8; }
-      ul { margin:0; padding-left:20px; }
-      footer { padding:8px 0 46px; text-align:center; color:var(--muted); }
-      footer a { color:var(--accent); font-weight:700; }
-      @media (max-width:720px) { .hero, .section { padding:22px; } .nav { padding:12px 0; } .nav-links { gap:10px; } }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="wrap nav">
-        <a class="brand" href="/block-boom">
-          <div class="mark"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
-          <span>Block Boom!</span>
-        </a>
-        <div class="nav-links">
-          <a href="/block-boom/privacy.html">Privacy</a>
-          <a href="/block-boom/terms.html">Terms</a>
-          <a href="/block-boom/data-deletion.html">Data Deletion</a>
-        </div>
-      </div>
-    </nav>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="description" content="Puzzle Games showcase with dedicated landing pages for 10 mobile puzzle titles." />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.svg?v=2" type="image/svg+xml" />
+        <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
 
-    <main class="wrap">
-      <div class="hero">
-        <div class="eyebrow">BLOCK BOOM!</div>
-        <h1>Terms of Use</h1>
-        <p class="updated">Last updated: July 23, 2026</p>
-      </div>
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Puzzle Games Showcase</title>
+        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+        <!--
+        These two scripts have been added for the Visual Edits, please do not edit or remove them
+        -->
+        <script>
+            // Only load visual edit scripts when inside an iframe
+            if (window.self !== window.top) {
+                // Load debug monitor script
+                var debugMonitorScript = document.createElement('script');
+                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
+                document.head.appendChild(debugMonitorScript);
 
-      <section class="section">
-        <h2>1. Acceptance</h2>
-        <p>By downloading, opening, or using Block Boom!, you agree to these terms. If you do not agree, please do not use the app.</p>
-      </section>
+                // Configure Tailwind
+                window.tailwind = window.tailwind || {};
+                tailwind.config = {
+                    corePlugins: { preflight: false },
+                };
 
-      <section class="section">
-        <h2>2. Service Scope</h2>
-        <p>Block Boom! is a mobile puzzle game built around placing and clearing blocks in the correct order. The service may include:</p>
-        <ul>
-          <li>Grid-based block puzzle levels and visual effects</li>
-          <li>Hints, hearts, progress saving, and rewarded-ad features</li>
-          <li>Premium or ad-free version options where available</li>
-        </ul>
-      </section>
+                // Load Tailwind CDN
+                var tailwindScript = document.createElement('script');
+                tailwindScript.src = 'https://cdn.tailwindcss.com';
+                document.head.appendChild(tailwindScript);
+            }
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-      <section class="section">
-        <h2>3. Progress and Devices</h2>
-        <p>Some progress data may be stored on your device or in platform verification systems. Changing devices, uninstalling the app, or a technical issue may affect some locally stored progress.</p>
-      </section>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-      <section class="section">
-        <h2>4. Ads, Rewards, and Purchases</h2>
-        <p>The game may offer rewarded ads or paid features. Watching an ad may be optional; however, completing the ad may be required to receive the reward.</p>
-        <p>Subscriptions, refunds, and payment rules are subject to Google Play or Apple App Store policies.</p>
-      </section>
-
-      <section class="section">
-        <h2>5. Prohibited Use</h2>
-        <ul>
-          <li>Misusing the game, ads, rewards, or purchase systems</li>
-          <li>Cheating, automation, reverse engineering, or bypassing security measures</li>
-          <li>Using the app unlawfully, harmfully, unfairly, or in a way that violates third-party rights</li>
-          <li>Copying or distributing the brand, artwork, level data, or software without permission</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>6. Intellectual Property</h2>
-        <p>The Block Boom! name, logo, interface, level layouts, gameplay mechanics, software, and visual assets belong to the relevant rights holders. You are granted only a personal, non-transferable, limited right to use the app.</p>
-      </section>
-
-      <section class="section">
-        <h2>7. Changes and Termination</h2>
-        <ul>
-          <li>Content, levels, ad flow, prices, or technical infrastructure may be updated from time to time.</li>
-          <li>The app, or parts of it, may be suspended or discontinued.</li>
-          <li>Continuing to use an updated version may mean you accept the revised terms.</li>
-        </ul>
-        <p>If you violate these terms, your access to the app may be restricted or terminated.</p>
-      </section>
-
-      <section class="section">
-        <h2>8. Limitation of Liability</h2>
-        <p>The app is provided “as is.” We do not guarantee uninterrupted, secure, or error-free operation. To the fullest extent permitted by law, we are not responsible for indirect or consequential damages.</p>
-      </section>
-
-      <section class="section">
-        <h2>9. Privacy</h2>
-        <p>Our data handling practices are described in the <a href="/block-boom/privacy.html">Privacy Policy</a>.</p>
-      </section>
-
-      <section class="section">
-        <h2>10. Contact</h2>
-        <p>For legal requests and questions: <a href="mailto:support@aveniaichat.com">support@aveniaichat.com</a></p>
-      </section>
-    </main>
-
-    <footer>© 2026 Block Boom!</footer>
-  </body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push(
+                                        [e].concat(
+                                            Array.prototype.slice.call(
+                                                arguments,
+                                                0,
+                                            ),
+                                        ),
+                                    );
+                                });
+                        }
+                        ((p = t.createElement("script")).type =
+                            "text/javascript"),
+                            (p.crossOrigin = "anonymous"),
+                            (p.async = !0),
+                            (p.src =
+                                s.api_host.replace(
+                                    ".i.posthog.com",
+                                    "-assets.i.posthog.com",
+                                ) + "/static/array.js"),
+                            (r =
+                                t.getElementsByTagName(
+                                    "script",
+                                )[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return (
+                                        "posthog" !== a && (e += "." + a),
+                                        t || (e += " (stub)"),
+                                        e
+                                    );
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o =
+                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
+                                        " ",
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
+                api_host: "https://us.i.posthog.com",
+                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+                session_recording: {
+                    recordCrossOriginIframes: true,
+                },
+            });
+        </script>
+    </body>
 </html>

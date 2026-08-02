@@ -47,6 +47,10 @@ import SudokuPrivacyPage from '@/pages/SudokuPrivacyPage';
 import SudokuTermsPage from '@/pages/SudokuTermsPage';
 import SudokuDataDeletionPage from '@/pages/SudokuDataDeletionPage';
 
+import WordSearchPrivacyPage from '@/pages/WordSearchPrivacyPage';
+import WordSearchTermsPage from '@/pages/WordSearchTermsPage';
+import WordSearchDataDeletionPage from '@/pages/WordSearchDataDeletionPage';
+
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
@@ -137,15 +141,15 @@ function App() {
             {/* 6. Word Search */}
             <Route path="/word-search" element={<GameLandingPage game={getGameBySlug('word-search')} />} />
             <Route path="/word-search/index.html" element={<GameLandingPage game={getGameBySlug('word-search')} />} />
-            <Route path="/word-search/privacy" element={<PrivacyPage />} />
-            <Route path="/word-search/privacy.html" element={<PrivacyPage />} />
-            <Route path="/word-search/privacy/index.html" element={<PrivacyPage />} />
-            <Route path="/word-search/terms" element={<TermsPage />} />
-            <Route path="/word-search/terms.html" element={<TermsPage />} />
-            <Route path="/word-search/terms/index.html" element={<TermsPage />} />
-            <Route path="/word-search/data-deletion" element={<DataDeletionPage />} />
-            <Route path="/word-search/data-deletion.html" element={<DataDeletionPage />} />
-            <Route path="/word-search/data-deletion/index.html" element={<DataDeletionPage />} />
+            <Route path="/word-search/privacy" element={<WordSearchPrivacyPage />} />
+            <Route path="/word-search/privacy.html" element={<WordSearchPrivacyPage />} />
+            <Route path="/word-search/privacy/index.html" element={<WordSearchPrivacyPage />} />
+            <Route path="/word-search/terms" element={<WordSearchTermsPage />} />
+            <Route path="/word-search/terms.html" element={<WordSearchTermsPage />} />
+            <Route path="/word-search/terms/index.html" element={<WordSearchTermsPage />} />
+            <Route path="/word-search/data-deletion" element={<WordSearchDataDeletionPage />} />
+            <Route path="/word-search/data-deletion.html" element={<WordSearchDataDeletionPage />} />
+            <Route path="/word-search/data-deletion/index.html" element={<WordSearchDataDeletionPage />} />
 
             {/* 7. Sudoku Quest */}
             <Route path="/sudoku" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />

@@ -56,6 +56,16 @@ import ColorSortPrivacyPage from '@/pages/ColorSortPrivacyPage';
 import ColorSortTermsPage from '@/pages/ColorSortTermsPage';
 import ColorSortDataDeletionPage from '@/pages/ColorSortDataDeletionPage';
 
+import WordConnectHomePage from '@/pages/WordConnectHomePage';
+import WordConnectPrivacyPage from '@/pages/WordConnectPrivacyPage';
+import WordConnectTermsPage from '@/pages/WordConnectTermsPage';
+import WordConnectDataDeletionPage from '@/pages/WordConnectDataDeletionPage';
+
+import ScrewMasterHomePage from '@/pages/ScrewMasterHomePage';
+import ScrewMasterPrivacyPage from '@/pages/ScrewMasterPrivacyPage';
+import ScrewMasterTermsPage from '@/pages/ScrewMasterTermsPage';
+import ScrewMasterDataDeletionPage from '@/pages/ScrewMasterDataDeletionPage';
+
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
@@ -265,6 +275,32 @@ function App() {
             <Route path="/color-sort/data-deletion" element={<ColorSortDataDeletionPage />} />
             <Route path="/color-sort/data-deletion.html" element={<ColorSortDataDeletionPage />} />
             <Route path="/color-sort/data-deletion/index.html" element={<ColorSortDataDeletionPage />} />
+
+            {/* 12. Word Connect */}
+            <Route path="/word-connect" element={<WordConnectHomePage />} />
+            <Route path="/word-connect/index.html" element={<WordConnectHomePage />} />
+            <Route path="/word-connect/privacy" element={<WordConnectPrivacyPage />} />
+            <Route path="/word-connect/privacy.html" element={<WordConnectPrivacyPage />} />
+            <Route path="/word-connect/privacy/index.html" element={<WordConnectPrivacyPage />} />
+            <Route path="/word-connect/terms" element={<WordConnectTermsPage />} />
+            <Route path="/word-connect/terms.html" element={<WordConnectTermsPage />} />
+            <Route path="/word-connect/terms/index.html" element={<WordConnectTermsPage />} />
+            <Route path="/word-connect/data-deletion" element={<WordConnectDataDeletionPage />} />
+            <Route path="/word-connect/data-deletion.html" element={<WordConnectDataDeletionPage />} />
+            <Route path="/word-connect/data-deletion/index.html" element={<WordConnectDataDeletionPage />} />
+
+            {/* 13. Screw Master */}
+            <Route path="/screw-master" element={<ScrewMasterHomePage />} />
+            <Route path="/screw-master/index.html" element={<ScrewMasterHomePage />} />
+            <Route path="/screw-master/privacy" element={<ScrewMasterPrivacyPage />} />
+            <Route path="/screw-master/privacy.html" element={<ScrewMasterPrivacyPage />} />
+            <Route path="/screw-master/privacy/index.html" element={<ScrewMasterPrivacyPage />} />
+            <Route path="/screw-master/terms" element={<ScrewMasterTermsPage />} />
+            <Route path="/screw-master/terms.html" element={<ScrewMasterTermsPage />} />
+            <Route path="/screw-master/terms/index.html" element={<ScrewMasterTermsPage />} />
+            <Route path="/screw-master/data-deletion" element={<ScrewMasterDataDeletionPage />} />
+            <Route path="/screw-master/data-deletion.html" element={<ScrewMasterDataDeletionPage />} />
+            <Route path="/screw-master/data-deletion/index.html" element={<ScrewMasterDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

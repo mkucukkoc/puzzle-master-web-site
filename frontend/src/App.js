@@ -112,6 +112,18 @@ function App() {
             <Route path="/car-puzzle/data-deletion.html" element={<CarPuzzleDataDeletionPage />} />
             <Route path="/car-puzzle/data-deletion/index.html" element={<CarPuzzleDataDeletionPage />} />
 
+            <Route path="/cars-puzzle-escape" element={<CarPuzzleHomePage />} />
+            <Route path="/cars-puzzle-escape/index.html" element={<CarPuzzleHomePage />} />
+            <Route path="/cars-puzzle-escape/privacy" element={<CarPuzzlePrivacyPage />} />
+            <Route path="/cars-puzzle-escape/privacy.html" element={<CarPuzzlePrivacyPage />} />
+            <Route path="/cars-puzzle-escape/privacy/index.html" element={<CarPuzzlePrivacyPage />} />
+            <Route path="/cars-puzzle-escape/terms" element={<CarPuzzleTermsPage />} />
+            <Route path="/cars-puzzle-escape/terms.html" element={<CarPuzzleTermsPage />} />
+            <Route path="/cars-puzzle-escape/terms/index.html" element={<CarPuzzleTermsPage />} />
+            <Route path="/cars-puzzle-escape/data-deletion" element={<CarPuzzleDataDeletionPage />} />
+            <Route path="/cars-puzzle-escape/data-deletion.html" element={<CarPuzzleDataDeletionPage />} />
+            <Route path="/cars-puzzle-escape/data-deletion/index.html" element={<CarPuzzleDataDeletionPage />} />
+
             {/* 4. Nonogram */}
             <Route path="/nonogram" element={<NonogramHomePage />} />
             <Route path="/nonogram/index.html" element={<NonogramHomePage />} />
@@ -163,9 +175,18 @@ function App() {
             <Route path="/sudoku/data-deletion" element={<SudokuDataDeletionPage />} />
             <Route path="/sudoku/data-deletion.html" element={<SudokuDataDeletionPage />} />
             <Route path="/sudoku/data-deletion/index.html" element={<SudokuDataDeletionPage />} />
+
+            <Route path="/sudoku-quest" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
+            <Route path="/sudoku-quest/index.html" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
             <Route path="/sudoku-quest/privacy" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku-quest/privacy.html" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku-quest/privacy/index.html" element={<SudokuPrivacyPage />} />
             <Route path="/sudoku-quest/terms" element={<SudokuTermsPage />} />
+            <Route path="/sudoku-quest/terms.html" element={<SudokuTermsPage />} />
+            <Route path="/sudoku-quest/terms/index.html" element={<SudokuTermsPage />} />
             <Route path="/sudoku-quest/data-deletion" element={<SudokuDataDeletionPage />} />
+            <Route path="/sudoku-quest/data-deletion.html" element={<SudokuDataDeletionPage />} />
+            <Route path="/sudoku-quest/data-deletion/index.html" element={<SudokuDataDeletionPage />} />
 
             {/* 8. Flow Connects */}
             <Route path="/flow-connects" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />
@@ -204,10 +225,18 @@ function App() {
             <Route path="/tile-match/data-deletion" element={<TileMatchDataDeletionPage />} />
             <Route path="/tile-match/data-deletion.html" element={<TileMatchDataDeletionPage />} />
             <Route path="/tile-match/data-deletion/index.html" element={<TileMatchDataDeletionPage />} />
+
             <Route path="/triple-grove" element={<TileMatchHomePage />} />
+            <Route path="/triple-grove/index.html" element={<TileMatchHomePage />} />
             <Route path="/triple-grove/privacy" element={<TileMatchPrivacyPage />} />
+            <Route path="/triple-grove/privacy.html" element={<TileMatchPrivacyPage />} />
+            <Route path="/triple-grove/privacy/index.html" element={<TileMatchPrivacyPage />} />
             <Route path="/triple-grove/terms" element={<TileMatchTermsPage />} />
+            <Route path="/triple-grove/terms.html" element={<TileMatchTermsPage />} />
+            <Route path="/triple-grove/terms/index.html" element={<TileMatchTermsPage />} />
             <Route path="/triple-grove/data-deletion" element={<TileMatchDataDeletionPage />} />
+            <Route path="/triple-grove/data-deletion.html" element={<TileMatchDataDeletionPage />} />
+            <Route path="/triple-grove/data-deletion/index.html" element={<TileMatchDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

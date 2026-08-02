@@ -1,101 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BlockBoomNav from '@/components/BlockBoomNav';
 import { useLanguage } from '@/context/LanguageContext';
-import LegalPageLayout, { LegalSection } from '@/components/LegalPageLayout';
+
+const Section = ({ title, children }) => (
+  <section className="rounded-[1.5rem] bg-white border border-[#d8d2f4] p-6 shadow-sm">
+    <h3 className="text-xl font-black mb-3 text-[#251b52]">{title}</h3>
+    <div className="text-[#7b6cb2] leading-7 space-y-3">{children}</div>
+  </section>
+);
 
 const BlockBoomPrivacyPage = () => {
   const { language } = useLanguage();
   const isTR = language === 'tr';
 
-  const collected = isTR
+  const collectedData = isTR
     ? [
-        'Oyun ilerlemesi, en yüksek skor, seviye durumu ve tercih verileri',
-        'Cihaz modeli, işletim sistemi, uygulama sürümü, çökme verileri ve teşhis sinyalleri',
-        'Reklam gösterimleri, ödüllü reklam tamamlama durumu ve reklam kimliği',
-        'Destek için iletişime geçildiğinde e-posta adresi ve mesaj içeriği',
+        'Oyun ilerlemesi, seviye durumu, can ve ipucu kullanımı, seçili tema ve uygulama tercihleri',
+        'Cihaz modeli, işletim sistemi, uygulama sürümü, çökme kayıtları ve performans sinyalleri',
+        'Reklam gösterimi, ödüllü reklam tamamlama bilgileri ve reklam kimlikleri gibi teknik veriler',
+        'Satın alma, abonelik veya mağaza doğrulama durumu',
+        'Destek için bizimle iletişime geçerseniz e-posta adresi ve mesaj içeriği',
       ]
     : [
-        'Game progress, high score, level state, and preference data',
-        'Device model, operating system, app version, crash data, and diagnostic signals',
-        'Ad impressions, rewarded ad completion state, and advertising ID',
+        'Game progress, level state, hearts and hint usage, selected theme, and app preferences',
+        'Device model, operating system, app version, crash logs, and performance signals',
+        'Ad delivery, rewarded-ad completion data, and technical data such as advertising identifiers',
+        'Purchase, subscription, or store verification status',
         'Email address and message content if you contact support',
       ];
 
   const purposes = isTR
     ? [
-        'Oyunu çalıştırmak, skorları tutmak ve seviye geçişlerini sağlamak',
-        'Reklamları, kombo ödüllerini ve uygulama içi özellikleri sunmak',
-        'Hataları gidermek, performansı artırmak ve güvenliği sağlamak',
-        'Destek bildirimlerine yanıt vermek',
+        'Oyunu çalıştırmak, ilerlemenizi kaydetmek ve mümkün olduğunda deneyimi cihazlar arasında korumak',
+        'Reklamları, ödüllü içerikleri ve varsa premium özellikleri sunmak',
+        'Hata ayıklamak, performansı iyileştirmek ve kötüye kullanımı önlemek',
+        'Destek, hesap/ödemeye ilişkin talepler ve veri silme isteklerine yanıt vermek',
       ]
     : [
-        'Run the game, keep track of scores, and manage level progression',
-        'Deliver ads, combo rewards, and in-app features',
-        'Fix bugs, improve performance, and maintain security',
-        'Respond to support inquiries',
+        'Run the game, save progress, and preserve the experience across devices where applicable',
+        'Deliver ads, rewarded content, and any premium features where available',
+        'Debug issues, improve performance, and prevent abuse',
+        'Respond to support, account/payment-related requests, and data deletion requests',
+      ];
+
+  const controls = isTR
+    ? [
+        'Block Boom! oynanış için kişi listesi, fotoğraf, video veya hassas konum istemez.',
+        'İsterseniz cihaz ayarlarından reklam kimliğinizi sınırlayabilir veya sıfırlayabilirsiniz.',
+        'Yalnızca talebinizi çözmek için gerekli olan destek bilgileri tutulur.',
+      ]
+    : [
+        'Block Boom! does not require contacts, photos, videos, or precise location for gameplay.',
+        'You can limit or reset your advertising ID settings from your device if desired.',
+        'We keep only the support information needed to resolve your request.',
       ];
 
   return (
-    <LegalPageLayout
-      title={isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
-      gameName="Block Boom!"
-      lastUpdated={isTR ? 'Son güncelleme: 13 Temmuz 2026' : 'Last updated: July 13, 2026'}
-      gameRoute="/block-boom"
-      activeTab="privacy"
-    >
-      <LegalSection title={isTR ? '1. Kapsam' : '1. Scope'}>
-        <p>
-          {isTR
-            ? 'Bu Gizlilik Politikası, Block Boom! mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlendiğini, neden işlendiğini ve haklarınızı açıklar.'
-            : 'This Privacy Policy explains what data is processed in connection with the Block Boom! mobile game and related web pages, why it is processed, and your rights.'}
-        </p>
-      </LegalSection>
+    <div className="min-h-screen bg-[#fbfaff] text-[#251b52]">
+      <BlockBoomNav active="privacy" />
 
-      <LegalSection title={isTR ? '2. Toplanan Veriler' : '2. Data We Collect'}>
-        <ul className="list-disc list-inside space-y-2">
-          {collected.map(item => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </LegalSection>
+      <main className="pt-24 sm:pt-28 pb-12 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#3A37A0] via-[#4A41C6] to-[#5B4BE0] p-8 sm:p-10 shadow-[0_24px_60px_rgba(74,65,198,0.35)]">
+            <div className="flex items-center gap-4">
+              <div className="grid grid-cols-2 gap-1.5">
+                <span className="h-6 w-6 rounded-md bg-[#FF5D5D] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#FF9F43] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#5AD26B] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+                <span className="h-6 w-6 rounded-md bg-[#4C8DFF] shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+              </div>
+              <p className="text-[11px] font-black tracking-[0.28em] text-[#FFD24C]">BLOCK BOOM!</p>
+            </div>
+            <h1 className="mt-6 text-3xl sm:text-4xl font-black text-white">
+              {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
+            </h1>
+            <p className="mt-3 text-white/70">
+              {isTR ? 'Son güncelleme: 23 Temmuz 2026' : 'Last updated: July 23, 2026'}
+            </p>
+          </div>
 
-      <LegalSection title={isTR ? '3. Kullanım Amaçları' : '3. How We Use Data'}>
-        <ul className="list-disc list-inside space-y-2">
-          {purposes.map(item => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </LegalSection>
+          <div className="space-y-5">
+            <Section title={isTR ? '1. Kapsam' : '1. Scope'}>
+              <p>
+                {isTR
+                  ? 'Bu Gizlilik Politikası, Block Boom! mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, bunların neden işlendiğini ve kullanıcıların hangi haklara sahip olabileceğini açıklar.'
+                  : 'This Privacy Policy explains what data may be processed in connection with the Block Boom! mobile game and related web pages, why it is processed, and what rights users may have.'}
+              </p>
+            </Section>
 
-      <LegalSection title={isTR ? '4. Üçüncü Taraf Hizmetler' : '4. Third-Party Services'}>
-        <p>
-          {isTR
-            ? 'Uygulama; reklam sunumu, analiz ve çökme raporlaması için üçüncü taraf hizmetleri kullanabilir. Bu hizmetler kendi gizlilik politikalarına tabi sınırlı teknik verileri işleyebilir.'
-            : 'The app may use third-party services for advertising, analytics, and crash reporting. These services may process limited technical data under their own privacy policies.'}
-        </p>
-      </LegalSection>
+            <Section title={isTR ? '2. Toplayabileceğimiz Veriler' : '2. Data We May Process'}>
+              <ul className="list-disc list-inside space-y-2">
+                {collectedData.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </Section>
 
-      <LegalSection title={isTR ? '5. Saklama ve Silme' : '5. Retention and Deletion'}>
-        <p>
-          {isTR
-            ? 'Yerel veriler cihazınızda tutulabilir. Doğrulanmış veri silme talepleri 30 gün içinde işlenir.'
-            : 'Local data may be kept on your device. Verified data deletion requests are processed within 30 days.'}
-        </p>
-      </LegalSection>
+            <Section title={isTR ? '3. Verileri Nasıl Kullanırız' : '3. How We Use Data'}>
+              <ul className="list-disc list-inside space-y-2">
+                {purposes.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </Section>
 
-      <LegalSection title={isTR ? '6. İletişim' : '6. Contact'}>
-        <p>
-          {isTR
-            ? 'Sorularınız için: support@aveniaichat.com'
-            : 'For questions: support@aveniaichat.com'}
-        </p>
-        <div className="mt-3">
-          <Link to="/block-boom/data-deletion" className="text-[#8b5cf6] font-bold hover:text-white transition-colors underline">
-            {isTR ? 'Block Boom! Veri Silme Talebi' : 'Block Boom! Data Deletion Request'}
-          </Link>
+            <Section title={isTR ? '4. Paylaşım ve Üçüncü Taraf Hizmetler' : '4. Sharing and Third-Party Services'}>
+              <p>
+                {isTR
+                  ? 'Uygulama; reklam sunumu, ödüllü reklamlar, çökme raporlama, analitik veya uygulama mağazası doğrulaması için üçüncü taraf hizmetleri kullanabilir. Bu hizmetler, kendi gizlilik politikalarına tabi olarak sınırlı teknik verileri işleyebilir.'
+                  : 'The app may use third-party services for ad delivery, rewarded ads, crash reporting, analytics, or app store validation. Those services may process limited technical data under their own privacy policies.'}
+              </p>
+              <p>
+                {isTR
+                  ? 'Block Boom!, yasaların gerektirdiği durumlar dışında kişisel verileri satmaz.'
+                  : 'Block Boom! does not sell personal data except where required by law.'}
+              </p>
+            </Section>
+
+            <Section title={isTR ? '5. Reklamlar ve Ödüller' : '5. Ads and Rewards'}>
+              <p>
+                {isTR
+                  ? 'Block Boom! bazı seviyelerde ödüllü reklam gösterebilir. Reklamı izlemeyi seçmeniz halinde, ödülün verilebilmesi için reklamın tamamlanması gerekebilir. Reklam ortakları, reklam ölçümü için cihaz tanımlayıcıları veya benzer teknik veriler kullanabilir.'
+                  : 'Block Boom! may show rewarded ads in some parts of the experience. If you choose to watch an ad, it may need to be completed before the reward is granted. Advertising partners may use device identifiers or similar technical data for measurement.'}
+              </p>
+            </Section>
+
+            <Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}>
+              <p>
+                {isTR
+                  ? 'Yerel oyun ilerlemesi cihazınızda saklanabilir. Destek, reklam, satın alma ve teknik kayıtlar yalnızca gerekli olduğu süre boyunca tutulur. Doğrulanmış veri silme talepleri mümkün olan en kısa sürede, çoğunlukla 30 gün içinde işlenir.'
+                  : 'Local game progress may be stored on your device. Support, ad, purchase, and technical records are kept only as long as necessary. Verified deletion requests are processed as soon as reasonably possible, usually within 30 days.'}
+              </p>
+            </Section>
+
+            <Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}>
+              <p>
+                {isTR
+                  ? 'Block Boom! genel kitleye yöneliktir ve 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
+                  : 'Block Boom! is intended for a general audience and does not knowingly collect personal data from children under 13.'}
+              </p>
+            </Section>
+
+            <Section title={isTR ? '8. Haklarınız ve Seçimleriniz' : '8. Your Rights and Choices'}>
+              <ul className="list-disc list-inside space-y-2">
+                {controls.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p>
+                {isTR
+                  ? 'Geçerli mevzuata göre verilerinize erişme, düzeltme, silme veya işleme itiraz etme gibi haklara sahip olabilirsiniz.'
+                  : 'Depending on applicable law, you may have rights to access, correct, delete, or object to the processing of your data.'}
+              </p>
+            </Section>
+
+            <Section title={isTR ? '9. İletişim' : '9. Contact'}>
+              <p>
+                {isTR
+                  ? 'Gizlilik ile ilgili sorular için: support@aveniaichat.com'
+                  : 'Questions about privacy: support@aveniaichat.com'}
+              </p>
+              <Link to="/block-boom/data-deletion" className="text-[#6a45d8] font-bold hover:text-[#251b52] transition-colors">
+                {isTR ? 'Veri Silme Talebi' : 'Data Deletion Request'}
+              </Link>
+            </Section>
+          </div>
         </div>
-      </LegalSection>
-    </LegalPageLayout>
+      </main>
+    </div>
   );
 };
 

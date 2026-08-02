@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Triple Grove</title>
+  <title>Privacy Policy - Triple Grove: Tile Match</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -43,7 +43,14 @@
     }
     h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
     .updated { font-size: 13px; color: rgba(255, 255, 255, 0.6); }
-    h2, h3 { font-size: 20px; font-weight: 700; margin: 24px 0 12px 0; color: #ffffff; }
+    .section {
+      margin-bottom: 24px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+    }
+    h2, h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #ffffff; }
     p { font-size: 15px; color: rgba(255, 255, 255, 0.82); margin-bottom: 12px; }
     ul, ol { margin: 12px 0 12px 24px; color: rgba(255, 255, 255, 0.82); font-size: 15px; }
     li { margin-bottom: 6px; }
@@ -62,38 +69,157 @@
 <body>
   <div class="container">
     <div class="header">
-      <span class="badge">Triple Grove</span>
+      <span class="badge">Triple Grove: Tile Match</span>
       <h1>Privacy Policy</h1>
       <div class="updated">Last updated: August 2, 2026</div>
     </div>
-    
-    <h3>1. Scope & Overview</h3>
-    <p>This Privacy Policy explains what data may be processed in connection with Triple Grove mobile application and related web pages, why it is processed, and user rights.</p>
-    
-    <h3>2. Data We May Process</h3>
-    <ul>
-      <li>Game progress, level state, hints/stars data, and app preferences</li>
-      <li>Device model, operating system version, app version, crash logs, and performance data</li>
-      <li>Ad delivery, rewarded ad completion state, and technical identifiers (such as Advertising ID)</li>
-      <li>Email address and message content if you contact support</li>
-    </ul>
+    <div class="section">import React from 'react';
+import { Link } from 'react-router-dom';
+import TileMatchNav from '@/components/TileMatchNav';
+import { useLanguage } from '@/context/LanguageContext';
 
-    <h3>3. How We Use Data</h3>
-    <ul>
-      <li>Run the game, save level progress, and preserve user experience</li>
-      <li>Deliver ads, rewarded content, and manage optional features</li>
-      <li>Debug issues, improve stability, and prevent misuse</li>
-      <li>Respond to support inquiries and comply with legal requirements</li>
-    </ul>
+const Section = ({ title, children }) =&gt; (
+  &lt;section className="rounded-[1.5rem] bg-white border border-[#bbf7d0] p-6 shadow-sm"&gt;
+    &lt;h3 className="text-xl font-black mb-3 text-[#052e16]"&gt;{title}&lt;/h3&gt;
+    &lt;div className="text-[#365314] leading-7 space-y-3"&gt;{children}&lt;/div&gt;
+  &lt;/section&gt;
+);
 
-    <h3>4. Retention & Deletion</h3>
-    <p>Local game progress is stored on your device and can be cleared by uninstalling the app. Verified server support or data deletion requests are processed within 30 days.</p>
+const TileMatchPrivacyPage = () =&gt; {
+  const { language } = useLanguage();
+  const isTR = language === 'tr';
 
-    <h3>5. Contact</h3>
-    <p>For questions or data deletion requests: <a href="mailto:support@aveniaichat.com">support@aveniaichat.com</a></p>
-  
+  const collected = isTR
+    ? [
+        'Oyun ilerlemesi, seviye durumu, yıldızlar, açılan temalar ve uygulama tercihleri (cihazınızda yerel saklanır)',
+        'Cihaz modeli, işletim sistemi, uygulama sürümü, hata kayıtları ve performans verileri',
+        'Google Mobile Ads aracılığıyla reklam gösterimi, etkileşimler ve Android Reklam Kimliği gibi teknik tanımlayıcılar',
+        'Destek talebi gönderirseniz e-posta adresi ve mesaj içeriği',
+      ]
+    : [
+        'Game progress, level state, stars, unlocked themes, and app preferences (stored locally on your device)',
+        'Device model, operating system, app version, crash logs, and performance data',
+        'Ad delivery, interaction metrics, and technical identifiers such as Android Advertising ID via Google Mobile Ads',
+        'Email address and message content if you contact support',
+      ];
+
+  const purposes = isTR
+    ? [
+        'Oyunu çalıştırmak, seviye ilerlemesini ve yıldızları aynı cihazda korumak',
+        'Kullanıcı tercihlerine göre reklamları ve ödüllü reklam özelliklerini sunmak',
+        'Hataları gidermek, performansı artırmak ve haksız kullanımı önlemek',
+        'Destek taleplerini yanıtlamak ve yasal yükümlülükleri yerine getirmek',
+      ]
+    : [
+        'Run the game, save level progress and stars on your device',
+        'Deliver ads and rewarded ad features based on user preferences',
+        'Debug issues, improve performance, and prevent fraud or misuse',
+        'Respond to support requests and meet legal compliance',
+      ];
+
+  return (
+    &lt;div className="min-h-screen bg-[#f0fdf4] text-[#052e16]"&gt;
+      &lt;TileMatchNav active="privacy" /&gt;
+
+      &lt;main className="pt-24 sm:pt-28 pb-12 px-6"&gt;
+        &lt;div className="max-w-3xl mx-auto"&gt;
+          &lt;div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#052e16] via-[#14532d] to-[#16a34a] p-8 sm:p-10 shadow-[0_24px_60px_rgba(5,46,22,0.28)]"&gt;
+            &lt;div className="flex items-center gap-4"&gt;
+              &lt;img
+                src="/games/tile-match/icon.png"
+                alt="Triple Grove: Tile Match"
+                className="h-12 w-12 rounded-2xl border border-white/20 object-cover"
+              /&gt;
+              &lt;p className="text-[11px] font-black tracking-[0.28em] text-[#bbf7d0]"&gt;TRIPLE GROVE&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;h1 className="mt-6 text-3xl sm:text-4xl font-black text-white"&gt;
+              {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
+            &lt;/h1&gt;
+            &lt;p className="mt-3 text-white/70"&gt;
+              {isTR ? 'Son güncelleme: 28 Temmuz 2026' : 'Last updated: July 28, 2026'}
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="space-y-5"&gt;
+            &lt;Section title={isTR ? '1. Kapsam' : '1. Scope'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Bu Gizlilik Politikası, Triple Grove: Tile Match mobil oyunu ve ilgili web sayfalarında hangi verilerin işlenebileceğini, neden işlendiğini ve kullanıcı seçeneklerini açıklar.'
+                  : 'This Privacy Policy explains what data may be processed in connection with the Triple Grove: Tile Match mobile game and related web pages, why it is processed, and user rights.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '2. İşlenen Veriler' : '2. Data We Process'}&gt;
+              &lt;ul className="list-disc list-inside space-y-2"&gt;
+                {collected.map(item =&gt; (
+                  &lt;li key={item}&gt;{item}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '3. Veri İşleme Amaçları' : '3. Purposes of Processing'}&gt;
+              &lt;ul className="list-disc list-inside space-y-2"&gt;
+                {purposes.map(item =&gt; (
+                  &lt;li key={item}&gt;{item}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '4. İzinler' : '4. Permissions'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Triple Grove konum, kamera, mikrofon, kişiler veya medya dosyalarınıza erişim istemez. İnternet ve ağ durumu izinleri reklam hizmetleri için, titreşim izni ise dokunsal geri bildirim için kullanılır.'
+                  : 'Triple Grove does not request access to location, camera, microphone, contacts, or media files. Internet and network state permissions are used for ad delivery, and vibration permission is used for optional haptic feedback.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '5. Reklamlar ve Üçüncü Taraf SDK’lar' : '5. Ads and Third-Party SDKs'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Uygulama, reklam gösterimi için Google Mobile Ads kullanabilir. Reklam sağlayıcıları reklam kimliği, cihaz bilgisi, IP adresi ve reklam etkileşim verilerini işleyebilir.'
+                  : 'The app may use Google Mobile Ads to deliver advertisements. Advertising providers may process advertising IDs, device specifications, IP address, and interaction metrics.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Yerel oyun verileri cihazınızda saklanır ve uygulama kaldırıldığında veya uygulama verisi temizlendiğinde silinir. Destek talepleri ve iletişim kayıtları yalnızca yanıt vermek için tutulur.'
+                  : 'Local game data is stored on your device and deleted when the app is uninstalled or app storage cleared. Support records are kept only as needed to fulfill your inquiry.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Oyun genel kitleye yöneliktir ve 13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz.'
+                  : 'The game is intended for a general audience and does not knowingly collect personal data from children under 13.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '8. İletişim ve Veri Silme' : '8. Contact & Data Requests'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Gizlilik sorularınız ve veri silme talepleriniz için: iammustafakucukkoc@gmail.com'
+                  : 'For privacy questions or data deletion requests: iammustafakucukkoc@gmail.com'}
+              &lt;/p&gt;
+              &lt;div className="mt-3"&gt;
+                &lt;Link to="/tile-match/data-deletion" className="text-[#16a34a] font-bold hover:text-[#052e16] transition-colors"&gt;
+                  {isTR ? 'Triple Grove Veri Silme Talebi Sayfası' : 'Triple Grove Data Deletion Request Page'}
+                &lt;/Link&gt;
+              &lt;/div&gt;
+            &lt;/Section&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default TileMatchPrivacyPage;
+</div>
     <div class="footer">
-      <a href="/">&larr; Return to Triple Grove Home</a>
+      <a href="/">&larr; Return to Triple Grove: Tile Match Home</a>
     </div>
   </div>
 </body>

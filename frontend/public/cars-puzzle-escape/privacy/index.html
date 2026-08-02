@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Cars Puzzle Escape</title>
+  <title>Privacy Policy - Cars - Puzzle Escape</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -43,7 +43,14 @@
     }
     h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
     .updated { font-size: 13px; color: rgba(255, 255, 255, 0.6); }
-    h2, h3 { font-size: 20px; font-weight: 700; margin: 24px 0 12px 0; color: #ffffff; }
+    .section {
+      margin-bottom: 24px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+    }
+    h2, h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #ffffff; }
     p { font-size: 15px; color: rgba(255, 255, 255, 0.82); margin-bottom: 12px; }
     ul, ol { margin: 12px 0 12px 24px; color: rgba(255, 255, 255, 0.82); font-size: 15px; }
     li { margin-bottom: 6px; }
@@ -62,38 +69,159 @@
 <body>
   <div class="container">
     <div class="header">
-      <span class="badge">Cars Puzzle Escape</span>
+      <span class="badge">Cars - Puzzle Escape</span>
       <h1>Privacy Policy</h1>
       <div class="updated">Last updated: August 2, 2026</div>
     </div>
-    
-    <h3>1. Scope & Overview</h3>
-    <p>This Privacy Policy explains what data may be processed in connection with Cars Puzzle Escape mobile application and related web pages, why it is processed, and user rights.</p>
-    
-    <h3>2. Data We May Process</h3>
-    <ul>
-      <li>Game progress, level state, hints/stars data, and app preferences</li>
-      <li>Device model, operating system version, app version, crash logs, and performance data</li>
-      <li>Ad delivery, rewarded ad completion state, and technical identifiers (such as Advertising ID)</li>
-      <li>Email address and message content if you contact support</li>
-    </ul>
+    <div class="section">import React from 'react';
+import CarPuzzleNav from '@/components/CarPuzzleNav';
+import { useLanguage } from '@/context/LanguageContext';
 
-    <h3>3. How We Use Data</h3>
-    <ul>
-      <li>Run the game, save level progress, and preserve user experience</li>
-      <li>Deliver ads, rewarded content, and manage optional features</li>
-      <li>Debug issues, improve stability, and prevent misuse</li>
-      <li>Respond to support inquiries and comply with legal requirements</li>
-    </ul>
+const Section = ({ title, children }) =&gt; (
+  &lt;section className="rounded-[1.5rem] bg-white border border-[#cfe0ec] p-6 shadow-sm"&gt;
+    &lt;h3 className="text-xl font-black mb-3 text-[#11304e]"&gt;{title}&lt;/h3&gt;
+    &lt;div className="text-[#5f7692] leading-7 space-y-3"&gt;{children}&lt;/div&gt;
+  &lt;/section&gt;
+);
 
-    <h3>4. Retention & Deletion</h3>
-    <p>Local game progress is stored on your device and can be cleared by uninstalling the app. Verified server support or data deletion requests are processed within 30 days.</p>
+const CarPuzzlePrivacyPage = () =&gt; {
+  const { language } = useLanguage();
+  const isTR = language === 'tr';
 
-    <h3>5. Contact</h3>
-    <p>For questions or data deletion requests: <a href="mailto:support@aveniaichat.com">support@aveniaichat.com</a></p>
-  
+  const collected = isTR
+    ? [
+        'Oyun ilerlemesi, seviye durumu, ipucu kullanımı ve uygulama tercihleri',
+        'Cihaz modeli, işletim sistemi, uygulama sürümü, hata kayıtları ve teşhis verileri',
+        'Reklam gösterimi, ödüllü reklam etkileşimleri ve reklam kimliği gibi teknik tanımlayıcılar',
+        'Destek için bizimle iletişime geçerseniz e-posta adresi ve mesaj içeriği',
+        'Varsa satın alma, abonelik veya mağaza doğrulama durumu',
+      ]
+    : [
+        'Game progress, level state, hint usage, and app preferences',
+        'Device model, operating system, app version, crash logs, and diagnostic data',
+        'Ad delivery, rewarded-ad interactions, and technical identifiers such as the advertising ID',
+        'Email address and message content if you contact support',
+        'Purchase, subscription, or store verification status if applicable',
+      ];
+
+  const purposes = isTR
+    ? [
+        'Oyunu çalıştırmak, ilerlemeyi kaydetmek ve aynı cihazda deneyimi sürdürmek',
+        'Reklam, ödül ve premium özellikleri yönetmek',
+        'Hataları tespit etmek, performansı iyileştirmek ve kötüye kullanımı önlemek',
+        'Destek taleplerine yanıt vermek ve yasal yükümlülüklere uymak',
+      ]
+    : [
+        'Run the game, save progress, and preserve the experience on the same device',
+        'Manage ads, rewards, and premium features',
+        'Detect issues, improve performance, and prevent misuse',
+        'Respond to support requests and meet legal obligations',
+      ];
+
+  return (
+    &lt;div className="min-h-screen bg-[#f7fbff] text-[#11304e]"&gt;
+      &lt;CarPuzzleNav active="privacy" /&gt;
+
+      &lt;main className="pt-24 sm:pt-28 pb-12 px-6"&gt;
+        &lt;div className="max-w-3xl mx-auto"&gt;
+          &lt;div className="mb-8"&gt;
+            &lt;p className="text-xs font-bold tracking-[0.22em] text-[#0f5cab]"&gt;CARS -PUZZLE ESCAPE&lt;/p&gt;
+            &lt;h1 className="mt-3 text-3xl sm:text-4xl font-black"&gt;
+              {isTR ? 'Gizlilik Politikası' : 'Privacy Policy'}
+            &lt;/h1&gt;
+            &lt;p className="mt-3 text-[#5f7692]"&gt;
+              {isTR ? 'Son güncelleme: 13 Temmuz 2026' : 'Last updated: July 13, 2026'}
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div className="space-y-5"&gt;
+            &lt;Section title={isTR ? '1. Kapsam' : '1. Scope'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Bu Gizlilik Politikası, Cars -Puzzle Escape mobil oyunu ve ilgili web sayfaları kapsamında hangi verilerin işlenebileceğini, neden işlendiğini ve kullanıcı haklarını açıklar.'
+                  : 'This Privacy Policy explains what data may be processed in connection with the Cars -Puzzle Escape mobile game and related web pages, why it is processed, and the rights available to users.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '2. İşleyebileceğimiz Veriler' : '2. Data We May Process'}&gt;
+              &lt;ul className="list-disc list-inside space-y-2"&gt;
+                {collected.map(item =&gt; (
+                  &lt;li key={item}&gt;{item}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '3. Verileri Kullanma Amaçlarımız' : '3. How We Use Data'}&gt;
+              &lt;ul className="list-disc list-inside space-y-2"&gt;
+                {purposes.map(item =&gt; (
+                  &lt;li key={item}&gt;{item}&lt;/li&gt;
+                ))}
+              &lt;/ul&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '4. Üçüncü Taraf Hizmetler' : '4. Third-Party Services'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Uygulama; Google Play hizmetleri, Google Mobile Ads, Firebase, satın alma doğrulama, hata raporlama ve analiz gibi üçüncü taraf SDK veya hizmetleri kullanabilir. Bu hizmetler kendi gizlilik politikalarına göre sınırlı teknik verileri işleyebilir.'
+                  : 'The app may use third-party SDKs or services such as Google Play services, Google Mobile Ads, Firebase, purchase validation, crash reporting, and analytics. These services may process limited technical data under their own privacy policies.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '5. Reklamlar ve Reklam Kimliği' : '5. Ads and Advertising ID'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Cars -Puzzle Escape reklamlar ve ödüllü reklamlar gösterebilir. Reklam ortakları, reklam sunumu, ölçüm, dolandırıcılığı önleme ve uyumluluk için Android Reklam Kimliği gibi cihaz tanımlayıcılarını kullanabilir.'
+                  : 'Cars -Puzzle Escape may show ads and rewarded ads. Advertising partners may use device identifiers, including the Android Advertising ID, for ad delivery, measurement, fraud prevention, and compliance.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '6. Saklama ve Silme' : '6. Retention and Deletion'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Yerel oyun ilerlemesi cihazınızda saklanabilir. Sunucu tarafındaki destek, reklam, satın alma veya teknik kayıtlar yalnızca gerekli olduğu süre boyunca tutulur. Doğrulanmış veri silme talepleri genellikle 30 gün içinde işlenir; yedek kopyalar rutin döngülerle en geç 90 gün içinde kaldırılabilir.'
+                  : 'Local game progress may be stored on your device. Server-side support, ad, purchase, or technical records are kept only as long as needed. Verified data deletion requests are usually processed within 30 days; residual backup copies may be removed within 90 days through routine cycles.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '7. Çocukların Gizliliği' : "7. Children's Privacy"}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Oyun genel kitleye yöneliktir ve 13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamaz. Böyle bir veri işlendiğini öğrenirsek silmek için makul adımları atarız.'
+                  : 'The game is intended for a general audience and does not knowingly seek to collect personal data from children under 13. If we learn such data has been processed, we will take reasonable steps to delete it.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '8. Haklarınız' : '8. Your Rights'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Geçerli mevzuata göre verilerinize erişme, düzeltme, silme veya işlemeye itiraz etme haklarınız olabilir. Veri silme bağlantısını kullanabilir veya destek e-postası üzerinden bize ulaşabilirsiniz.'
+                  : 'Depending on applicable law, you may have rights to access, correct, delete, or object to the processing of your data. You can use the data deletion link or contact us by support email.'}
+              &lt;/p&gt;
+            &lt;/Section&gt;
+
+            &lt;Section title={isTR ? '9. İletişim' : '9. Contact'}&gt;
+              &lt;p&gt;
+                {isTR
+                  ? 'Gizlilik soruları için: iammustafakucukkoc@gmail.com'
+                  : 'For privacy questions: iammustafakucukkoc@gmail.com'}
+              &lt;/p&gt;
+              &lt;p&gt;
+                &lt;a className="text-[#0f5cab] font-bold hover:text-[#11304e] transition-colors" href="/car-puzzle/data-deletion"&gt;
+                  {isTR ? 'Cars -Puzzle Escape Veri Silme Talebi' : 'Cars -Puzzle Escape Data Deletion Request'}
+                &lt;/a&gt;
+              &lt;/p&gt;
+            &lt;/Section&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default CarPuzzlePrivacyPage;
+</div>
     <div class="footer">
-      <a href="/">&larr; Return to Cars Puzzle Escape Home</a>
+      <a href="/">&larr; Return to Cars - Puzzle Escape Home</a>
     </div>
   </div>
 </body>

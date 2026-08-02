@@ -69,11 +69,21 @@ function App() {
             <Route path="/games" element={<GamesPage />} />
             <Route path="/games/index.html" element={<GamesPage />} />
             <Route path="/showcase" element={<SiteHomePage />} />
+
             <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/privacy.html" element={<PrivacyPage />} />
+            <Route path="/privacy/index.html" element={<PrivacyPage />} />
+
             <Route path="/terms" element={<TermsPage />} />
+            <Route path="/terms.html" element={<TermsPage />} />
+            <Route path="/terms/index.html" element={<TermsPage />} />
+
             <Route path="/help" element={<HelpPage />} />
             <Route path="/account-deletion" element={<AccountDeletionPage />} />
+
             <Route path="/data-deletion" element={<DataDeletionPage />} />
+            <Route path="/data-deletion.html" element={<DataDeletionPage />} />
+            <Route path="/data-deletion/index.html" element={<DataDeletionPage />} />
 
             {/* 1. Arrows Puzzle Master */}
             <Route path="/arrows-puzzle-master" element={<HomePage />} />

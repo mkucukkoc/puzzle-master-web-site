@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import GamesPage from '@/pages/GamesPage';
 import SiteHomePage from '@/pages/SiteHomePage';
-import HomePage from '@/pages/HomePage';
+import GamesPage from '@/pages/GamesPage';
 import PrivacyPage from '@/pages/PrivacyPage';
 import TermsPage from '@/pages/TermsPage';
-import HelpPage from '@/pages/HelpPage';
-import AccountDeletionPage from '@/pages/AccountDeletionPage';
 import DataDeletionPage from '@/pages/DataDeletionPage';
+import AccountDeletionPage from '@/pages/AccountDeletionPage';
+import HelpPage from '@/pages/HelpPage';
+import HomePage from '@/pages/HomePage';
 import BlockBoomHomePage from '@/pages/BlockBoomHomePage';
 import BlockBoomPrivacyPage from '@/pages/BlockBoomPrivacyPage';
 import BlockBoomTermsPage from '@/pages/BlockBoomTermsPage';
@@ -33,6 +33,7 @@ import TileMatchPrivacyPage from '@/pages/TileMatchPrivacyPage';
 import TileMatchTermsPage from '@/pages/TileMatchTermsPage';
 import TileMatchDataDeletionPage from '@/pages/TileMatchDataDeletionPage';
 import GameLandingPage from '@/components/GameLandingPage';
+import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
 import { LanguageProvider } from '@/context/LanguageContext';
 import '@/App.css';
@@ -42,6 +43,7 @@ function App() {
     <div className="App">
       <LanguageProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<SiteHomePage />} />
             <Route path="/games" element={<GamesPage />} />

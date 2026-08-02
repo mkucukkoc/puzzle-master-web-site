@@ -43,6 +43,10 @@ import FlowConnectsPrivacyPage from '@/pages/FlowConnectsPrivacyPage';
 import FlowConnectsTermsPage from '@/pages/FlowConnectsTermsPage';
 import FlowConnectsDataDeletionPage from '@/pages/FlowConnectsDataDeletionPage';
 
+import SudokuPrivacyPage from '@/pages/SudokuPrivacyPage';
+import SudokuTermsPage from '@/pages/SudokuTermsPage';
+import SudokuDataDeletionPage from '@/pages/SudokuDataDeletionPage';
+
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
@@ -146,15 +150,18 @@ function App() {
             {/* 7. Sudoku Quest */}
             <Route path="/sudoku" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
             <Route path="/sudoku/index.html" element={<GameLandingPage game={getGameBySlug('sudoku')} />} />
-            <Route path="/sudoku/privacy" element={<PrivacyPage />} />
-            <Route path="/sudoku/privacy.html" element={<PrivacyPage />} />
-            <Route path="/sudoku/privacy/index.html" element={<PrivacyPage />} />
-            <Route path="/sudoku/terms" element={<TermsPage />} />
-            <Route path="/sudoku/terms.html" element={<TermsPage />} />
-            <Route path="/sudoku/terms/index.html" element={<TermsPage />} />
-            <Route path="/sudoku/data-deletion" element={<DataDeletionPage />} />
-            <Route path="/sudoku/data-deletion.html" element={<DataDeletionPage />} />
-            <Route path="/sudoku/data-deletion/index.html" element={<DataDeletionPage />} />
+            <Route path="/sudoku/privacy" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku/privacy.html" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku/privacy/index.html" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku/terms" element={<SudokuTermsPage />} />
+            <Route path="/sudoku/terms.html" element={<SudokuTermsPage />} />
+            <Route path="/sudoku/terms/index.html" element={<SudokuTermsPage />} />
+            <Route path="/sudoku/data-deletion" element={<SudokuDataDeletionPage />} />
+            <Route path="/sudoku/data-deletion.html" element={<SudokuDataDeletionPage />} />
+            <Route path="/sudoku/data-deletion/index.html" element={<SudokuDataDeletionPage />} />
+            <Route path="/sudoku-quest/privacy" element={<SudokuPrivacyPage />} />
+            <Route path="/sudoku-quest/terms" element={<SudokuTermsPage />} />
+            <Route path="/sudoku-quest/data-deletion" element={<SudokuDataDeletionPage />} />
 
             {/* 8. Flow Connects */}
             <Route path="/flow-connects" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -87,8 +87,15 @@ const SiteHomePage = () => {
   const isTR = language === 'tr';
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
 
-  const heroGames = GAMES.slice(0, 5);
+  const heroGames = GAMES.slice(0, 10);
   const activeGame = heroGames[activeHeroIndex] ?? heroGames[0];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveHeroIndex(prev => (prev + 1) % heroGames.length);
+    }, 7000);
+    return () => clearInterval(timer);
+  }, [heroGames.length]);
 
   const heroTitle = isTR
     ? 'Tüm Bulmaca Oyunlarımız Tek Bir Yerde'

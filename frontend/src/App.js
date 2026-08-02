@@ -51,6 +51,11 @@ import WordSearchPrivacyPage from '@/pages/WordSearchPrivacyPage';
 import WordSearchTermsPage from '@/pages/WordSearchTermsPage';
 import WordSearchDataDeletionPage from '@/pages/WordSearchDataDeletionPage';
 
+import ColorSortHomePage from '@/pages/ColorSortHomePage';
+import ColorSortPrivacyPage from '@/pages/ColorSortPrivacyPage';
+import ColorSortTermsPage from '@/pages/ColorSortTermsPage';
+import ColorSortDataDeletionPage from '@/pages/ColorSortDataDeletionPage';
+
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
@@ -247,6 +252,19 @@ function App() {
             <Route path="/triple-grove/data-deletion" element={<TileMatchDataDeletionPage />} />
             <Route path="/triple-grove/data-deletion.html" element={<TileMatchDataDeletionPage />} />
             <Route path="/triple-grove/data-deletion/index.html" element={<TileMatchDataDeletionPage />} />
+
+            {/* 11. Color Sort */}
+            <Route path="/color-sort" element={<ColorSortHomePage />} />
+            <Route path="/color-sort/index.html" element={<ColorSortHomePage />} />
+            <Route path="/color-sort/privacy" element={<ColorSortPrivacyPage />} />
+            <Route path="/color-sort/privacy.html" element={<ColorSortPrivacyPage />} />
+            <Route path="/color-sort/privacy/index.html" element={<ColorSortPrivacyPage />} />
+            <Route path="/color-sort/terms" element={<ColorSortTermsPage />} />
+            <Route path="/color-sort/terms.html" element={<ColorSortTermsPage />} />
+            <Route path="/color-sort/terms/index.html" element={<ColorSortTermsPage />} />
+            <Route path="/color-sort/data-deletion" element={<ColorSortDataDeletionPage />} />
+            <Route path="/color-sort/data-deletion.html" element={<ColorSortDataDeletionPage />} />
+            <Route path="/color-sort/data-deletion/index.html" element={<ColorSortDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

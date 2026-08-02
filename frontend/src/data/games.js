@@ -719,6 +719,77 @@ export const GAMES = [
       { q: 'Ücretsiz mi?', a: 'Evet, kazanılabilir joker ödülleriyle tamamen ücretsizdir.' },
     ],
   },
+  {
+    slug: 'color-sort',
+    title: 'Color Sort: Water Puzzle',
+    shortTitle: 'Color Sort',
+    route: '/color-sort',
+    theme: 'cyan',
+    accent: '#06b6d4',
+    accentSoft: '#e0f2fe',
+    surface: '#082f49',
+    feature: '/games/color-sort/feature.png',
+    icon: '/games/color-sort/icon.png',
+    screenshots: [
+      '/games/color-sort/screenshots/ss-1.png',
+      '/games/color-sort/screenshots/ss-2.png',
+      '/games/color-sort/screenshots/ss-3.png',
+      '/games/color-sort/screenshots/ss-4.png',
+      '/games/color-sort/screenshots/ss-5.png',
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.colorsort',
+    appStoreUrl: appStoreSearchUrl('Color Sort Water Puzzle'),
+    descriptionEN: 'Pour and sort colored liquids into tubes until each bottle holds a single uniform color.',
+    descriptionTR: 'Renkli sıvıları tüplere dökerek her şişede tek renk elde edene kadar sıvıları eşleştir.',
+    highlightsEN: [
+      'Vibrant liquid sorting puzzle mechanics',
+      'Relaxing water pouring animations and sounds',
+      'Hundreds of brain-teasing tube levels',
+    ],
+    highlightsTR: [
+      'Canlı sıvı sıralama bulmaca mekaniği',
+      'Rahatlatıcı su dökme animasyonları ve sesleri',
+      'Yüzlerce zihin açıcı tüp seviyesi',
+    ],
+    howToPlayEN: [
+      'Tap a Tube: Select any bottle to pour liquid from top layer into another tube.',
+      'Match Same Colors: You can only pour liquid if both tubes have matching top colors.',
+      'Sort All Tubes: Complete the puzzle when every tube contains only one solid color.',
+    ],
+    howToPlayTR: [
+      'Tüpe Dokunun: Üst katmandaki sıvıyı başka bir tüpe dökmek için şişeyi seçin.',
+      'Aynı Renkleri Eşleştirin: Sıvıyı sadece hedef tüpün üstündeki renk aynıysa dökebilirsiniz.',
+      'Tüm Tüpleri Sıralayın: Her tüp tek bir renk içerdiğinde bulmacayı çözün.',
+    ],
+    featuresEN: [
+      { title: '1,000+ Liquid Levels', desc: 'From simple 3-tube setups to complex multi-color challenges.' },
+      { title: 'Relaxing ASMR Sound', desc: 'Soothing water pouring effects and smooth fluid motion.' },
+      { title: 'Undo & Extra Tube Boosters', desc: 'Get unstuck easily by adding an extra empty tube or rewinding moves.' },
+      { title: 'Offline Play', desc: 'Enjoy relaxing color sorting anytime without internet.' },
+    ],
+    featuresTR: [
+      { title: '1.000+ Sıvı Seviyesi', desc: '3 tüplü kolay bulmacalardan çok renkli zorlu seviyelere.' },
+      { title: 'Rahatlatıcı Su Sesleri', desc: 'Huzur veren su dökme efektleri ve akıcı sıvı animasyonları.' },
+      { title: 'Geri Al ve Ekstra Tüp Jokerleri', desc: 'Ekstra boş tüp ekleyerek veya hamleyi geri alarak rahatça çözün.' },
+      { title: 'İnternetsiz Oynama', desc: 'İnternet bağlantısı olmadan istediğiniz yerde renkleri sıralayın.' },
+    ],
+    tipsEN: [
+      'Always keep at least one tube empty as a workspace buffer.',
+      'Prioritize completing single-color bottles first to free up tube capacity.',
+    ],
+    tipsTR: [
+      'İşlem marjı sağlamak için en az bir tüpü her zaman boş tutmaya çalışın.',
+      'Öncelikle tek renkli şişeleri tamamlayarak tüp kapasitesini açın.',
+    ],
+    faqEN: [
+      { q: 'Is Color Sort free to play?', a: 'Yes, completely free with optional hint boosters.' },
+      { q: 'Does it work offline?', a: 'Yes, full offline support is included.' },
+    ],
+    faqTR: [
+      { q: 'Color Sort ücretsiz mi?', a: 'Evet, isteğe bağlı joker ödülleriyle tamamen ücretsizdir.' },
+      { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, tam çevrimdışı oynanabilir.' },
+    ],
+  },
 ];
 
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));

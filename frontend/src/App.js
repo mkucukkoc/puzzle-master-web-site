@@ -39,6 +39,10 @@ import TileMatchPrivacyPage from '@/pages/TileMatchPrivacyPage';
 import TileMatchTermsPage from '@/pages/TileMatchTermsPage';
 import TileMatchDataDeletionPage from '@/pages/TileMatchDataDeletionPage';
 
+import FlowConnectsPrivacyPage from '@/pages/FlowConnectsPrivacyPage';
+import FlowConnectsTermsPage from '@/pages/FlowConnectsTermsPage';
+import FlowConnectsDataDeletionPage from '@/pages/FlowConnectsDataDeletionPage';
+
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
 import { getGameBySlug } from '@/data/games';
@@ -155,15 +159,15 @@ function App() {
             {/* 8. Flow Connects */}
             <Route path="/flow-connects" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />
             <Route path="/flow-connects/index.html" element={<GameLandingPage game={getGameBySlug('flow-connects')} />} />
-            <Route path="/flow-connects/privacy" element={<PrivacyPage />} />
-            <Route path="/flow-connects/privacy.html" element={<PrivacyPage />} />
-            <Route path="/flow-connects/privacy/index.html" element={<PrivacyPage />} />
-            <Route path="/flow-connects/terms" element={<TermsPage />} />
-            <Route path="/flow-connects/terms.html" element={<TermsPage />} />
-            <Route path="/flow-connects/terms/index.html" element={<TermsPage />} />
-            <Route path="/flow-connects/data-deletion" element={<DataDeletionPage />} />
-            <Route path="/flow-connects/data-deletion.html" element={<DataDeletionPage />} />
-            <Route path="/flow-connects/data-deletion/index.html" element={<DataDeletionPage />} />
+            <Route path="/flow-connects/privacy" element={<FlowConnectsPrivacyPage />} />
+            <Route path="/flow-connects/privacy.html" element={<FlowConnectsPrivacyPage />} />
+            <Route path="/flow-connects/privacy/index.html" element={<FlowConnectsPrivacyPage />} />
+            <Route path="/flow-connects/terms" element={<FlowConnectsTermsPage />} />
+            <Route path="/flow-connects/terms.html" element={<FlowConnectsTermsPage />} />
+            <Route path="/flow-connects/terms/index.html" element={<FlowConnectsTermsPage />} />
+            <Route path="/flow-connects/data-deletion" element={<FlowConnectsDataDeletionPage />} />
+            <Route path="/flow-connects/data-deletion.html" element={<FlowConnectsDataDeletionPage />} />
+            <Route path="/flow-connects/data-deletion/index.html" element={<FlowConnectsDataDeletionPage />} />
 
             {/* 9. Blocks Puzzle Escape */}
             <Route path="/blocks-puzzle-escape" element={<BlocksPuzzleEscapeHomePage />} />

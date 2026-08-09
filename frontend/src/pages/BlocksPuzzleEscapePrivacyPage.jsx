@@ -371,7 +371,7 @@ const BlocksPuzzleEscapePrivacyPage = () => {
     <div className="min-h-screen bg-[#f7fbff] text-[#17345f]">
       <BlocksPuzzleEscapeNav active="privacy" />
 
-      <main className="pt-24 sm:pt-28 pb-12 px-6">
+      <main className="pt-28 sm:pt-32 pb-12 px-4 sm:px-6 break-words">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#0f5aa7] via-[#1f7cff] to-[#2f89ff] p-8 sm:p-10 shadow-[0_24px_60px_rgba(31,124,255,0.26)]">
             <div className="flex items-center gap-4">

@@ -17,7 +17,7 @@ const CarPuzzleDataDeletionPage = () => {
     <div className="min-h-screen bg-[#f7fbff] text-[#11304e]">
       <CarPuzzleNav active="dataDeletion" />
 
-      <main className="pt-24 sm:pt-28 pb-12 px-6">
+      <main className="pt-28 sm:pt-32 pb-12 px-4 sm:px-6 break-words">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <p className="text-xs font-bold tracking-[0.22em] text-[#0f5cab]">

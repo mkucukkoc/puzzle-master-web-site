@@ -46,7 +46,7 @@ const WordConnectPrivacyPage = () => {
     <div className="min-h-screen bg-[#070b16] text-white">
       <WordConnectNav active="privacy" />
 
-      <main className="pt-24 sm:pt-28 pb-12 px-6">
+      <main className="pt-28 sm:pt-32 pb-12 px-4 sm:px-6 break-words">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#2e1c05] via-[#78350f] to-[#d97706] p-8 sm:p-10 shadow-[0_24px_60px_rgba(217,119,6,0.25)]">
             <div className="flex items-center gap-4">

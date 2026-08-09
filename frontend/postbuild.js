@@ -24,7 +24,10 @@ const gameFolders = [
   'sudoku-quest',
   'flow-connects',
   'tile-match',
-  'triple-grove'
+  'triple-grove',
+  'color-sort',
+  'word-connect',
+  'screw-master'
 ];
 
 for (const slug of gameFolders) {

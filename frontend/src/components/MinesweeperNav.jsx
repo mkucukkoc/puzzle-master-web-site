@@ -35,7 +35,7 @@ const MinesweeperNav = ({ active }) => {
           </span>
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-6">
+        <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-5">
           <LanguageSwitcher />
           <Link to="/minesweeper/privacy" className={navLinkClass('privacy')}>
             {navLabels.privacy}

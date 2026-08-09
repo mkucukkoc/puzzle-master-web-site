@@ -43,7 +43,7 @@ const TileMatchTermsPage = () => {
     <div className="min-h-screen bg-[#f0fdf4] text-[#052e16]">
       <TileMatchNav active="terms" />
 
-      <main className="pt-24 sm:pt-28 pb-12 px-6">
+      <main className="pt-28 sm:pt-32 pb-12 px-4 sm:px-6 break-words">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#052e16] via-[#14532d] to-[#16a34a] p-8 sm:p-10 shadow-[0_24px_60px_rgba(5,46,22,0.28)]">
             <div className="flex items-center gap-4">

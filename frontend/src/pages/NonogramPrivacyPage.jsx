@@ -48,7 +48,7 @@ const NonogramPrivacyPage = () => {
     <div className="min-h-screen bg-[#f7fbfb] text-[#06213a]">
       <NonogramNav active="privacy" />
 
-      <main className="pt-24 sm:pt-28 pb-12 px-6">
+      <main className="pt-28 sm:pt-32 pb-12 px-4 sm:px-6 break-words">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#05304f] via-[#0b4665] to-[#0f7180] p-8 sm:p-10 shadow-[0_24px_60px_rgba(6,33,58,0.28)]">
             <div className="flex items-center gap-4">

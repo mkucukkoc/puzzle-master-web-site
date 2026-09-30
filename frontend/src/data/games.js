@@ -932,6 +932,77 @@ export const GAMES = [
       { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, tam çevrimdışı oynanabilir.' },
     ],
   },
+  {
+    slug: 'meow-sudoku',
+    title: 'Meow Sudoku: Cat Logic Puzzle',
+    shortTitle: 'Meow Sudoku',
+    route: '/meow-sudoku',
+    theme: 'purple',
+    accent: '#8b5cf6',
+    accentSoft: '#ede4ff',
+    surface: '#1f1336',
+    feature: '/games/meow-sudoku/feature.png',
+    icon: '/games/meow-sudoku/icon.png',
+    screenshots: [
+      '/games/meow-sudoku/screenshots/ss-1.png',
+      '/games/meow-sudoku/screenshots/ss-2.png',
+      '/games/meow-sudoku/screenshots/ss-3.png',
+      '/games/meow-sudoku/screenshots/ss-4.png',
+      '/games/meow-sudoku/screenshots/ss-5.png',
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mkucukkoc.meowsudoku',
+    appStoreUrl: appStoreSearchUrl('Meow Sudoku'),
+    descriptionEN: 'Place the cats on a colourful board: one in every row, column and colour, and no two cats may touch.',
+    descriptionTR: 'Kedileri renkli tahtaya yerleştirin: her satırda, sütunda ve renkte bir kedi olsun, iki kedi birbirine değmesin.',
+    highlightsEN: [
+      'A cosy cat twist on classic logic puzzles',
+      'Collect postcards on an illustrated journey map',
+      'Classic Sudoku levels and Daily Challenges included',
+    ],
+    highlightsTR: [
+      'Klasik mantık bulmacalarına sevimli bir kedi dokunuşu',
+      'Resimli yolculuk haritasında kartpostal toplayın',
+      'Klasik Sudoku bölümleri ve günlük görevler de var',
+    ],
+    howToPlayEN: [
+      'One Cat Per Colour: every coloured region holds exactly one cat.',
+      'One Cat Per Row and Column: no row or column may hold two cats.',
+      'Cats Can’t Touch: no two cats may sit next to each other, not even diagonally.',
+    ],
+    howToPlayTR: [
+      'Her Renkte Bir Kedi: her renkli bölgede tam olarak bir kedi olur.',
+      'Her Satır ve Sütunda Bir Kedi: hiçbir satır veya sütunda iki kedi olamaz.',
+      'Kediler Birbirine Değemez: iki kedi yan yana, çapraz bile olsa, duramaz.',
+    ],
+    featuresEN: [
+      { title: 'Hand-Crafted Cat Levels', desc: 'Bright, calm boards that grow from gentle to truly tricky.' },
+      { title: 'Postcard Gallery', desc: 'Every cleared level adds a jigsaw piece to a postcard.' },
+      { title: 'Classic Sudoku & Daily Challenges', desc: 'Thousands of Sudoku boards and a paw-sealed calendar.' },
+      { title: 'Hints When You Need Them', desc: 'Reveal a cat or clear a few squares when you get stuck.' },
+    ],
+    featuresTR: [
+      { title: 'Özenle Hazırlanmış Kedi Bölümleri', desc: 'Kolaydan gerçekten zorlayıcıya uzanan renkli, sakin tahtalar.' },
+      { title: 'Kartpostal Galerisi', desc: 'Geçilen her bölüm bir kartpostala yapboz parçası ekler.' },
+      { title: 'Klasik Sudoku ve Günlük Görevler', desc: 'Binlerce Sudoku tahtası ve pati mühürlü bir takvim.' },
+      { title: 'Gerektiğinde İpucu', desc: 'Takıldığınızda bir kedi gösterin ya da birkaç kareyi eleyin.' },
+    ],
+    tipsEN: [
+      'Start with the smallest colour region — its cat has the fewest places to go.',
+      'Mark squares next to a cat with X right away: no other cat can sit there.',
+    ],
+    tipsTR: [
+      'En küçük renkli bölgeden başlayın; kedisinin gidebileceği en az yer oradadır.',
+      'Bir kedinin çevresindeki kareleri hemen X ile işaretleyin; oraya başka kedi gelemez.',
+    ],
+    faqEN: [
+      { q: 'Is Meow Sudoku free to play?', a: 'Yes, it is free to play with optional rewarded ads for hints.' },
+      { q: 'Does it work offline?', a: 'Yes, you can play offline; ads need an internet connection.' },
+    ],
+    faqTR: [
+      { q: 'Meow Sudoku ücretsiz mi?', a: 'Evet, ücretsizdir; ipucu için isteğe bağlı ödüllü reklamlar vardır.' },
+      { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
+    ],
+  },
 ];
 
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));

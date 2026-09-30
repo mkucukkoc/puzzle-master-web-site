@@ -65,6 +65,10 @@ import ScrewMasterHomePage from '@/pages/ScrewMasterHomePage';
 import ScrewMasterPrivacyPage from '@/pages/ScrewMasterPrivacyPage';
 import ScrewMasterTermsPage from '@/pages/ScrewMasterTermsPage';
 import ScrewMasterDataDeletionPage from '@/pages/ScrewMasterDataDeletionPage';
+import MeowSudokuHomePage from '@/pages/MeowSudokuHomePage';
+import MeowSudokuPrivacyPage from '@/pages/MeowSudokuPrivacyPage';
+import MeowSudokuTermsPage from '@/pages/MeowSudokuTermsPage';
+import MeowSudokuDataDeletionPage from '@/pages/MeowSudokuDataDeletionPage';
 
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -301,6 +305,19 @@ function App() {
             <Route path="/screw-master/data-deletion" element={<ScrewMasterDataDeletionPage />} />
             <Route path="/screw-master/data-deletion.html" element={<ScrewMasterDataDeletionPage />} />
             <Route path="/screw-master/data-deletion/index.html" element={<ScrewMasterDataDeletionPage />} />
+
+            {/* 14. Meow Sudoku */}
+            <Route path="/meow-sudoku" element={<MeowSudokuHomePage />} />
+            <Route path="/meow-sudoku/index.html" element={<MeowSudokuHomePage />} />
+            <Route path="/meow-sudoku/privacy" element={<MeowSudokuPrivacyPage />} />
+            <Route path="/meow-sudoku/privacy.html" element={<MeowSudokuPrivacyPage />} />
+            <Route path="/meow-sudoku/privacy/index.html" element={<MeowSudokuPrivacyPage />} />
+            <Route path="/meow-sudoku/terms" element={<MeowSudokuTermsPage />} />
+            <Route path="/meow-sudoku/terms.html" element={<MeowSudokuTermsPage />} />
+            <Route path="/meow-sudoku/terms/index.html" element={<MeowSudokuTermsPage />} />
+            <Route path="/meow-sudoku/data-deletion" element={<MeowSudokuDataDeletionPage />} />
+            <Route path="/meow-sudoku/data-deletion.html" element={<MeowSudokuDataDeletionPage />} />
+            <Route path="/meow-sudoku/data-deletion/index.html" element={<MeowSudokuDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

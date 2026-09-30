@@ -27,7 +27,8 @@ const gameFolders = [
   'triple-grove',
   'color-sort',
   'word-connect',
-  'screw-master'
+  'screw-master',
+  'meow-sudoku'
 ];
 
 for (const slug of gameFolders) {

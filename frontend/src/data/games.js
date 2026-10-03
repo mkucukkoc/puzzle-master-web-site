@@ -1003,6 +1003,77 @@ export const GAMES = [
       { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
     ],
   },
+  {
+    slug: 'pandoku',
+    title: 'Pandoku: Panda Logic Puzzle',
+    shortTitle: 'Pandoku',
+    route: '/pandoku',
+    theme: 'teal',
+    accent: '#14a3ad',
+    accentSoft: '#d6f5f7',
+    surface: '#0b2b30',
+    feature: '/games/pandoku/feature.png',
+    icon: '/games/pandoku/icon.png',
+    screenshots: [
+      '/games/pandoku/screenshots/ss-1.png',
+      '/games/pandoku/screenshots/ss-2.png',
+      '/games/pandoku/screenshots/ss-3.png',
+      '/games/pandoku/screenshots/ss-4.png',
+      '/games/pandoku/screenshots/ss-5.png',
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.pandoku',
+    appStoreUrl: appStoreSearchUrl('Pandoku'),
+    descriptionEN: 'Place the pandas on a colourful board: one in every row, column and colour, and no two pandas may touch.',
+    descriptionTR: 'Pandaları renkli tahtaya yerleştirin: her satırda, sütunda ve renkte bir panda olsun, iki panda birbirine değmesin.',
+    highlightsEN: [
+      'A cosy panda twist on classic logic puzzles',
+      'Collect postcards on an illustrated journey map',
+      'Classic Sudoku levels and Daily Challenges included',
+    ],
+    highlightsTR: [
+      'Klasik mantık bulmacalarına sevimli bir panda dokunuşu',
+      'Resimli yolculuk haritasında kartpostal toplayın',
+      'Klasik Sudoku bölümleri ve günlük görevler de var',
+    ],
+    howToPlayEN: [
+      'One Panda Per Colour: every coloured region holds exactly one panda.',
+      'One Panda Per Row and Column: no row or column may hold two pandas.',
+      'Pandas Can’t Touch: no two pandas may sit next to each other, not even diagonally.',
+    ],
+    howToPlayTR: [
+      'Her Renkte Bir Panda: her renkli bölgede tam olarak bir panda olur.',
+      'Her Satır ve Sütunda Bir Panda: hiçbir satır veya sütunda iki panda olamaz.',
+      'Pandalar Birbirine Değemez: iki panda yan yana, çapraz bile olsa, duramaz.',
+    ],
+    featuresEN: [
+      { title: '500 Hand-Crafted Panda Levels', desc: 'Bright, calm boards that grow from gentle to truly tricky.' },
+      { title: 'Postcard Gallery', desc: 'Every cleared level adds a jigsaw piece to a postcard.' },
+      { title: 'Classic Sudoku & Daily Challenges', desc: 'Classic Sudoku boards, a paw-sealed calendar and monthly trophies.' },
+      { title: 'Hints When You Need Them', desc: 'Reveal a panda or clear a few squares when you get stuck.' },
+    ],
+    featuresTR: [
+      { title: 'Özenle Hazırlanmış 500 Panda Bölümü', desc: 'Kolaydan gerçekten zorlayıcıya uzanan renkli, sakin tahtalar.' },
+      { title: 'Kartpostal Galerisi', desc: 'Geçilen her bölüm bir kartpostala yapboz parçası ekler.' },
+      { title: 'Klasik Sudoku ve Günlük Görevler', desc: 'Klasik Sudoku tahtaları, pati mühürlü bir takvim ve aylık kupalar.' },
+      { title: 'Gerektiğinde İpucu', desc: 'Takıldığınızda bir panda gösterin ya da birkaç kareyi eleyin.' },
+    ],
+    tipsEN: [
+      'Start with the smallest colour region — its panda has the fewest places to go.',
+      'Mark squares next to a panda with X right away: no other panda can sit there.',
+    ],
+    tipsTR: [
+      'En küçük renkli bölgeden başlayın; pandasının gidebileceği en az yer oradadır.',
+      'Bir pandanın çevresindeki kareleri hemen X ile işaretleyin; oraya başka panda gelemez.',
+    ],
+    faqEN: [
+      { q: 'Is Pandoku free to play?', a: 'Yes, it is free to play with optional rewarded ads for hints.' },
+      { q: 'Does it work offline?', a: 'Yes, you can play offline; ads need an internet connection.' },
+    ],
+    faqTR: [
+      { q: 'Pandoku ücretsiz mi?', a: 'Evet, ücretsizdir; ipucu için isteğe bağlı ödüllü reklamlar vardır.' },
+      { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
+    ],
+  },
 ];
 
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));

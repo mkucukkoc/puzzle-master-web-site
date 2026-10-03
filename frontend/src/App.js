@@ -69,6 +69,10 @@ import MeowSudokuHomePage from '@/pages/MeowSudokuHomePage';
 import MeowSudokuPrivacyPage from '@/pages/MeowSudokuPrivacyPage';
 import MeowSudokuTermsPage from '@/pages/MeowSudokuTermsPage';
 import MeowSudokuDataDeletionPage from '@/pages/MeowSudokuDataDeletionPage';
+import PandokuHomePage from '@/pages/PandokuHomePage';
+import PandokuPrivacyPage from '@/pages/PandokuPrivacyPage';
+import PandokuTermsPage from '@/pages/PandokuTermsPage';
+import PandokuDataDeletionPage from '@/pages/PandokuDataDeletionPage';
 
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -318,6 +322,19 @@ function App() {
             <Route path="/meow-sudoku/data-deletion" element={<MeowSudokuDataDeletionPage />} />
             <Route path="/meow-sudoku/data-deletion.html" element={<MeowSudokuDataDeletionPage />} />
             <Route path="/meow-sudoku/data-deletion/index.html" element={<MeowSudokuDataDeletionPage />} />
+
+            {/* 15. Pandoku */}
+            <Route path="/pandoku" element={<PandokuHomePage />} />
+            <Route path="/pandoku/index.html" element={<PandokuHomePage />} />
+            <Route path="/pandoku/privacy" element={<PandokuPrivacyPage />} />
+            <Route path="/pandoku/privacy.html" element={<PandokuPrivacyPage />} />
+            <Route path="/pandoku/privacy/index.html" element={<PandokuPrivacyPage />} />
+            <Route path="/pandoku/terms" element={<PandokuTermsPage />} />
+            <Route path="/pandoku/terms.html" element={<PandokuTermsPage />} />
+            <Route path="/pandoku/terms/index.html" element={<PandokuTermsPage />} />
+            <Route path="/pandoku/data-deletion" element={<PandokuDataDeletionPage />} />
+            <Route path="/pandoku/data-deletion.html" element={<PandokuDataDeletionPage />} />
+            <Route path="/pandoku/data-deletion/index.html" element={<PandokuDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

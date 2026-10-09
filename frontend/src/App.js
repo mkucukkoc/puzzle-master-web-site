@@ -73,6 +73,10 @@ import PandokuHomePage from '@/pages/PandokuHomePage';
 import PandokuPrivacyPage from '@/pages/PandokuPrivacyPage';
 import PandokuTermsPage from '@/pages/PandokuTermsPage';
 import PandokuDataDeletionPage from '@/pages/PandokuDataDeletionPage';
+import BusLoopHomePage from '@/pages/BusLoopHomePage';
+import BusLoopPrivacyPage from '@/pages/BusLoopPrivacyPage';
+import BusLoopTermsPage from '@/pages/BusLoopTermsPage';
+import BusLoopDataDeletionPage from '@/pages/BusLoopDataDeletionPage';
 
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -335,6 +339,19 @@ function App() {
             <Route path="/pandoku/data-deletion" element={<PandokuDataDeletionPage />} />
             <Route path="/pandoku/data-deletion.html" element={<PandokuDataDeletionPage />} />
             <Route path="/pandoku/data-deletion/index.html" element={<PandokuDataDeletionPage />} />
+
+            {/* 16. Bus Loop */}
+            <Route path="/bus-loop" element={<BusLoopHomePage />} />
+            <Route path="/bus-loop/index.html" element={<BusLoopHomePage />} />
+            <Route path="/bus-loop/privacy" element={<BusLoopPrivacyPage />} />
+            <Route path="/bus-loop/privacy.html" element={<BusLoopPrivacyPage />} />
+            <Route path="/bus-loop/privacy/index.html" element={<BusLoopPrivacyPage />} />
+            <Route path="/bus-loop/terms" element={<BusLoopTermsPage />} />
+            <Route path="/bus-loop/terms.html" element={<BusLoopTermsPage />} />
+            <Route path="/bus-loop/terms/index.html" element={<BusLoopTermsPage />} />
+            <Route path="/bus-loop/data-deletion" element={<BusLoopDataDeletionPage />} />
+            <Route path="/bus-loop/data-deletion.html" element={<BusLoopDataDeletionPage />} />
+            <Route path="/bus-loop/data-deletion/index.html" element={<BusLoopDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

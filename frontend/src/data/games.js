@@ -1074,6 +1074,78 @@ export const GAMES = [
       { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
     ],
   },
+  {
+    slug: 'bus-loop',
+    title: 'Bus Loop: Color Jam Puzzle',
+    shortTitle: 'Bus Loop',
+    route: '/bus-loop',
+    theme: 'amber',
+    accent: '#f5a524',
+    accentSoft: '#fff1cc',
+    surface: '#2b2208',
+    feature: '/games/bus-loop/feature.png',
+    icon: '/games/bus-loop/icon.png',
+    screenshots: [
+      '/games/bus-loop/screenshots/ss-1.png',
+      '/games/bus-loop/screenshots/ss-2.png',
+      '/games/bus-loop/screenshots/ss-3.png',
+      '/games/bus-loop/screenshots/ss-4.png',
+      '/games/bus-loop/screenshots/ss-5.png',
+      '/games/bus-loop/screenshots/ss-6.png',
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.blockescape',
+    appStoreUrl: appStoreSearchUrl('Bus Loop Color Jam Puzzle'),
+    descriptionEN: 'Clear the jam, match colours and fill every bus, tram and harvest truck with the passengers going round the loop.',
+    descriptionTR: 'Sıkışıklığı aç, renkleri eşleştir; her otobüsü, tramvayı ve hasat kamyonunu halkada dönen yolcularla doldur.',
+    highlightsEN: [
+      'Five games in one journey: bus, tram, fruit, vegetable and animal levels',
+      'A new map and a new road on every level',
+      'Daily Fuel-Up and a Lucky Wheel for free coins and boosters',
+    ],
+    highlightsTR: [
+      'Tek yolculukta beş oyun: otobüs, tramvay, meyve, sebze ve hayvan bölümleri',
+      'Her bölümde yeni bir harita ve yeni bir yol',
+      'Bedava altın ve güçlendirici için Günlük İkmal ve Şanslı Çark',
+    ],
+    howToPlayEN: [
+      'Tap a Vehicle: it drives out of the car park, but only if its path is clear.',
+      'Match the Colour: each vehicle waits in a bay and picks up passengers of its own colour as they pass.',
+      'Plan Ahead: bays are limited, so send out the vehicles the crowd needs next.',
+    ],
+    howToPlayTR: [
+      'Araca Dokun: yolu açıksa otoparktan çıkıp yola koyulur.',
+      'Rengi Eşleştir: her araç bir peronda bekler ve önünden geçen kendi rengindeki yolcuları alır.',
+      'Önceden Planla: peronlar sınırlıdır; kalabalığın sıradaki ihtiyacı olan araçları gönder.',
+    ],
+    featuresEN: [
+      { title: 'Bus, Tram and Harvest Levels', desc: 'An easy bus level, then a hard tram stop, fruit, vegetable and animal level, round after round.' },
+      { title: 'Always a New Scene', desc: 'Meadows, snow, beaches, forests and city streets: the map and road change every level.' },
+      { title: 'Handy Boosters', desc: 'Shuffle the parked colours, pull passengers with the Magnet or lift any vehicle out with VIP.' },
+      { title: 'Daily Rewards', desc: 'Fill up coins at the Daily Fuel-Up and spin the Lucky Wheel once a day.' },
+    ],
+    featuresTR: [
+      { title: 'Otobüs, Tramvay ve Hasat Bölümleri', desc: 'Kolay bir otobüs bölümü, ardından zor tramvay, meyve, sebze ve hayvan bölümleri; tur tur.' },
+      { title: 'Hep Yeni Bir Sahne', desc: 'Çayırlar, kar, kumsallar, ormanlar ve şehir sokakları: harita ve yol her bölümde değişir.' },
+      { title: 'Kullanışlı Güçlendiriciler', desc: 'Park etmiş araçların renklerini karıştır, Mıknatısla yolcuları çek ya da VIP ile her aracı çıkar.' },
+      { title: 'Günlük Ödüller', desc: 'Günlük İkmal’den altın topla, Şanslı Çark’ı her gün bir kez çevir.' },
+    ],
+    tipsEN: [
+      'Look at the colours coming round the loop and free those vehicles first.',
+      'Keep one bay empty when you can: a full row of bays is how a level is lost.',
+    ],
+    tipsTR: [
+      'Halkada gelen renklere bak ve önce o araçların yolunu aç.',
+      'Mümkünse bir peronu boş bırak: peronların dolması bölümü kaybettirir.',
+    ],
+    faqEN: [
+      { q: 'Is Bus Loop free to play?', a: 'Yes, it is free to play with optional rewarded ads for coins and boosters.' },
+      { q: 'Does it work offline?', a: 'Yes, you can play offline; ads need an internet connection.' },
+    ],
+    faqTR: [
+      { q: 'Bus Loop ücretsiz mi?', a: 'Evet, ücretsizdir; altın ve güçlendirici için isteğe bağlı ödüllü reklamlar vardır.' },
+      { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
+    ],
+  },
 ];
 
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));

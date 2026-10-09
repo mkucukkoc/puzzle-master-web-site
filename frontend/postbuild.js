@@ -29,7 +29,8 @@ const gameFolders = [
   'word-connect',
   'screw-master',
   'meow-sudoku',
-  'pandoku'
+  'pandoku',
+  'bus-loop'
 ];
 
 for (const slug of gameFolders) {

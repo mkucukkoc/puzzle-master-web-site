@@ -30,7 +30,8 @@ const gameFolders = [
   'screw-master',
   'meow-sudoku',
   'pandoku',
-  'bus-loop'
+  'bus-loop',
+  'kingdom-smash'
 ];
 
 for (const slug of gameFolders) {

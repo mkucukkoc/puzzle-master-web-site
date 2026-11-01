@@ -77,6 +77,10 @@ import BusLoopHomePage from '@/pages/BusLoopHomePage';
 import BusLoopPrivacyPage from '@/pages/BusLoopPrivacyPage';
 import BusLoopTermsPage from '@/pages/BusLoopTermsPage';
 import BusLoopDataDeletionPage from '@/pages/BusLoopDataDeletionPage';
+import KingdomSmashHomePage from '@/pages/KingdomSmashHomePage';
+import KingdomSmashPrivacyPage from '@/pages/KingdomSmashPrivacyPage';
+import KingdomSmashTermsPage from '@/pages/KingdomSmashTermsPage';
+import KingdomSmashDataDeletionPage from '@/pages/KingdomSmashDataDeletionPage';
 
 import GameLandingPage from '@/components/GameLandingPage';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -352,6 +356,19 @@ function App() {
             <Route path="/bus-loop/data-deletion" element={<BusLoopDataDeletionPage />} />
             <Route path="/bus-loop/data-deletion.html" element={<BusLoopDataDeletionPage />} />
             <Route path="/bus-loop/data-deletion/index.html" element={<BusLoopDataDeletionPage />} />
+
+            {/* 17. Kingdom Smash */}
+            <Route path="/kingdom-smash" element={<KingdomSmashHomePage />} />
+            <Route path="/kingdom-smash/index.html" element={<KingdomSmashHomePage />} />
+            <Route path="/kingdom-smash/privacy" element={<KingdomSmashPrivacyPage />} />
+            <Route path="/kingdom-smash/privacy.html" element={<KingdomSmashPrivacyPage />} />
+            <Route path="/kingdom-smash/privacy/index.html" element={<KingdomSmashPrivacyPage />} />
+            <Route path="/kingdom-smash/terms" element={<KingdomSmashTermsPage />} />
+            <Route path="/kingdom-smash/terms.html" element={<KingdomSmashTermsPage />} />
+            <Route path="/kingdom-smash/terms/index.html" element={<KingdomSmashTermsPage />} />
+            <Route path="/kingdom-smash/data-deletion" element={<KingdomSmashDataDeletionPage />} />
+            <Route path="/kingdom-smash/data-deletion.html" element={<KingdomSmashDataDeletionPage />} />
+            <Route path="/kingdom-smash/data-deletion/index.html" element={<KingdomSmashDataDeletionPage />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

@@ -1146,6 +1146,78 @@ export const GAMES = [
       { q: 'İnternetsiz çalışıyor mu?', a: 'Evet, internetsiz oynanabilir; reklamlar için internet gerekir.' },
     ],
   },
+  {
+    slug: 'kingdom-smash',
+    title: 'Kingdom Smash: Royal Cannon Puzzle',
+    shortTitle: 'Kingdom Smash',
+    route: '/kingdom-smash',
+    theme: 'crimson',
+    accent: '#f5b52c',
+    accentSoft: '#fff1cc',
+    surface: '#4e0418',
+    feature: '/games/kingdom-smash/feature.png',
+    icon: '/games/kingdom-smash/icon.png',
+    screenshots: [
+      '/games/kingdom-smash/screenshots/ss-1.png',
+      '/games/kingdom-smash/screenshots/ss-2.png',
+      '/games/kingdom-smash/screenshots/ss-3.png',
+      '/games/kingdom-smash/screenshots/ss-4.png',
+      '/games/kingdom-smash/screenshots/ss-5.png',
+      '/games/kingdom-smash/screenshots/ss-6.png',
+    ],
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.puzzle.blockescape',
+    appStoreUrl: appStoreSearchUrl('Kingdom Smash'),
+    descriptionEN: 'Help King Leo and his friends fire the royal cannon, knock every tower off the table and build the greatest kingdom of all.',
+    descriptionTR: 'Kral Leo ve arkadaşlarına yardım et: kraliyet topunu ateşle, masadaki her kuleyi yık ve en büyük krallığı kur.',
+    highlightsEN: [
+      'Over a thousand levels of towers, crates, jars and drums to smash',
+      'Swinging maces, shields, gears and drawbridges that make every shot count',
+      'The Wizard’s powers: rockets, fireballs, lightning, magnets and vortexes',
+    ],
+    highlightsTR: [
+      'Yıkılacak kuleler, sandıklar, kavanozlar ve davullarla binden fazla bölüm',
+      'Her atışı önemli kılan sallanan gülleler, kalkanlar, dişliler ve asma köprüler',
+      'Büyücünün güçleri: roketler, ateş topları, şimşekler, mıknatıslar ve girdaplar',
+    ],
+    howToPlayEN: [
+      'Tap to Fire: tap anywhere on the stack and the cannon fires straight at it.',
+      'Clear the Table: knock every piece off the table before your cannonballs run out.',
+      'Use Your Boosters: the Magic Wand, Giant Ball, Black Bomb and Unlimited Balls save the toughest levels.',
+    ],
+    howToPlayTR: [
+      'Dokun ve Ateşle: yığının herhangi bir yerine dokun, top tam oraya ateş etsin.',
+      'Masayı Temizle: gülleler bitmeden masadaki her parçayı aşağı düşür.',
+      'Güçlendiricileri Kullan: Sihirli Değnek, Dev Top, Kara Bomba ve Sınırsız Top en zor bölümleri kurtarır.',
+    ],
+    featuresEN: [
+      { title: 'A Royal Journey', desc: 'Travel the Kingdom Road through ten lands, from the Castle Garden to the Throne Hall.' },
+      { title: 'Clever Obstacles', desc: 'Time your shots past spinning propellers, hammers, shields, gears and spiked maces.' },
+      { title: 'The Wizard’s Powers', desc: 'Brew rockets, fireballs and lightning with the Wizard and blast whole towers at once.' },
+      { title: 'Daily Fun', desc: 'Royal Seals tasks, the King’s Daily Gift, the Kingdom Party and a world leaderboard.' },
+    ],
+    featuresTR: [
+      { title: 'Kraliyet Yolculuğu', desc: 'Kale Bahçesi’nden Taht Salonu’na, on diyarı Krallık Yolu’nda gez.' },
+      { title: 'Akıllı Engeller', desc: 'Dönen pervaneler, çekiçler, kalkanlar, dişliler ve dikenli güllelerin arasından atışını ayarla.' },
+      { title: 'Büyücünün Güçleri', desc: 'Büyücüyle roket, ateş topu ve şimşek hazırla; koca kuleleri tek seferde yık.' },
+      { title: 'Her Gün Eğlence', desc: 'Kraliyet Mühürleri görevleri, Kralın Günlük Hediyesi, Krallık Partisi ve dünya sıralaması.' },
+    ],
+    tipsEN: [
+      'Aim at the bottom of a tower: the pieces above fall with it.',
+      'Save the Giant Ball for the tallest stacks and the hardest levels.',
+    ],
+    tipsTR: [
+      'Kulenin alt kısmına nişan al: üstteki parçalar da onunla birlikte düşer.',
+      'Dev Top’u en yüksek yığınlara ve en zor bölümlere sakla.',
+    ],
+    faqEN: [
+      { q: 'Is Kingdom Smash free to play?', a: 'Yes, it is free to play. It shows ads and offers optional in-app purchases and rewarded ads for coins, lives and boosters.' },
+      { q: 'Will I lose my progress if I change phones?', a: 'No. Create an account in your Profile and sign in with it on your new phone to restore your progress.' },
+    ],
+    faqTR: [
+      { q: 'Kingdom Smash ücretsiz mi?', a: 'Evet, ücretsizdir. Reklam içerir; altın, can ve güçlendirici için isteğe bağlı uygulama içi satın almalar ve ödüllü reklamlar sunar.' },
+      { q: 'Telefonumu değiştirirsem ilerlemem kaybolur mu?', a: 'Hayır. Profil ekranından bir hesap oluşturup yeni telefonunda o hesapla giriş yaparak ilerlemeni geri yükleyebilirsin.' },
+    ],
+  },
 ];
 
 export const GAME_MAP = Object.fromEntries(GAMES.map(game => [game.slug, game]));

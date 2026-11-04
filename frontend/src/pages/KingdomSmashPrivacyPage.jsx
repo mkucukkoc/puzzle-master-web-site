@@ -155,7 +155,7 @@ const KingdomSmashPrivacyPage = () => {
               <p className="text-[11px] font-black tracking-[0.28em] text-[#fff1cc]">KINGDOM SMASH</p>
             </div>
             <h1 className="mt-6 text-3xl sm:text-4xl font-black text-white">{t('Gizlilik Politikası', 'Privacy Policy')}</h1>
-            <p className="mt-3 text-white/80">{t('Yürürlük tarihi: 1 Kasım 2026', 'Effective date: November 1, 2026')}</p>
+            <p className="mt-3 text-white/80">{t('Yürürlük tarihi: 4 Kasım 2026', 'Effective date: November 4, 2026')}</p>
           </div>
 
           <div className="space-y-5">
@@ -225,8 +225,16 @@ const KingdomSmashPrivacyPage = () => {
               <SubTitle>{t('3.7 Toplamadıklarımız', '3.7 What we do not collect')}</SubTitle>
               <p>
                 {t(
-                  'Oynamak için gerçek adınızı veya e-postanızı istemeyiz. Konumunuza, kişilerinize, kameranıza, mikrofonunuza, fotoğraflarınıza veya dosyalarınıza erişmeyiz. Oyun bildirim göndermez ve sosyal ağ ile giriş kullanmaz. Yukarıda sayılanlar dışında analiz veya pazarlama aracı bulunmaz.',
-                  'We do not ask for your real name or email to play. We do not access your location, contacts, camera, microphone, photos or files. The game sends no notifications and uses no social network login. There are no analytics or marketing tools other than those listed above.'
+                  'Oynamak için gerçek adınızı veya e-postanızı istemeyiz. Konumunuza, kişilerinize, kameranıza, mikrofonunuza, fotoğraflarınıza veya dosyalarınıza erişmeyiz. Oyun sosyal ağ ile giriş kullanmaz. Hatırlatma bildirimleri (bkz. 3.8) cihazınızın kendisinde kurulur: hiçbir anlık bildirim (push) servisi veya bildirim kimliği kullanılmaz ve bunlarla ilgili hiçbir bilgi bize ya da başkasına gönderilmez. Yukarıda sayılanlar dışında analiz veya pazarlama aracı bulunmaz.',
+                  'We do not ask for your real name or email to play. We do not access your location, contacts, camera, microphone, photos or files. The game uses no social network login. Reminder notifications (see 3.8) are scheduled on your device itself: no push service or notification token is used and nothing about them is sent to us or anyone else. There are no analytics or marketing tools other than those listed above.'
+                )}
+              </p>
+
+              <SubTitle>{t('3.8 Hatırlatma bildirimleri', '3.8 Reminder notifications')}</SubTitle>
+              <p>
+                {t(
+                  'Bildirimlere izin verirseniz oyun, siz uzaktayken telefonunuzda birkaç hatırlatma kurar (örneğin canlarınız dolduğunda, Kral’ın günlük hediyesi hazır olduğunda veya yeni bir bölüm sizi beklerken). Günde en fazla dört tane ve son ziyaretinizden sonra bir hafta boyunca gelirler. Yalnızca cihazınız tarafından oluşturulup gösterilirler ve metinlerinde bölüm numaranız yer alır. Bunları telefonunuzun ayarlarından (Ayarlar → Bildirimler → Kingdom Smash) istediğiniz zaman kapatabilirsiniz.',
+                  'If you allow notifications, the game schedules a few reminders on your phone while you are away (for example when your lives are full again, when the King’s daily gift is ready, or when a new level is waiting). They come at most four times a day and for one week after your last visit. They are created and shown by your device only, and their text includes your level number. You can turn them off at any time in your phone’s settings (Settings → Notifications → Kingdom Smash).'
                 )}
               </p>
             </Section>
@@ -294,18 +302,20 @@ const KingdomSmashPrivacyPage = () => {
               <List
                 items={t(
                   [
-                    'Reklam izni: AB, AEA, İngiltere ve İsviçre’de oyun ilk açılışta izninizi sorar. Seçiminizi Ayarlar → Terms & Privacy → Privacy Choices bölümünden istediğiniz zaman değiştirebilirsiniz.',
+                    'Reklam izni: AB, AEA, İngiltere ve İsviçre’de oyun ilk açılışta izninizi sorar; gizlilik yasası olan ABD eyaletlerinde bilgilerinizin hedefli reklam için satılmasından veya paylaşılmasından çıkabilirsiniz. Her iki seçimi de Ayarlar → Terms & Privacy → Privacy Choices bölümünden istediğiniz zaman değiştirebilirsiniz.',
                     'Reklam Kimliği: Android’de Ayarlar → Gizlilik → Reklamlar bölümünden Reklam Kimliğinizi sıfırlayabilir veya silebilirsiniz; iOS’ta İzleme ayarlarını kapatabilirsiniz.',
                     'Reklamsız oyun: “Reklamları Kaldır” satın alındığında geçiş reklamları kapanır.',
                     'Ses, müzik ve titreşim oyunun Ayarlar ekranından kapatılabilir.',
-                    'Uygulamayı silmek cihazınızdaki tüm oyun verilerini siler; sunucudaki verilerinizin silinmesi için aşağıdaki Veri Silme sayfasını kullanın.',
+                    'Bildirimler: hatırlatmaları telefonunuzun ayarlarından açıp kapatabilirsiniz.',
+                    'Hesabınızı ve bulut kaydınızı istediğiniz zaman oyunda (Ayarlar → Delete Account) veya Veri Silme sayfamızdan anında silebilirsiniz. Uygulamayı silmek cihazınızdaki tüm oyun verilerini siler.',
                   ],
                   [
-                    'Ad consent: in the EU, EEA, UK and Switzerland the game asks for your consent on first launch. You can change your choice at any time in Settings → Terms & Privacy → Privacy Choices.',
+                    'Ad consent: in the EU, EEA, UK and Switzerland the game asks for your consent on first launch; in US states with privacy laws you can opt out of the sale or sharing of your information for targeted advertising. You can change either choice at any time in Settings → Terms & Privacy → Privacy Choices.',
                     'Advertising ID: on Android you can reset or delete it in Settings → Privacy → Ads; on iOS you can turn off tracking in Settings.',
                     'Ad-free play: buying “Remove Ads” turns off interstitial ads.',
                     'Sound, music and vibration can be turned off in the game’s Settings.',
-                    'Deleting the app deletes all game data on your device; to delete your data on our server, use the Data Deletion page below.',
+                    'Notifications: turn reminders on or off in your phone’s settings.',
+                    'Delete your account and cloud save at once, at any time, in the game (Settings → Delete Account) or on our Data Deletion page. Deleting the app deletes all game data on your device.',
                   ]
                 )}
               />
@@ -316,8 +326,8 @@ const KingdomSmashPrivacyPage = () => {
               <List items={rights} />
               <p>
                 {t(
-                  `Kaliforniya sakinleri ayrıca hangi kişisel bilgilerin toplandığını bilme, silinmesini ve düzeltilmesini isteme ve kişisel bilgilerin satışından veya hedefli reklam için paylaşımından çıkma haklarına sahiptir. Kişisel bilgilerinizi satmayız; reklam kişiselleştirmesini yukarıdaki reklam ve cihaz ayarlarıyla sınırlayabilirsiniz. Haklarınızı kullandığınız için size farklı davranılmaz.`,
-                  `California residents also have the right to know what personal information is collected, to request its deletion and correction, and to opt out of the sale or sharing of personal information for targeted advertising. We do not sell personal information; you can limit ad personalisation with the ad and device settings above. You will not be treated differently for using your rights.`
+                  `Kaliforniya sakinleri ayrıca hangi kişisel bilgilerin toplandığını bilme, silinmesini ve düzeltilmesini isteme ve kişisel bilgilerin satışından veya hedefli reklam için paylaşımından çıkma haklarına sahiptir. Kişisel bilgilerinizi satmayız; hedefli reklam için paylaşımdan oyunda Privacy Choices ile çıkabilir, reklam kişiselleştirmesini yukarıdaki cihaz ayarlarıyla da sınırlayabilirsiniz. Haklarınızı kullandığınız için size farklı davranılmaz.`,
+                  `California residents also have the right to know what personal information is collected, to request its deletion and correction, and to opt out of the sale or sharing of personal information for targeted advertising. We do not sell personal information; you can opt out of sharing for targeted advertising with Privacy Choices in the game, and limit ad personalisation with the device settings above. You will not be treated differently for using your rights.`
                 )}
               </p>
               <p>
@@ -333,16 +343,16 @@ const KingdomSmashPrivacyPage = () => {
                 items={t(
                   [
                     'Cihazınızdaki veriler: uygulamayı silene kadar.',
-                    'Hesap, bulut kayıt ve sıralama kaydı: oynadığınız sürece; doğrulanmış bir silme talebinden sonra 30 gün içinde silinir.',
+                    'Hesap, bulut kayıt ve sıralama kaydı: oynadığınız sürece; hesabınızı oyunda veya Veri Silme sayfasında sildiğinizde anında, e-postayla gelen bir talepte 30 gün içinde silinir.',
                     'Satın alma kayıtları: vergi ve ticaret mevzuatının gerektirdiği süre boyunca (Türkiye’de 10 yıla kadar).',
-                    'Sunucu ve hata kayıtları: güvenlik ve hata ayıklama için sınırlı bir süre, ardından silinir.',
+                    'Sunucu ve hata kayıtları: güvenlik ve hata ayıklama için 30 gün, ardından silinir.',
                     'Çökme raporları: Firebase Crashlytics tarafından en fazla 90 gün.',
                   ],
                   [
                     'Data on your device: until you delete the app.',
-                    'Account, cloud save and leaderboard entry: for as long as you play; deleted within 30 days of a verified deletion request.',
+                    'Account, cloud save and leaderboard entry: for as long as you play; deleted at once when you delete your account in the game or on the Data Deletion page, or within 30 days of a request by email.',
                     'Purchase records: for as long as tax and commercial law requires (up to 10 years in Turkey).',
-                    'Server and error logs: for a limited period for security and debugging, then deleted.',
+                    'Server and error logs: 30 days for security and debugging, then deleted.',
                     'Crash reports: up to 90 days by Firebase Crashlytics.',
                   ]
                 )}
